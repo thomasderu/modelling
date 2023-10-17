@@ -308,63 +308,18 @@ namespace Company.TestMart
 			}
 		}
 		#endregion
-		#region SocialConcerned opposite domain role accessor
+		#region Concerned opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of SocialConcerned.
-		/// Description for Company.TestMart.ImpactLevelHasSocialConcern.ImpactLevel
+		/// Gets a list of Concerned.
+		/// Description for Company.TestMart.ImpactLevelHasConcerned.ImpactLevel
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<SocialConcern> SocialConcerned
+		public virtual DslModeling::LinkedElementCollection<Concern> Concerned
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<SocialConcern>, SocialConcern>(global::Company.TestMart.ImpactLevelHasSocialConcern.ImpactLevelDomainRoleId);
-			}
-		}
-		#endregion
-		#region EnvironmentalConcerned opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of EnvironmentalConcerned.
-		/// Description for Company.TestMart.ImpactLevelHasEnvironmentalConcern.ImpactLevel
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EnvironmentalConcern> EnvironmentalConcerned
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EnvironmentalConcern>, EnvironmentalConcern>(global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.ImpactLevelDomainRoleId);
-			}
-		}
-		#endregion
-		#region EconomicConcerned opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of EconomicConcerned.
-		/// Description for Company.TestMart.ImpactLevelHasEconomicConcern.ImpactLevel
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EconomicConcern> EconomicConcerned
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EconomicConcern>, EconomicConcern>(global::Company.TestMart.ImpactLevelHasEconomicConcern.ImpactLevelDomainRoleId);
-			}
-		}
-		#endregion
-		#region TechnicalConcerned opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of TechnicalConcerned.
-		/// Description for Company.TestMart.ImpactLevelHasTechnicalConcern.ImpactLevel
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<TechnicalConcern> TechnicalConcerned
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<TechnicalConcern>, TechnicalConcern>(global::Company.TestMart.ImpactLevelHasTechnicalConcern.ImpactLevelDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ImpactLevelHasConcerned.ImpactLevelDomainRoleId);
 			}
 		}
 		#endregion
@@ -388,22 +343,7 @@ namespace Company.TestMart
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.SocialConcern.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.EnvironmentalConcern.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.EconomicConcern.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.TechnicalConcern.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Concern.DomainClassId)) 
 				{
 					return true;
 				}
@@ -432,38 +372,11 @@ namespace Company.TestMart
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Company.TestMart.SocialConcern sourceSocialConcern1 = sourceElement as global::Company.TestMart.SocialConcern;
-			if (sourceSocialConcern1 != null)
+			global::Company.TestMart.Concern sourceConcern1 = sourceElement as global::Company.TestMart.Concern;
+			if (sourceConcern1 != null)
 			{
-				// Create link for path ImpactLevelHasSocialConcern.SocialConcerned
-				this.SocialConcerned.Add(sourceSocialConcern1);
-
-				return;
-			}
-				
-			global::Company.TestMart.EnvironmentalConcern sourceEnvironmentalConcern2 = sourceElement as global::Company.TestMart.EnvironmentalConcern;
-			if (sourceEnvironmentalConcern2 != null)
-			{
-				// Create link for path ImpactLevelHasEnvironmentalConcern.EnvironmentalConcerned
-				this.EnvironmentalConcerned.Add(sourceEnvironmentalConcern2);
-
-				return;
-			}
-				
-			global::Company.TestMart.EconomicConcern sourceEconomicConcern3 = sourceElement as global::Company.TestMart.EconomicConcern;
-			if (sourceEconomicConcern3 != null)
-			{
-				// Create link for path ImpactLevelHasEconomicConcern.EconomicConcerned
-				this.EconomicConcerned.Add(sourceEconomicConcern3);
-
-				return;
-			}
-				
-			global::Company.TestMart.TechnicalConcern sourceTechnicalConcern4 = sourceElement as global::Company.TestMart.TechnicalConcern;
-			if (sourceTechnicalConcern4 != null)
-			{
-				// Create link for path ImpactLevelHasTechnicalConcern.TechnicalConcerned
-				this.TechnicalConcerned.Add(sourceTechnicalConcern4);
+				// Create link for path ImpactLevelHasConcerned.Concerned
+				this.Concerned.Add(sourceConcern1);
 
 				return;
 			}
@@ -490,57 +403,15 @@ namespace Company.TestMart
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Company.TestMart.SocialConcern sourceSocialConcern1 = sourceElement as global::Company.TestMart.SocialConcern;
-			if (sourceSocialConcern1 != null)
+			global::Company.TestMart.Concern sourceConcern1 = sourceElement as global::Company.TestMart.Concern;
+			if (sourceConcern1 != null)
 			{
-				// Delete link for path ImpactLevelHasSocialConcern.SocialConcerned
+				// Delete link for path ImpactLevelHasConcerned.Concerned
 				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelHasSocialConcern.GetLinks((global::Company.TestMart.ImpactLevel)this, sourceSocialConcern1))
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelHasConcerned.GetLinks((global::Company.TestMart.ImpactLevel)this, sourceConcern1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.ImpactLevelHasSocialConcern.ImpactLevelDomainRoleId, global::Company.TestMart.ImpactLevelHasSocialConcern.SocialConcernDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::Company.TestMart.EnvironmentalConcern sourceEnvironmentalConcern2 = sourceElement as global::Company.TestMart.EnvironmentalConcern;
-			if (sourceEnvironmentalConcern2 != null)
-			{
-				// Delete link for path ImpactLevelHasEnvironmentalConcern.EnvironmentalConcerned
-				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.GetLinks((global::Company.TestMart.ImpactLevel)this, sourceEnvironmentalConcern2))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.ImpactLevelDomainRoleId, global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.EnvironmentalConcernDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::Company.TestMart.EconomicConcern sourceEconomicConcern3 = sourceElement as global::Company.TestMart.EconomicConcern;
-			if (sourceEconomicConcern3 != null)
-			{
-				// Delete link for path ImpactLevelHasEconomicConcern.EconomicConcerned
-				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelHasEconomicConcern.GetLinks((global::Company.TestMart.ImpactLevel)this, sourceEconomicConcern3))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.ImpactLevelHasEconomicConcern.ImpactLevelDomainRoleId, global::Company.TestMart.ImpactLevelHasEconomicConcern.EconomicConcernDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::Company.TestMart.TechnicalConcern sourceTechnicalConcern4 = sourceElement as global::Company.TestMart.TechnicalConcern;
-			if (sourceTechnicalConcern4 != null)
-			{
-				// Delete link for path ImpactLevelHasTechnicalConcern.TechnicalConcerned
-				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelHasTechnicalConcern.GetLinks((global::Company.TestMart.ImpactLevel)this, sourceTechnicalConcern4))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.ImpactLevelHasTechnicalConcern.ImpactLevelDomainRoleId, global::Company.TestMart.ImpactLevelHasTechnicalConcern.TechnicalConcernDomainRoleId);
+					link.Delete(global::Company.TestMart.ImpactLevelHasConcerned.ImpactLevelDomainRoleId, global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId);
 				}
 
 				return;
@@ -562,7 +433,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("beefb504-550b-4f41-b4d8-a8eefd6f1526")]
-	public partial class SocialConcern : DslModeling::ModelElement
+	public partial class SocialConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -677,25 +548,6 @@ namespace Company.TestMart
 		}
 		
 		#endregion
-		#region ImpactLevel opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ImpactLevel.
-		/// Description for Company.TestMart.ImpactLevelHasSocialConcern.SocialConcern
-		/// </summary>
-		public virtual ImpactLevel ImpactLevel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelHasSocialConcern.SocialConcernDomainRoleId) as ImpactLevel;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelHasSocialConcern.SocialConcernDomainRoleId, value);
-			}
-		}
-		#endregion
 	}
 }
 namespace Company.TestMart
@@ -709,7 +561,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5b9e7ce6-0858-4e57-80e6-e2d3716fae3e")]
-	public partial class EnvironmentalConcern : DslModeling::ModelElement
+	public partial class EnvironmentalConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -824,26 +676,6 @@ namespace Company.TestMart
 		}
 		
 		#endregion
-		#region ImpactLevel opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ImpactLevel.
-		/// Description for
-		/// Company.TestMart.ImpactLevelHasEnvironmentalConcern.EnvironmentalConcern
-		/// </summary>
-		public virtual ImpactLevel ImpactLevel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.EnvironmentalConcernDomainRoleId) as ImpactLevel;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.EnvironmentalConcernDomainRoleId, value);
-			}
-		}
-		#endregion
 	}
 }
 namespace Company.TestMart
@@ -857,7 +689,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("396c8e99-afe7-4d09-9402-48edd3163546")]
-	public partial class EconomicConcern : DslModeling::ModelElement
+	public partial class EconomicConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -972,25 +804,6 @@ namespace Company.TestMart
 		}
 		
 		#endregion
-		#region ImpactLevel opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ImpactLevel.
-		/// Description for Company.TestMart.ImpactLevelHasEconomicConcern.EconomicConcern
-		/// </summary>
-		public virtual ImpactLevel ImpactLevel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelHasEconomicConcern.EconomicConcernDomainRoleId) as ImpactLevel;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelHasEconomicConcern.EconomicConcernDomainRoleId, value);
-			}
-		}
-		#endregion
 	}
 }
 namespace Company.TestMart
@@ -1004,7 +817,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("482f4b9f-e0bb-4c93-94ac-fa2edf8790e0")]
-	public partial class TechnicalConcern : DslModeling::ModelElement
+	public partial class TechnicalConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -1119,22 +932,93 @@ namespace Company.TestMart
 		}
 		
 		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass Concern
+	/// Description for Company.TestMart.Concern
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.Concern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.Concern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("d456544b-e3e3-480a-8131-4b81db81910b")]
+	public partial class Concern : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Concern domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd456544b, 0xe3e3, 0x480a, 0x81, 0x31, 0x4b, 0x81, 0xdb, 0x81, 0x91, 0x0b);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Concern(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Concern(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TargetConcerned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of TargetConcerned.
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerned.SourceConcern
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Concern> TargetConcerned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ConcernReferencesTargetConcerned.SourceConcernDomainRoleId);
+			}
+		}
+		#endregion
+		#region SourceConcerned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of SourceConcerned.
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerned.TargetConcern
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Concern> SourceConcerned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ConcernReferencesTargetConcerned.TargetConcernDomainRoleId);
+			}
+		}
+		#endregion
 		#region ImpactLevel opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ImpactLevel.
-		/// Description for Company.TestMart.ImpactLevelHasTechnicalConcern.TechnicalConcern
+		/// Description for Company.TestMart.ImpactLevelHasConcerned.Concern
 		/// </summary>
 		public virtual ImpactLevel ImpactLevel
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelHasTechnicalConcern.TechnicalConcernDomainRoleId) as ImpactLevel;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId) as ImpactLevel;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelHasTechnicalConcern.TechnicalConcernDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId, value);
 			}
 		}
 		#endregion

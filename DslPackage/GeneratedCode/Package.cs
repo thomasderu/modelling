@@ -69,6 +69,14 @@ namespace Company.TestMart
 					"@TechnicalConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
 					Index = 4)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@ConnectionTool1ToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.ConnectionTool1ToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ConnectionTool1", 
+					"@ConnectionTool1ToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 5)]
 	[VSShell::ProvideEditorFactory(typeof(TestMartEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(TestMartEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(TestMartEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

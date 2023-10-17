@@ -2,53 +2,40 @@
 <soSA xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5bbcd38e-7edb-44fd-96c7-a65cd391bc26" xmlns="http://schemas.microsoft.com/dsltools/TestMart">
   <impactLeveled>
     <impactLevel Id="bbde13f7-1398-4ec3-914f-deab81c52eae" name="LIFECYCLE">
-      <environmentalConcerned>
-        <impactLevelHasEnvironmentalConcern Id="75f699e8-f8ab-4ddb-8c78-26aa21ef5c27">
-          <environmentalConcern Id="7baa333d-5376-4f3f-abfa-430de65cb859" />
-        </impactLevelHasEnvironmentalConcern>
-      </environmentalConcerned>
-      <economicConcerned>
-        <impactLevelHasEconomicConcern Id="1b545dc8-169e-414f-80ed-0963eeda4e2c">
-          <economicConcern Id="37151806-82d9-4fcd-b03b-fcc898e5981d" />
-        </impactLevelHasEconomicConcern>
-      </economicConcerned>
-      <technicalConcerned>
-        <impactLevelHasTechnicalConcern Id="6c818525-337e-4705-a2d7-0ad3bffcbc07">
-          <technicalConcern Id="7c713b61-1d03-4b96-a9a5-36bc108d4474" />
-        </impactLevelHasTechnicalConcern>
-      </technicalConcerned>
+      <concerned>
+        <impactLevelHasConcerned Id="2ac8d609-c5f7-419f-8ebb-f249bea30a2b">
+          <economicConcern Id="38a4bc31-6aa7-4ef6-83d2-f9e74c1e7ccc" />
+        </impactLevelHasConcerned>
+      </concerned>
     </impactLevel>
     <impactLevel Id="29f07f68-8e91-4ef2-be25-5f029fb7d11b" name="ENABLING">
-      <environmentalConcerned>
-        <impactLevelHasEnvironmentalConcern Id="dee391bd-a5ef-42b5-92f7-ac1af15acc4b">
-          <environmentalConcern Id="89d2ad03-6110-499e-82dd-febd3a165347" />
-        </impactLevelHasEnvironmentalConcern>
-      </environmentalConcerned>
-      <economicConcerned>
-        <impactLevelHasEconomicConcern Id="ad926c1b-aaf9-49d6-a43a-15a38d6fb8fe">
-          <economicConcern Id="12cdf810-8c1a-49a6-b26b-5728cf54409a" />
-        </impactLevelHasEconomicConcern>
-      </economicConcerned>
-      <technicalConcerned>
-        <impactLevelHasTechnicalConcern Id="cd36fd24-8a72-4670-b190-c6dc78623876">
-          <technicalConcern Id="42435dab-bc3d-402d-a487-0d33cbbceb42" />
-        </impactLevelHasTechnicalConcern>
-      </technicalConcerned>
+      <concerned>
+        <impactLevelHasConcerned Id="097ae37b-8d16-429f-b4a1-a2247ee0a61d">
+          <environmentalConcern Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6">
+            <targetConcerned>
+              <concernReferencesTargetConcerned Id="8d51fa7f-b828-4137-9299-b6e43ce04ed4">
+                <environmentalConcernMoniker Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6" />
+              </concernReferencesTargetConcerned>
+            </targetConcerned>
+          </environmentalConcern>
+        </impactLevelHasConcerned>
+      </concerned>
     </impactLevel>
     <impactLevel Id="134923b2-e1a4-4373-afd6-a66e0f06e282" name="STRUCTURAL">
-      <socialConcerned>
-        <impactLevelHasSocialConcern Id="71279fe7-f98c-43a7-8325-cdc02ba4c212">
-          <socialConcern Id="1cb97e89-eb2e-4cd3-b2bc-a6fc7f658b10" name="socialconcern1" />
-        </impactLevelHasSocialConcern>
-        <impactLevelHasSocialConcern Id="e8511efe-2afb-44ff-89e1-b77a7ef7c7f3">
-          <socialConcern Id="fd568a84-e6a2-4269-97cf-0402cc1aefb0" name="concern2" />
-        </impactLevelHasSocialConcern>
-      </socialConcerned>
-      <environmentalConcerned>
-        <impactLevelHasEnvironmentalConcern Id="a1523cf2-645a-4c35-b15f-939645865588">
-          <environmentalConcern Id="6b9ae98c-5943-4e8b-a29e-08d7670cf4c8" name="env concern1" />
-        </impactLevelHasEnvironmentalConcern>
-      </environmentalConcerned>
+      <concerned>
+        <impactLevelHasConcerned Id="2f4b811c-d860-4592-aabe-e076b7c545e3">
+          <socialConcern Id="bb59bbf1-d4bb-480a-8229-dc53711f88e2">
+            <targetConcerned>
+              <concernReferencesTargetConcerned Id="d6791770-6e37-42da-8ed9-a6aa28d31039">
+                <economicConcernMoniker Id="38a4bc31-6aa7-4ef6-83d2-f9e74c1e7ccc" />
+              </concernReferencesTargetConcerned>
+              <concernReferencesTargetConcerned Id="03d59b5b-9438-4c1e-b739-cc0bd9393cd5">
+                <environmentalConcernMoniker Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6" />
+              </concernReferencesTargetConcerned>
+            </targetConcerned>
+          </socialConcern>
+        </impactLevelHasConcerned>
+      </concerned>
     </impactLevel>
   </impactLeveled>
 </soSA>

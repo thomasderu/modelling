@@ -47,6 +47,10 @@ namespace Company.TestMart
 		/// item filters.
 		/// </remarks>
 		public const string ToolboxFilterString = "TestMart.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify ConnectionTool1 connector tool.
+		/// </summary>
+		public const string ConnectionTool1FilterString = "ConnectionTool1.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -94,7 +98,7 @@ namespace Company.TestMart
 		{
 			get
 			{
-				return 5;
+				return 6;
 			}
 		}
 		
@@ -221,6 +225,24 @@ namespace Company.TestMart
 						CreateElementToolPrototype(store, global::Company.TestMart.TechnicalConcern.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.TestMart.ConnectionTool1ToolboxItem":
+
+					// Add ConnectionTool1 connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.TestMart.ConnectionTool1ToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						6, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ConnectionTool1ToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConnectionTool1ToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ConnectionTool1", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ConnectionTool1ToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ConnectionTool1FilterString)
 						});
 					break;
 				default:

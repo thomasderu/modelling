@@ -14,32 +14,35 @@
       <impactLevelMoniker name="/5bbcd38e-7edb-44fd-96c7-a65cd391bc26/STRUCTURAL" />
       <relativeChildShapes />
     </impactShape>
-    <environmentalShape Id="b83ab953-5d81-41d0-915d-5b86161fbe4d" absoluteBounds="5.125, 4.25, 0.875, 0.5">
-      <environmentalConcernMoniker Id="89d2ad03-6110-499e-82dd-febd3a165347" />
-    </environmentalShape>
-    <socialConcernShape Id="ff55cfc7-2fc1-480d-8a17-a1b561d901a7" absoluteBounds="5.125, 1.375, 1.125, 0.75">
-      <socialConcernMoniker Id="1cb97e89-eb2e-4cd3-b2bc-a6fc7f658b10" />
+    <socialConcernShape Id="a561932e-ac10-47ae-a5f4-1f472d5a24b9" absoluteBounds="3.75, 2.25, 1.5, 1">
+      <socialConcernMoniker Id="bb59bbf1-d4bb-480a-8229-dc53711f88e2" />
     </socialConcernShape>
-    <environmentalShape Id="fc1f4c3e-46ba-421e-9056-2c20ad866ee2" absoluteBounds="4.5, 2.75, 1.125, 0.625">
-      <environmentalConcernMoniker Id="6b9ae98c-5943-4e8b-a29e-08d7670cf4c8" />
-    </environmentalShape>
-    <socialConcernShape Id="d42ee7a0-1235-4507-92fe-ee9c44131177" absoluteBounds="3.375, 2.125, 1, 0.625">
-      <socialConcernMoniker Id="fd568a84-e6a2-4269-97cf-0402cc1aefb0" />
-    </socialConcernShape>
-    <environmentalShape Id="5658abcd-f6dc-4c55-b70b-d33f5b698719" absoluteBounds="2.25, 4.75, 1, 0.625">
-      <environmentalConcernMoniker Id="7baa333d-5376-4f3f-abfa-430de65cb859" />
-    </environmentalShape>
-    <economicShape Id="b711933c-ca82-43b0-b263-6da195ae4566" absoluteBounds="2.75, 3.625, 1, 0.625">
-      <economicConcernMoniker Id="37151806-82d9-4fcd-b03b-fcc898e5981d" />
+    <economicShape Id="306552c4-7fed-4ef9-81dd-cb2c70235542" absoluteBounds="2, 3.5, 1.5, 1">
+      <economicConcernMoniker Id="38a4bc31-6aa7-4ef6-83d2-f9e74c1e7ccc" />
     </economicShape>
-    <technicalShape Id="2fcf2c01-e298-4663-bed9-a04ee96db729" absoluteBounds="2.25, 2.75, 1, 0.75">
-      <technicalConcernMoniker Id="42435dab-bc3d-402d-a487-0d33cbbceb42" />
-    </technicalShape>
-    <technicalShape Id="ac3648bc-93aa-4305-aa6d-f077bb82676e" absoluteBounds="1.25, 3.875, 0.875, 0.625">
-      <technicalConcernMoniker Id="7c713b61-1d03-4b96-a9a5-36bc108d4474" />
-    </technicalShape>
-    <economicShape Id="30cf4bd0-5924-4d75-9e1f-2fbe906e49c5" absoluteBounds="6, 3.625, 1.125, 0.625">
-      <economicConcernMoniker Id="12cdf810-8c1a-49a6-b26b-5728cf54409a" />
-    </economicShape>
+    <concernRela Id="d64b39da-081f-4226-bf09-927d634a34bf" edgePoints="[(4.5 : 3.25); (4.5 : 4); (3.5 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <concernReferencesTargetConcernedMoniker Id="d6791770-6e37-42da-8ed9-a6aa28d31039" />
+      <nodes>
+        <socialConcernShapeMoniker Id="a561932e-ac10-47ae-a5f4-1f472d5a24b9" />
+        <economicShapeMoniker Id="306552c4-7fed-4ef9-81dd-cb2c70235542" />
+      </nodes>
+    </concernRela>
+    <environmentalShape Id="8ce6fd64-694f-4a0a-9f8e-5a1627186b20" absoluteBounds="6.125, 4.25, 1.5, 1">
+      <environmentalConcernMoniker Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6" />
+    </environmentalShape>
+    <concernRela Id="a726679e-36f5-48ef-a1da-541b3bb876c8" edgePoints="[(6.64884615384615 : 5.25); (6.64884615384615 : 5.5); (7.11192307692308 : 5.5); (7.11192307692308 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <concernReferencesTargetConcernedMoniker Id="8d51fa7f-b828-4137-9299-b6e43ce04ed4" />
+      <nodes>
+        <environmentalShapeMoniker Id="8ce6fd64-694f-4a0a-9f8e-5a1627186b20" />
+        <environmentalShapeMoniker Id="8ce6fd64-694f-4a0a-9f8e-5a1627186b20" />
+      </nodes>
+    </concernRela>
+    <concernRela Id="39616023-fe94-4926-82a6-506a6a1348b7" edgePoints="[(4.875 : 3.25); (4.875 : 4.75); (6.125 : 4.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <concernReferencesTargetConcernedMoniker Id="03d59b5b-9438-4c1e-b739-cc0bd9393cd5" />
+      <nodes>
+        <socialConcernShapeMoniker Id="a561932e-ac10-47ae-a5f4-1f472d5a24b9" />
+        <environmentalShapeMoniker Id="8ce6fd64-694f-4a0a-9f8e-5a1627186b20" />
+      </nodes>
+    </concernRela>
   </nestedChildShapes>
 </testMartDiagram>

@@ -75,61 +75,16 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ImpactLevelHasSocialConcern -->
-          <xsd:element name="socialConcerned" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ImpactLevelHasConcerned -->
+          <xsd:element name="concerned" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ImpactLevelHasSocialConcern</xsd:documentation>
+              <xsd:documentation>Instances of ImpactLevelHasConcerned</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="impactLevelHasSocialConcern" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="impactLevelHasConcerned" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ImpactLevelHasSocialConcern needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ImpactLevelHasEnvironmentalConcern -->
-          <xsd:element name="environmentalConcerned" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of ImpactLevelHasEnvironmentalConcern</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="impactLevelHasEnvironmentalConcern" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of ImpactLevelHasEnvironmentalConcern needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ImpactLevelHasEconomicConcern -->
-          <xsd:element name="economicConcerned" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of ImpactLevelHasEconomicConcern</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="impactLevelHasEconomicConcern" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of ImpactLevelHasEconomicConcern needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ImpactLevelHasTechnicalConcern -->
-          <xsd:element name="technicalConcerned" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of ImpactLevelHasTechnicalConcern</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="impactLevelHasTechnicalConcern" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of ImpactLevelHasTechnicalConcern needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ImpactLevelHasConcerned needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -166,10 +121,10 @@
   </xsd:complexType>
   
   <!-- SocialConcern -->
-  <xsd:element name="socialConcern" type="SocialConcern" substitutionGroup="core:modelElement" />
+  <xsd:element name="socialConcern" type="SocialConcern" substitutionGroup="concern" />
   <xsd:complexType name="SocialConcern">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -183,27 +138,22 @@
   </xsd:complexType>
   
   <!-- SocialConcern Moniker -->
-  <xsd:element name="socialConcernMoniker" type="SocialConcernMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="socialConcernMoniker" type="SocialConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="SocialConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for SocialConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- EnvironmentalConcern -->
-  <xsd:element name="environmentalConcern" type="EnvironmentalConcern" substitutionGroup="core:modelElement" />
+  <xsd:element name="environmentalConcern" type="EnvironmentalConcern" substitutionGroup="concern" />
   <xsd:complexType name="EnvironmentalConcern">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -217,27 +167,22 @@
   </xsd:complexType>
   
   <!-- EnvironmentalConcern Moniker -->
-  <xsd:element name="environmentalConcernMoniker" type="EnvironmentalConcernMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="environmentalConcernMoniker" type="EnvironmentalConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="EnvironmentalConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for EnvironmentalConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- EconomicConcern -->
-  <xsd:element name="economicConcern" type="EconomicConcern" substitutionGroup="core:modelElement" />
+  <xsd:element name="economicConcern" type="EconomicConcern" substitutionGroup="concern" />
   <xsd:complexType name="EconomicConcern">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -251,27 +196,22 @@
   </xsd:complexType>
   
   <!-- EconomicConcern Moniker -->
-  <xsd:element name="economicConcernMoniker" type="EconomicConcernMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="economicConcernMoniker" type="EconomicConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="EconomicConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for EconomicConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- TechnicalConcern -->
-  <xsd:element name="technicalConcern" type="TechnicalConcern" substitutionGroup="core:modelElement" />
+  <xsd:element name="technicalConcern" type="TechnicalConcern" substitutionGroup="concern" />
   <xsd:complexType name="TechnicalConcern">
     <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -285,10 +225,54 @@
   </xsd:complexType>
   
   <!-- TechnicalConcern Moniker -->
-  <xsd:element name="technicalConcernMoniker" type="TechnicalConcernMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:element name="technicalConcernMoniker" type="TechnicalConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="TechnicalConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for TechnicalConcern instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ConcernMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Concern -->
+  <xsd:element name="concern" type="Concern" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Concern">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ConcernReferencesTargetConcerned -->
+          <xsd:element name="targetConcerned" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ConcernReferencesTargetConcerned</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="concernReferencesTargetConcerned" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ConcernReferencesTargetConcerned needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Concern Moniker -->
+  <xsd:element name="concernMoniker" type="ConcernMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ConcernMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Concern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -344,14 +328,14 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ImpactLevelHasSocialConcern -->
-  <xsd:element name="impactLevelHasSocialConcern" type="ImpactLevelHasSocialConcern" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ImpactLevelHasSocialConcern">
+  <!-- ConcernReferencesTargetConcerned -->
+  <xsd:element name="concernReferencesTargetConcerned" type="ConcernReferencesTargetConcerned" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ConcernReferencesTargetConcerned">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end SocialConcern -->
-          <xsd:element ref="socialConcern" minOccurs="1" maxOccurs="1">
+          <!-- Target end Concern -->
+          <xsd:element ref="concernMoniker" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -367,11 +351,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ImpactLevelHasSocialConcern Moniker -->
-  <xsd:element name="impactLevelHasSocialConcernMoniker" type="ImpactLevelHasSocialConcernMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ImpactLevelHasSocialConcernMoniker">
+  <!-- ConcernReferencesTargetConcerned Moniker -->
+  <xsd:element name="concernReferencesTargetConcernedMoniker" type="ConcernReferencesTargetConcernedMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ConcernReferencesTargetConcernedMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ImpactLevelHasSocialConcern instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ConcernReferencesTargetConcerned instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -384,14 +368,14 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ImpactLevelHasEnvironmentalConcern -->
-  <xsd:element name="impactLevelHasEnvironmentalConcern" type="ImpactLevelHasEnvironmentalConcern" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ImpactLevelHasEnvironmentalConcern">
+  <!-- ImpactLevelHasConcerned -->
+  <xsd:element name="impactLevelHasConcerned" type="ImpactLevelHasConcerned" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ImpactLevelHasConcerned">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end EnvironmentalConcern -->
-          <xsd:element ref="environmentalConcern" minOccurs="1" maxOccurs="1">
+          <!-- Target end Concern -->
+          <xsd:element ref="concern" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -407,91 +391,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ImpactLevelHasEnvironmentalConcern Moniker -->
-  <xsd:element name="impactLevelHasEnvironmentalConcernMoniker" type="ImpactLevelHasEnvironmentalConcernMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ImpactLevelHasEnvironmentalConcernMoniker">
+  <!-- ImpactLevelHasConcerned Moniker -->
+  <xsd:element name="impactLevelHasConcernedMoniker" type="ImpactLevelHasConcernedMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ImpactLevelHasConcernedMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ImpactLevelHasEnvironmentalConcern instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ImpactLevelHasEconomicConcern -->
-  <xsd:element name="impactLevelHasEconomicConcern" type="ImpactLevelHasEconomicConcern" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ImpactLevelHasEconomicConcern">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end EconomicConcern -->
-          <xsd:element ref="economicConcern" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ImpactLevelHasEconomicConcern Moniker -->
-  <xsd:element name="impactLevelHasEconomicConcernMoniker" type="ImpactLevelHasEconomicConcernMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ImpactLevelHasEconomicConcernMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ImpactLevelHasEconomicConcern instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ImpactLevelHasTechnicalConcern -->
-  <xsd:element name="impactLevelHasTechnicalConcern" type="ImpactLevelHasTechnicalConcern" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ImpactLevelHasTechnicalConcern">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end TechnicalConcern -->
-          <xsd:element ref="technicalConcern" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ImpactLevelHasTechnicalConcern Moniker -->
-  <xsd:element name="impactLevelHasTechnicalConcernMoniker" type="ImpactLevelHasTechnicalConcernMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ImpactLevelHasTechnicalConcernMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ImpactLevelHasTechnicalConcern instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ImpactLevelHasConcerned instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

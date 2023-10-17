@@ -73,19 +73,21 @@ namespace Company.TestMart
 				typeof(EnvironmentalConcern),
 				typeof(EconomicConcern),
 				typeof(TechnicalConcern),
+				typeof(Concern),
 				typeof(SoSAHasImpactLeveled),
-				typeof(ImpactLevelHasSocialConcern),
-				typeof(ImpactLevelHasEnvironmentalConcern),
-				typeof(ImpactLevelHasEconomicConcern),
-				typeof(ImpactLevelHasTechnicalConcern),
+				typeof(ConcernReferencesTargetConcerned),
+				typeof(ImpactLevelHasConcerned),
 				typeof(TestMartDiagram),
+				typeof(ConcernRela),
 				typeof(ImpactShape),
 				typeof(SocialConcernShape),
 				typeof(EnvironmentalShape),
 				typeof(EconomicShape),
 				typeof(TechnicalShape),
+				typeof(concernShape),
 				typeof(global::Company.TestMart.FixUpDiagram),
 				typeof(global::Company.TestMart.DecoratorPropertyChanged),
+				typeof(global::Company.TestMart.ConnectorRolePlayerChanged),
 			};
 		}
 		/// <summary>
@@ -114,14 +116,10 @@ namespace Company.TestMart
 			{
 				new DomainRolePlayerInfo(typeof(SoSAHasImpactLeveled), "SoSA", SoSAHasImpactLeveled.SoSADomainRoleId),
 				new DomainRolePlayerInfo(typeof(SoSAHasImpactLeveled), "ImpactLevel", SoSAHasImpactLeveled.ImpactLevelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasSocialConcern), "ImpactLevel", ImpactLevelHasSocialConcern.ImpactLevelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasSocialConcern), "SocialConcern", ImpactLevelHasSocialConcern.SocialConcernDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasEnvironmentalConcern), "ImpactLevel", ImpactLevelHasEnvironmentalConcern.ImpactLevelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasEnvironmentalConcern), "EnvironmentalConcern", ImpactLevelHasEnvironmentalConcern.EnvironmentalConcernDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasEconomicConcern), "ImpactLevel", ImpactLevelHasEconomicConcern.ImpactLevelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasEconomicConcern), "EconomicConcern", ImpactLevelHasEconomicConcern.EconomicConcernDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasTechnicalConcern), "ImpactLevel", ImpactLevelHasTechnicalConcern.ImpactLevelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelHasTechnicalConcern), "TechnicalConcern", ImpactLevelHasTechnicalConcern.TechnicalConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConcernReferencesTargetConcerned), "SourceConcern", ConcernReferencesTargetConcerned.SourceConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConcernReferencesTargetConcerned), "TargetConcern", ConcernReferencesTargetConcerned.TargetConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ImpactLevelHasConcerned), "ImpactLevel", ImpactLevelHasConcerned.ImpactLevelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ImpactLevelHasConcerned), "Concern", ImpactLevelHasConcerned.ConcernDomainRoleId),
 			};
 		}
 		#endregion
@@ -143,19 +141,22 @@ namespace Company.TestMart
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
 				createElementMap.Add(typeof(SoSA), 0);
 				createElementMap.Add(typeof(ImpactLevel), 1);
 				createElementMap.Add(typeof(SocialConcern), 2);
 				createElementMap.Add(typeof(EnvironmentalConcern), 3);
 				createElementMap.Add(typeof(EconomicConcern), 4);
 				createElementMap.Add(typeof(TechnicalConcern), 5);
-				createElementMap.Add(typeof(TestMartDiagram), 6);
-				createElementMap.Add(typeof(ImpactShape), 7);
-				createElementMap.Add(typeof(SocialConcernShape), 8);
-				createElementMap.Add(typeof(EnvironmentalShape), 9);
-				createElementMap.Add(typeof(EconomicShape), 10);
-				createElementMap.Add(typeof(TechnicalShape), 11);
+				createElementMap.Add(typeof(Concern), 6);
+				createElementMap.Add(typeof(TestMartDiagram), 7);
+				createElementMap.Add(typeof(ConcernRela), 8);
+				createElementMap.Add(typeof(ImpactShape), 9);
+				createElementMap.Add(typeof(SocialConcernShape), 10);
+				createElementMap.Add(typeof(EnvironmentalShape), 11);
+				createElementMap.Add(typeof(EconomicShape), 12);
+				createElementMap.Add(typeof(TechnicalShape), 13);
+				createElementMap.Add(typeof(concernShape), 14);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -175,12 +176,15 @@ namespace Company.TestMart
 				case 3: return new EnvironmentalConcern(partition, propertyAssignments);
 				case 4: return new EconomicConcern(partition, propertyAssignments);
 				case 5: return new TechnicalConcern(partition, propertyAssignments);
-				case 6: return new TestMartDiagram(partition, propertyAssignments);
-				case 7: return new ImpactShape(partition, propertyAssignments);
-				case 8: return new SocialConcernShape(partition, propertyAssignments);
-				case 9: return new EnvironmentalShape(partition, propertyAssignments);
-				case 10: return new EconomicShape(partition, propertyAssignments);
-				case 11: return new TechnicalShape(partition, propertyAssignments);
+				case 6: return new Concern(partition, propertyAssignments);
+				case 7: return new TestMartDiagram(partition, propertyAssignments);
+				case 8: return new ConcernRela(partition, propertyAssignments);
+				case 9: return new ImpactShape(partition, propertyAssignments);
+				case 10: return new SocialConcernShape(partition, propertyAssignments);
+				case 11: return new EnvironmentalShape(partition, propertyAssignments);
+				case 12: return new EconomicShape(partition, propertyAssignments);
+				case 13: return new TechnicalShape(partition, propertyAssignments);
+				case 14: return new concernShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -203,12 +207,10 @@ namespace Company.TestMart
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
 				createElementLinkMap.Add(typeof(SoSAHasImpactLeveled), 0);
-				createElementLinkMap.Add(typeof(ImpactLevelHasSocialConcern), 1);
-				createElementLinkMap.Add(typeof(ImpactLevelHasEnvironmentalConcern), 2);
-				createElementLinkMap.Add(typeof(ImpactLevelHasEconomicConcern), 3);
-				createElementLinkMap.Add(typeof(ImpactLevelHasTechnicalConcern), 4);
+				createElementLinkMap.Add(typeof(ConcernReferencesTargetConcerned), 1);
+				createElementLinkMap.Add(typeof(ImpactLevelHasConcerned), 2);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -224,10 +226,8 @@ namespace Company.TestMart
 			switch (index)
 			{
 				case 0: return new SoSAHasImpactLeveled(partition, roleAssignments, propertyAssignments);
-				case 1: return new ImpactLevelHasSocialConcern(partition, roleAssignments, propertyAssignments);
-				case 2: return new ImpactLevelHasEnvironmentalConcern(partition, roleAssignments, propertyAssignments);
-				case 3: return new ImpactLevelHasEconomicConcern(partition, roleAssignments, propertyAssignments);
-				case 4: return new ImpactLevelHasTechnicalConcern(partition, roleAssignments, propertyAssignments);
+				case 1: return new ConcernReferencesTargetConcerned(partition, roleAssignments, propertyAssignments);
+				case 2: return new ImpactLevelHasConcerned(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -349,6 +349,7 @@ namespace Company.TestMart
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::Company.TestMart.FixUpDiagram));
 			ruleManager.EnableRule(typeof(global::Company.TestMart.DecoratorPropertyChanged));
+			ruleManager.EnableRule(typeof(global::Company.TestMart.ConnectorRolePlayerChanged));
 		}
 		
 		/// <summary>
@@ -361,6 +362,7 @@ namespace Company.TestMart
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::Company.TestMart.FixUpDiagram));
 			ruleManager.DisableRule(typeof(global::Company.TestMart.DecoratorPropertyChanged));
+			ruleManager.DisableRule(typeof(global::Company.TestMart.ConnectorRolePlayerChanged));
 		}
 		#endregion
 	}
@@ -397,10 +399,7 @@ namespace Company.TestMart
 		{
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::Company.TestMart.SoSAHasImpactLeveled.ImpactLevelDomainRoleId, true);
-			DomainRoles.Add(global::Company.TestMart.ImpactLevelHasSocialConcern.SocialConcernDomainRoleId, true);
-			DomainRoles.Add(global::Company.TestMart.ImpactLevelHasEnvironmentalConcern.EnvironmentalConcernDomainRoleId, true);
-			DomainRoles.Add(global::Company.TestMart.ImpactLevelHasEconomicConcern.EconomicConcernDomainRoleId, true);
-			DomainRoles.Add(global::Company.TestMart.ImpactLevelHasTechnicalConcern.TechnicalConcernDomainRoleId, true);
+			DomainRoles.Add(global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
