@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language2Diagram dslVersion="1.0.0.0" Id="a0184ef1-a7ec-426b-a106-b2abe4a0ceee" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <universityMoniker Id="6ebcfb26-5b07-4d4f-bd8c-a5627fa8f62f" />
+  <nestedChildShapes>
+    <courseElement Id="7b8338b1-4363-4222-86fd-4197f62bd9cf" absoluteBounds="1.125, 0.875, 2, 0.75">
+      <courseMoniker name="/6ebcfb26-5b07-4d4f-bd8c-a5627fa8f62f/Responsible ICT" />
+    </courseElement>
+    <courseElement Id="12f9b6f7-6817-4e62-8775-7cb71496ab8e" absoluteBounds="4.375, 0.875, 2, 0.75">
+      <courseMoniker name="/6ebcfb26-5b07-4d4f-bd8c-a5627fa8f62f/Advanced Psychology" />
+    </courseElement>
+    <courseRelationship Id="38001865-cde4-4bd6-b74f-b6c2ba9691ad" edgePoints="[(3.125 : 1.25); (4.375 : 1.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="6bce1efe-6e49-49b0-a5af-d144fb9343ce">
+      <nodes>
+        <courseElementMoniker Id="7b8338b1-4363-4222-86fd-4197f62bd9cf" />
+        <courseElementMoniker Id="12f9b6f7-6817-4e62-8775-7cb71496ab8e" />
+      </nodes>
+    </courseRelationship>
+    <buildingElement Id="120d5e4c-f04f-4a30-a117-c7dafb3b0992" absoluteBounds="0.5, 2.125, 3.25, 2.75">
+      <buildingMoniker Id="987bd890-9756-4483-bc6c-256d4708961d" />
+    </buildingElement>
+    <buildingElement Id="66c83e76-b91a-4a05-ab98-4a8743dc984a" absoluteBounds="4.5, 2.25, 3.125, 2.125">
+      <buildingMoniker Id="f1dc2824-8341-4d2c-b43d-4a2d374c7073" />
+    </buildingElement>
+    <roomElement Id="c4bb4840-239c-4592-85b0-79ffec2252ad" absoluteBounds="6.625, 3.625, 0.875, 0.625">
+      <roomMoniker Id="b6dceaec-5c01-40a4-8ff6-46c781cfab16" />
+    </roomElement>
+    <roomRelationship Id="f7c05987-49a3-467d-8cf3-338ca11a231e" edgePoints="[(6.0625 : 2.25); (6.0625 : 3.9375); (6.625 : 3.9375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <buildingHasRoomedMoniker Id="e4fc1a2c-6afb-4d0c-964f-8925dbf58c09" />
+      <nodes>
+        <buildingElementMoniker Id="66c83e76-b91a-4a05-ab98-4a8743dc984a" />
+        <roomElementMoniker Id="c4bb4840-239c-4592-85b0-79ffec2252ad" />
+      </nodes>
+    </roomRelationship>
+    <roomElement Id="dae0d435-71df-49e3-8abe-7ca562a723fb" absoluteBounds="2.625, 4.125, 1, 0.625">
+      <roomMoniker Id="7d7da1ba-87ad-43bc-adbc-c39797e1ff94" />
+    </roomElement>
+    <roomRelationship Id="2528a26e-3eff-4581-a9a7-ebe2850de8eb" edgePoints="[(2.125 : 4.875); (2.125 : 4.4375); (2.625 : 4.4375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <buildingHasRoomedMoniker Id="0a9fa2bb-a8d0-4097-aeba-ea19fe6666fc" />
+      <nodes>
+        <buildingElementMoniker Id="120d5e4c-f04f-4a30-a117-c7dafb3b0992" />
+        <roomElementMoniker Id="dae0d435-71df-49e3-8abe-7ca562a723fb" />
+      </nodes>
+    </roomRelationship>
+  </nestedChildShapes>
+</language2Diagram>

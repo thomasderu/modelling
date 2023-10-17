@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{96cbde49-76cb-4880-b8be-f50d88187c7c}</TemplateID>
+		<Name Package="{15eb7b54-dbdb-423c-b14e-a357751af958}" ID="103"/>
+		<Description Package="{15eb7b54-dbdb-423c-b14e-a357751af958}" ID="102"/>
+		<Icon Package="{15eb7b54-dbdb-423c-b14e-a357751af958}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>TestMart.TestMart</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.TestMart">TestMart.TestMart</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.TestMart.diagram">TestMart.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

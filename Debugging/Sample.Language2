@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<university xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6ebcfb26-5b07-4d4f-bd8c-a5627fa8f62f" xmlns="http://schemas.microsoft.com/dsltools/Language2">
+  <elements>
+    <course Id="d9257bbc-2847-4df2-af2c-400a5700b815" name="Responsible ICT" code="INFOMRICT">
+      <targets>
+        <courseMoniker name="/6ebcfb26-5b07-4d4f-bd8c-a5627fa8f62f/Advanced Psychology" />
+      </targets>
+    </course>
+    <course Id="32b1a66e-8511-4921-90c1-75ffe269bd89" name="Advanced Psychology" code="INFOMCSP" />
+  </elements>
+  <build>
+    <universityHasBuild Id="18fdaca9-c708-4976-8891-d86a8e88fde0">
+      <building Id="987bd890-9756-4483-bc6c-256d4708961d" address="Princetonplein 5" name="BBG">
+        <roomed>
+          <buildingHasRoomed Id="0a9fa2bb-a8d0-4097-aeba-ea19fe6666fc">
+            <room Id="7d7da1ba-87ad-43bc-adbc-c39797e1ff94" name="2.14" size="25" materials="Computer" />
+          </buildingHasRoomed>
+        </roomed>
+      </building>
+    </universityHasBuild>
+    <universityHasBuild Id="29c1d3b2-bebf-4438-a70d-ee054fa53185">
+      <building Id="f1dc2824-8341-4d2c-b43d-4a2d374c7073" name="Minnaerts">
+        <roomed>
+          <buildingHasRoomed Id="e4fc1a2c-6afb-4d0c-964f-8925dbf58c09">
+            <room Id="b6dceaec-5c01-40a4-8ff6-46c781cfab16" name="1.023" size="20" materials="Screen" />
+          </buildingHasRoomed>
+        </roomed>
+      </building>
+    </universityHasBuild>
+  </build>
+</university>

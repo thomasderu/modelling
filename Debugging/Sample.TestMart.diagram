@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testMartDiagram dslVersion="1.0.0.0" Id="6da5293f-dac7-4ef4-a3c4-fc55b8698a2f" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <soSAMoniker Id="5bbcd38e-7edb-44fd-96c7-a65cd391bc26" />
+  <nestedChildShapes>
+    <impactShape Id="e2965dce-00d6-4036-b43a-4acf2c8ca619" absoluteBounds="0.75, 0.5, 8.25, 5.375">
+      <impactLevelMoniker name="/5bbcd38e-7edb-44fd-96c7-a65cd391bc26/LIFECYCLE" />
+      <relativeChildShapes />
+    </impactShape>
+    <impactShape Id="da6a3296-38c7-47f7-8b4c-847a8c65149e" absoluteBounds="2, 0.625, 5.375, 4.625">
+      <impactLevelMoniker name="/5bbcd38e-7edb-44fd-96c7-a65cd391bc26/ENABLING" />
+      <relativeChildShapes />
+    </impactShape>
+    <impactShape Id="a400f05d-b926-4f64-ad80-6e3b3fd9fd6c" absoluteBounds="2.75, 0.75, 4, 3">
+      <impactLevelMoniker name="/5bbcd38e-7edb-44fd-96c7-a65cd391bc26/STRUCTURAL" />
+      <relativeChildShapes />
+    </impactShape>
+    <environmentalShape Id="b83ab953-5d81-41d0-915d-5b86161fbe4d" absoluteBounds="5.125, 4.25, 0.875, 0.5">
+      <environmentalConcernMoniker Id="89d2ad03-6110-499e-82dd-febd3a165347" />
+    </environmentalShape>
+    <socialConcernShape Id="ff55cfc7-2fc1-480d-8a17-a1b561d901a7" absoluteBounds="5.125, 1.375, 1.125, 0.75">
+      <socialConcernMoniker Id="1cb97e89-eb2e-4cd3-b2bc-a6fc7f658b10" />
+    </socialConcernShape>
+    <environmentalShape Id="fc1f4c3e-46ba-421e-9056-2c20ad866ee2" absoluteBounds="4.5, 2.75, 1.125, 0.625">
+      <environmentalConcernMoniker Id="6b9ae98c-5943-4e8b-a29e-08d7670cf4c8" />
+    </environmentalShape>
+    <socialConcernShape Id="d42ee7a0-1235-4507-92fe-ee9c44131177" absoluteBounds="3.375, 2.125, 1, 0.625">
+      <socialConcernMoniker Id="fd568a84-e6a2-4269-97cf-0402cc1aefb0" />
+    </socialConcernShape>
+    <environmentalShape Id="5658abcd-f6dc-4c55-b70b-d33f5b698719" absoluteBounds="2.25, 4.75, 1, 0.625">
+      <environmentalConcernMoniker Id="7baa333d-5376-4f3f-abfa-430de65cb859" />
+    </environmentalShape>
+    <economicShape Id="b711933c-ca82-43b0-b263-6da195ae4566" absoluteBounds="2.75, 3.625, 1, 0.625">
+      <economicConcernMoniker Id="37151806-82d9-4fcd-b03b-fcc898e5981d" />
+    </economicShape>
+    <technicalShape Id="2fcf2c01-e298-4663-bed9-a04ee96db729" absoluteBounds="2.25, 2.75, 1, 0.75">
+      <technicalConcernMoniker Id="42435dab-bc3d-402d-a487-0d33cbbceb42" />
+    </technicalShape>
+    <technicalShape Id="ac3648bc-93aa-4305-aa6d-f077bb82676e" absoluteBounds="1.25, 3.875, 0.875, 0.625">
+      <technicalConcernMoniker Id="7c713b61-1d03-4b96-a9a5-36bc108d4474" />
+    </technicalShape>
+    <economicShape Id="30cf4bd0-5924-4d75-9e1f-2fbe906e49c5" absoluteBounds="6, 3.625, 1.125, 0.625">
+      <economicConcernMoniker Id="12cdf810-8c1a-49a6-b26b-5728cf54409a" />
+    </economicShape>
+  </nestedChildShapes>
+</testMartDiagram>
