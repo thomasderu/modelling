@@ -262,6 +262,10 @@ namespace Company.TestMart
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::Company.TestMart.SolutionShape.DecoratorsInitialized += SolutionShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.TechnicalShape.DecoratorsInitialized += TechnicalShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.EconomicShape.DecoratorsInitialized += EconomicShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.EnvironmentalShape.DecoratorsInitialized += EnvironmentalShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.SocialConcernShape.DecoratorsInitialized += SocialConcernShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.ImpactImmediateShape.DecoratorsInitialized += ImpactImmediateShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.ConcernRela.DecoratorsInitialized += ConcernRelaDecoratorMap.OnDecoratorsInitialized;
 		}
@@ -281,6 +285,99 @@ namespace Company.TestMart
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.Solution.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.Solution.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for TechnicalShape.
+		/// </summary>
+		internal static partial class TechnicalShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for TechnicalShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.TechnicalConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.TechnicalConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EconomicShape.
+		/// </summary>
+		internal static partial class EconomicShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EconomicShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.EconomicConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.EconomicConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.EconomicConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EnvironmentalShape.
+		/// </summary>
+		internal static partial class EnvironmentalShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EnvironmentalShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.EnvironmentalConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.EnvironmentalConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.EnvironmentalConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for SocialConcernShape.
+		/// </summary>
+		internal static partial class SocialConcernShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for SocialConcernShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.SocialConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.SocialConcern.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -296,6 +393,9 @@ namespace Company.TestMart
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);

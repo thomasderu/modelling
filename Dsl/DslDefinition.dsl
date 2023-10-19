@@ -427,6 +427,14 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="TechnicalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="TechnicalConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="TechnicalShape" />
       </ShapeMap>
       <ShapeMap>
@@ -436,6 +444,22 @@
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="SolutionShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EconomicConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="TechnicalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EconomicConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EconomicShape/Name" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="EconomicConcern/Name" />
@@ -457,6 +481,22 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="TechnicalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EnvironmentalConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EnvironmentalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EnvironmentalConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="EnvironmentalShape" />
       </ShapeMap>
       <ShapeMap>
@@ -472,6 +512,14 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SocialConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="SocialConcernShape" />
       </ShapeMap>
       <ShapeMap>
@@ -481,6 +529,14 @@
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="SolutionShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Solution/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Solution/Name" />
@@ -509,6 +565,22 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ImpactStructural/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EnvironmentalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ImpactStructural/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="ImpactStructuralShape" />
       </ShapeMap>
       <ShapeMap>
@@ -524,6 +596,22 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ImpactImmediate/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EnvironmentalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ImpactImmediate/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="ImpactImmediateShape" />
       </ShapeMap>
       <ShapeMap>
@@ -533,6 +621,22 @@
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ImpactImmediateShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ImpactEnabling/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ImpactEnabling/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EnvironmentalShape/Name" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="ImpactEnabling/Name" />
