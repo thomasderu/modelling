@@ -133,21 +133,21 @@
     <value>So SA</value>
     <comment>DisplayName for DomainClass &apos;SoSA&apos;</comment>
   </data>
-  <data name="Company.TestMart.ImpactLevel.Description" xml:space="preserve">
+  <data name="Company.TestMart.ImpactImmediate.Description" xml:space="preserve">
     <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
-    <comment>Description for DomainClass &apos;ImpactLevel&apos;</comment>
+    <comment>Description for DomainClass &apos;ImpactImmediate&apos;</comment>
   </data>
-  <data name="Company.TestMart.ImpactLevel.DisplayName" xml:space="preserve">
-    <value>Impact Level</value>
-    <comment>DisplayName for DomainClass &apos;ImpactLevel&apos;</comment>
+  <data name="Company.TestMart.ImpactImmediate.DisplayName" xml:space="preserve">
+    <value>Impact Immediate</value>
+    <comment>DisplayName for DomainClass &apos;ImpactImmediate&apos;</comment>
   </data>
-  <data name="Company.TestMart.ImpactLevel/Name.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ImpactLevel.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactLevel&apos;</comment>
+  <data name="Company.TestMart.ImpactImmediate/Name.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactImmediate.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactImmediate&apos;</comment>
   </data>
-  <data name="Company.TestMart.ImpactLevel/Name.DisplayName" xml:space="preserve">
+  <data name="Company.TestMart.ImpactImmediate/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactLevel&apos;</comment>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactImmediate&apos;</comment>
   </data>
   <data name="Company.TestMart.SocialConcern.Description" xml:space="preserve">
     <value>Description for Company.TestMart.SocialConcern</value>
@@ -213,120 +213,184 @@
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;TechnicalConcern&apos;</comment>
   </data>
-  <data name="Company.TestMart.Concern.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.Concern</value>
-    <comment>Description for DomainClass &apos;Concern&apos;</comment>
+  <data name="Company.TestMart.Element.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.Element</value>
+    <comment>Description for DomainClass &apos;Element&apos;</comment>
   </data>
-  <data name="Company.TestMart.Concern.DisplayName" xml:space="preserve">
-    <value>Concern</value>
-    <comment>DisplayName for DomainClass &apos;Concern&apos;</comment>
+  <data name="Company.TestMart.Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainClass &apos;Element&apos;</comment>
   </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled.Description" xml:space="preserve">
-    <value>Embedding relationship between the Model and Elements</value>
-    <comment>Description for DomainClass &apos;SoSAHasImpactLeveled&apos;</comment>
+  <data name="Company.TestMart.Solution.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.Solution</value>
+    <comment>Description for DomainClass &apos;Solution&apos;</comment>
   </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled.DisplayName" xml:space="preserve">
-    <value>So SAHas Impact Leveled</value>
-    <comment>DisplayName for DomainClass &apos;SoSAHasImpactLeveled&apos;</comment>
+  <data name="Company.TestMart.Solution.DisplayName" xml:space="preserve">
+    <value>Solution</value>
+    <comment>DisplayName for DomainClass &apos;Solution&apos;</comment>
   </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled/SoSA.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasImpactLeveled&apos;</comment>
+  <data name="Company.TestMart.Solution/Name.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.Solution.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Solution&apos;</comment>
   </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled/SoSA.DisplayName" xml:space="preserve">
-    <value>So SA</value>
-    <comment>DisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasImpactLeveled&apos;</comment>
-  </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled/SoSA.PropertyDisplayName" xml:space="preserve">
-    <value>Impact Leveled</value>
-    <comment>PropertyDisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasImpactLeveled&apos;</comment>
-  </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled/ImpactLevel.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;ImpactLevel&apos; on DomainRelationship &apos;SoSAHasImpactLeveled&apos;</comment>
-  </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled/ImpactLevel.DisplayName" xml:space="preserve">
-    <value>Impact Level</value>
-    <comment>DisplayName for DomainRole &apos;ImpactLevel&apos; on DomainRelationship &apos;SoSAHasImpactLeveled&apos;</comment>
-  </data>
-  <data name="Company.TestMart.SoSAHasImpactLeveled/ImpactLevel.PropertyDisplayName" xml:space="preserve">
-    <value>So SA</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ImpactLevel&apos; on DomainRelationship &apos;SoSAHasImpactLeveled&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ConcernReferencesTargetConcerned</value>
-    <comment>Description for DomainClass &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned.DisplayName" xml:space="preserve">
-    <value>Concern References Target Concerned</value>
-    <comment>DisplayName for DomainClass &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned/SourceConcern.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ConcernReferencesTargetConcerned.SourceConcern</value>
-    <comment>Description for DomainRole &apos;SourceConcern&apos; on DomainRelationship &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned/SourceConcern.DisplayName" xml:space="preserve">
-    <value>Source Concern</value>
-    <comment>DisplayName for DomainRole &apos;SourceConcern&apos; on DomainRelationship &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned/SourceConcern.PropertyDisplayName" xml:space="preserve">
-    <value>Target Concerned</value>
-    <comment>PropertyDisplayName for DomainRole &apos;SourceConcern&apos; on DomainRelationship &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned/TargetConcern.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ConcernReferencesTargetConcerned.TargetConcern</value>
-    <comment>Description for DomainRole &apos;TargetConcern&apos; on DomainRelationship &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned/TargetConcern.DisplayName" xml:space="preserve">
-    <value>Target Concern</value>
-    <comment>DisplayName for DomainRole &apos;TargetConcern&apos; on DomainRelationship &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ConcernReferencesTargetConcerned/TargetConcern.PropertyDisplayName" xml:space="preserve">
-    <value>Source Concerned</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TargetConcern&apos; on DomainRelationship &apos;ConcernReferencesTargetConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ImpactLevelHasConcerned</value>
-    <comment>Description for DomainClass &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned.DisplayName" xml:space="preserve">
-    <value>Impact Level Has Concerned</value>
-    <comment>DisplayName for DomainClass &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned/ImpactLevel.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ImpactLevelHasConcerned.ImpactLevel</value>
-    <comment>Description for DomainRole &apos;ImpactLevel&apos; on DomainRelationship &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned/ImpactLevel.DisplayName" xml:space="preserve">
-    <value>Impact Level</value>
-    <comment>DisplayName for DomainRole &apos;ImpactLevel&apos; on DomainRelationship &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned/ImpactLevel.PropertyDisplayName" xml:space="preserve">
-    <value>Concerned</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ImpactLevel&apos; on DomainRelationship &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned/Concern.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.ImpactLevelHasConcerned.Concern</value>
-    <comment>Description for DomainRole &apos;Concern&apos; on DomainRelationship &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned/Concern.DisplayName" xml:space="preserve">
-    <value>Concern</value>
-    <comment>DisplayName for DomainRole &apos;Concern&apos; on DomainRelationship &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactLevelHasConcerned/Concern.PropertyDisplayName" xml:space="preserve">
-    <value>Impact Level</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Concern&apos; on DomainRelationship &apos;ImpactLevelHasConcerned&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactShape.Description" xml:space="preserve">
-    <value>Shape used to represent ExampleElements on a Diagram.</value>
-    <comment>Description for DomainClass &apos;ImpactShape&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactShape.DisplayName" xml:space="preserve">
-    <value>Impact Shape</value>
-    <comment>DisplayName for DomainClass &apos;ImpactShape&apos;</comment>
-  </data>
-  <data name="ImpactShapeNameDefaultText" xml:space="preserve">
+  <data name="Company.TestMart.Solution/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Solution&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactStructural.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactStructural</value>
+    <comment>Description for DomainClass &apos;ImpactStructural&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactStructural.DisplayName" xml:space="preserve">
+    <value>Impact Structural</value>
+    <comment>DisplayName for DomainClass &apos;ImpactStructural&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactStructural/Name.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactStructural.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactStructural&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactStructural/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactStructural&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevels.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactLevels</value>
+    <comment>Description for DomainClass &apos;ImpactLevels&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevels.DisplayName" xml:space="preserve">
+    <value>Impact Levels</value>
+    <comment>DisplayName for DomainClass &apos;ImpactLevels&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactEnabling.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactEnabling</value>
+    <comment>Description for DomainClass &apos;ImpactEnabling&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactEnabling.DisplayName" xml:space="preserve">
+    <value>Impact Enabling</value>
+    <comment>DisplayName for DomainClass &apos;ImpactEnabling&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactEnabling/Name.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactEnabling.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactEnabling&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactEnabling/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactEnabling&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ElementReferencesTargetElements</value>
+    <comment>Description for DomainClass &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements.DisplayName" xml:space="preserve">
+    <value>Element References Target Elements</value>
+    <comment>DisplayName for DomainClass &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/Sign.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ElementReferencesTargetElements.Sign</value>
+    <comment>Description for DomainProperty &apos;Sign&apos; on DomainClass &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/Sign.DisplayName" xml:space="preserve">
+    <value>Sign</value>
+    <comment>DisplayName for DomainProperty &apos;Sign&apos; on DomainClass &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/SourceElement.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ElementReferencesTargetElements.SourceElement</value>
+    <comment>Description for DomainRole &apos;SourceElement&apos; on DomainRelationship &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/SourceElement.DisplayName" xml:space="preserve">
+    <value>Source Element</value>
+    <comment>DisplayName for DomainRole &apos;SourceElement&apos; on DomainRelationship &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/SourceElement.PropertyDisplayName" xml:space="preserve">
+    <value>Target Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceElement&apos; on DomainRelationship &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/TargetElement.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ElementReferencesTargetElements.TargetElement</value>
+    <comment>Description for DomainRole &apos;TargetElement&apos; on DomainRelationship &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/TargetElement.DisplayName" xml:space="preserve">
+    <value>Target Element</value>
+    <comment>DisplayName for DomainRole &apos;TargetElement&apos; on DomainRelationship &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ElementReferencesTargetElements/TargetElement.PropertyDisplayName" xml:space="preserve">
+    <value>Source Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetElement&apos; on DomainRelationship &apos;ElementReferencesTargetElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactLevelsHasElements</value>
+    <comment>Description for DomainClass &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements.DisplayName" xml:space="preserve">
+    <value>Impact Levels Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements/ImpactLevels.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactLevelsHasElements.ImpactLevels</value>
+    <comment>Description for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements/ImpactLevels.DisplayName" xml:space="preserve">
+    <value>Impact Levels</value>
+    <comment>DisplayName for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements/ImpactLevels.PropertyDisplayName" xml:space="preserve">
+    <value>Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements/Element.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactLevelsHasElements.Element</value>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactLevelsHasElements/Element.PropertyDisplayName" xml:space="preserve">
+    <value>Impact Levels</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ImpactLevelsHasElements&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasImpactLevel</value>
+    <comment>Description for DomainClass &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel.DisplayName" xml:space="preserve">
+    <value>So SAHas Impact Level</value>
+    <comment>DisplayName for DomainClass &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel/SoSA.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasImpactLevel.SoSA</value>
+    <comment>Description for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel/SoSA.DisplayName" xml:space="preserve">
+    <value>So SA</value>
+    <comment>DisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel/SoSA.PropertyDisplayName" xml:space="preserve">
+    <value>Impact Level</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel/ImpactLevels.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasImpactLevel.ImpactLevels</value>
+    <comment>Description for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel/ImpactLevels.DisplayName" xml:space="preserve">
+    <value>Impact Levels</value>
+    <comment>DisplayName for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasImpactLevel/ImpactLevels.PropertyDisplayName" xml:space="preserve">
+    <value>So SA</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactImmediateShape.Description" xml:space="preserve">
+    <value>Shape used to represent ExampleElements on a Diagram.</value>
+    <comment>Description for DomainClass &apos;ImpactImmediateShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactImmediateShape.DisplayName" xml:space="preserve">
+    <value>Impact Immediate Shape</value>
+    <comment>DisplayName for DomainClass &apos;ImpactImmediateShape&apos;</comment>
+  </data>
+  <data name="ImpactImmediateShapeNameDefaultText" xml:space="preserve">
+    <value>IMMEDIATE</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.TestMart.SocialConcernShape.Description" xml:space="preserve">
@@ -377,13 +441,49 @@
     <value>Name</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Company.TestMart.concernShape.Description" xml:space="preserve">
-    <value>Description for Company.TestMart.concernShape</value>
-    <comment>Description for DomainClass &apos;concernShape&apos;</comment>
+  <data name="Company.TestMart.ElementShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ElementShape</value>
+    <comment>Description for DomainClass &apos;ElementShape&apos;</comment>
   </data>
-  <data name="Company.TestMart.concernShape.DisplayName" xml:space="preserve">
-    <value>Concern Shape</value>
-    <comment>DisplayName for DomainClass &apos;concernShape&apos;</comment>
+  <data name="Company.TestMart.ElementShape.DisplayName" xml:space="preserve">
+    <value>Element Shape</value>
+    <comment>DisplayName for DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SolutionShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SolutionShape</value>
+    <comment>Description for DomainClass &apos;SolutionShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SolutionShape.DisplayName" xml:space="preserve">
+    <value>Solution Shape</value>
+    <comment>DisplayName for DomainClass &apos;SolutionShape&apos;</comment>
+  </data>
+  <data name="SolutionShapeNameDefaultText" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.TestMart.ImpactStructuralShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactStructuralShape</value>
+    <comment>Description for DomainClass &apos;ImpactStructuralShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactStructuralShape.DisplayName" xml:space="preserve">
+    <value>Impact Structural Shape</value>
+    <comment>DisplayName for DomainClass &apos;ImpactStructuralShape&apos;</comment>
+  </data>
+  <data name="ImpactStructuralShapeNameDefaultText" xml:space="preserve">
+    <value>STRUCTURAL</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.TestMart.ImpactEnablingShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactEnablingShape</value>
+    <comment>Description for DomainClass &apos;ImpactEnablingShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactEnablingShape.DisplayName" xml:space="preserve">
+    <value>Impact Enabling Shape</value>
+    <comment>DisplayName for DomainClass &apos;ImpactEnablingShape&apos;</comment>
+  </data>
+  <data name="ImpactEnablingShapeNameDefaultText" xml:space="preserve">
+    <value>ENABLING</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="Company.TestMart.ConcernRela.Description" xml:space="preserve">
     <value>Description for Company.TestMart.ConcernRela</value>
@@ -413,11 +513,11 @@
     <value>TestMart</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="ImpactBlockToolboxItem" xml:space="preserve">
-    <value>ImpactBlock</value>
+  <data name="LevelImpactImmediateToolboxItem" xml:space="preserve">
+    <value>LevelImpactImmediate</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ImpactBlockToolboxTooltip" xml:space="preserve">
+  <data name="LevelImpactImmediateToolboxTooltip" xml:space="preserve">
     <value>Create an ExampleElement</value>
     <comment>Toolbox tooltip text</comment>
   </data>
@@ -453,12 +553,36 @@
     <value>Technical Concern</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ConnectionTool1ToolboxItem" xml:space="preserve">
-    <value>ConnectionTool1</value>
+  <data name="EffectRelationToolboxItem" xml:space="preserve">
+    <value>EffectRelation</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ConnectionTool1ToolboxTooltip" xml:space="preserve">
-    <value>Connection Tool1</value>
+  <data name="EffectRelationToolboxTooltip" xml:space="preserve">
+    <value>Effect Relation</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="SolutionToolboxItem" xml:space="preserve">
+    <value>Solution</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="SolutionToolboxTooltip" xml:space="preserve">
+    <value>Solution</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="LevelImpactStructuralToolboxItem" xml:space="preserve">
+    <value>LevelImpactStructural</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="LevelImpactStructuralToolboxTooltip" xml:space="preserve">
+    <value>Level Impact Structural</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="LevelImpactEnablingToolboxItem" xml:space="preserve">
+    <value>LevelImpactEnabling</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="LevelImpactEnablingToolboxTooltip" xml:space="preserve">
+    <value>Level Impact Enabling</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -586,7 +710,7 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ImpactBlockToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="LevelImpactImmediateToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
@@ -606,8 +730,20 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ConnectionTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="EffectRelationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="SolutionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="LevelImpactStructuralToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="LevelImpactEnablingToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

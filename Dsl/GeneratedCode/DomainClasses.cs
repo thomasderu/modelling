@@ -48,17 +48,18 @@ namespace Company.TestMart
 		{
 		}
 		#endregion
-		#region ImpactLeveled opposite domain role accessor
+		#region ImpactLevel opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ImpactLeveled.
+		/// Gets a list of ImpactLevel.
+		/// Description for Company.TestMart.SoSAHasImpactLevel.SoSA
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ImpactLevel> ImpactLeveled
+		public virtual DslModeling::LinkedElementCollection<ImpactLevels> ImpactLevel
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ImpactLevel>, ImpactLevel>(global::Company.TestMart.SoSAHasImpactLeveled.SoSADomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ImpactLevels>, ImpactLevels>(global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId);
 			}
 		}
 		#endregion
@@ -82,7 +83,7 @@ namespace Company.TestMart
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.ImpactLevel.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.ImpactLevels.DomainClassId)) 
 				{
 					return true;
 				}
@@ -111,11 +112,11 @@ namespace Company.TestMart
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Company.TestMart.ImpactLevel sourceImpactLevel1 = sourceElement as global::Company.TestMart.ImpactLevel;
-			if (sourceImpactLevel1 != null)
+			global::Company.TestMart.ImpactLevels sourceImpactLevels1 = sourceElement as global::Company.TestMart.ImpactLevels;
+			if (sourceImpactLevels1 != null)
 			{
-				// Create link for path SoSAHasImpactLeveled.ImpactLeveled
-				this.ImpactLeveled.Add(sourceImpactLevel1);
+				// Create link for path SoSAHasImpactLevel.ImpactLevel
+				this.ImpactLevel.Add(sourceImpactLevels1);
 
 				return;
 			}
@@ -142,15 +143,15 @@ namespace Company.TestMart
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Company.TestMart.ImpactLevel sourceImpactLevel1 = sourceElement as global::Company.TestMart.ImpactLevel;
-			if (sourceImpactLevel1 != null)
+			global::Company.TestMart.ImpactLevels sourceImpactLevels1 = sourceElement as global::Company.TestMart.ImpactLevels;
+			if (sourceImpactLevels1 != null)
 			{
-				// Delete link for path SoSAHasImpactLeveled.ImpactLeveled
+				// Delete link for path SoSAHasImpactLevel.ImpactLevel
 				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasImpactLeveled.GetLinks((global::Company.TestMart.SoSA)this, sourceImpactLevel1))
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasImpactLevel.GetLinks((global::Company.TestMart.SoSA)this, sourceImpactLevels1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.SoSAHasImpactLeveled.SoSADomainRoleId, global::Company.TestMart.SoSAHasImpactLeveled.ImpactLevelDomainRoleId);
+					link.Delete(global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId);
 				}
 
 				return;
@@ -164,21 +165,21 @@ namespace Company.TestMart
 namespace Company.TestMart
 {
 	/// <summary>
-	/// DomainClass ImpactLevel
+	/// DomainClass ImpactImmediate
 	/// Elements embedded in the model. Appear as boxes on the diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevel.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.ImpactLevel.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.TestMart.ImpactImmediate.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ImpactImmediate.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("f3b749eb-136a-4956-b0cd-d1b565e13cd6")]
-	public partial class ImpactLevel : DslModeling::ModelElement
+	public partial class ImpactImmediate : ImpactLevels
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ImpactLevel domain class Id.
+		/// ImpactImmediate domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf3b749eb, 0x136a, 0x4956, 0xb0, 0xcd, 0xd1, 0xb5, 0x65, 0xe1, 0x3c, 0xd6);
 		/// <summary>
@@ -186,7 +187,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ImpactLevel(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ImpactImmediate(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -196,7 +197,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ImpactLevel(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ImpactImmediate(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -215,10 +216,10 @@ namespace Company.TestMart
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
-		/// Description for Company.TestMart.ImpactLevel.Name
+		/// Description for Company.TestMart.ImpactImmediate.Name
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevel/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.ImpactLevel/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactImmediate/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactImmediate/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.DefaultValue("")]
 		[DslModeling::ElementName]
 		[DslModeling::DomainObjectId("a772382b-5a1c-435b-b2ad-ba04ead55191")]
@@ -236,19 +237,19 @@ namespace Company.TestMart
 			}
 		}
 		/// <summary>
-		/// Value handler for the ImpactLevel.Name domain property.
+		/// Value handler for the ImpactImmediate.Name domain property.
 		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ImpactLevel, global::System.String>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ImpactImmediate, global::System.String>
 		{
 			private NamePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ImpactLevel.Name domain property value handler.
+			/// Gets the singleton instance of the ImpactImmediate.Name domain property value handler.
 			/// </summary>
 			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ImpactLevel.Name domain property.
+			/// Gets the Id of the ImpactImmediate.Name domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -264,7 +265,7 @@ namespace Company.TestMart
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ImpactLevel element)
+			public override sealed global::System.String GetValue(ImpactImmediate element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.namePropertyStorage;
@@ -275,7 +276,7 @@ namespace Company.TestMart
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ImpactLevel element, global::System.String newValue)
+			public override sealed void SetValue(ImpactImmediate element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -290,136 +291,6 @@ namespace Company.TestMart
 		}
 		
 		#endregion
-		#region SoSA opposite domain role accessor
-		/// <summary>
-		/// Gets or sets SoSA.
-		/// </summary>
-		public virtual SoSA SoSA
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLeveled.ImpactLevelDomainRoleId) as SoSA;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLeveled.ImpactLevelDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region Concerned opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Concerned.
-		/// Description for Company.TestMart.ImpactLevelHasConcerned.ImpactLevel
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Concern> Concerned
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ImpactLevelHasConcerned.ImpactLevelDomainRoleId);
-			}
-		}
-		#endregion
-		#region ElementGroupPrototype Merge methods
-		/// <summary>
-		/// Returns a value indicating whether the source element represented by the
-		/// specified root ProtoElement can be added to this element.
-		/// </summary>
-		/// <param name="rootElement">
-		/// The root ProtoElement representing a source element.  This can be null, 
-		/// in which case the ElementGroupPrototype does not contain an ProtoElements
-		/// and the code should inspect the ElementGroupPrototype context information.
-		/// </param>
-		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
-		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
-		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
-		{
-			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
-			
-			if (rootElement != null)
-			{
-				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Concern.DomainClassId)) 
-				{
-					return true;
-				}
-			}
-			return base.CanMerge(rootElement, elementGroupPrototype);
-		}
-		
-		/// <summary>
-		/// Called by the Merge process to create a relationship between 
-		/// this target element and the specified source element. 
-		/// Typically, a parent-child relationship is established
-		/// between the target element (the parent) and the source element 
-		/// (the child), but any relationship can be established.
-		/// </summary>
-		/// <param name="sourceElement">The element that is to be related to this model element.</param>
-		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
-		/// <remarks>
-		/// This method is overriden to create the relationship between the target element and the specified source element.
-		/// The base method does nothing.
-		/// </remarks>
-		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
-		{
-			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
-			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
-			// need to support this case.
-			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
-		
-				
-			global::Company.TestMart.Concern sourceConcern1 = sourceElement as global::Company.TestMart.Concern;
-			if (sourceConcern1 != null)
-			{
-				// Create link for path ImpactLevelHasConcerned.Concerned
-				this.Concerned.Add(sourceConcern1);
-
-				return;
-			}
-		
-			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
-			// during a "Paste".
-			if (sourceElement is DslModeling::ExtensionElement
-				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
-			{
-				return;
-			}
-		
-			// Fall through to base class if this class hasn't handled the merge.
-			base.MergeRelate(sourceElement, elementGroup);
-		}
-		
-		/// <summary>
-		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
-		/// element from the current one (removes links created by MergeRelate).
-		/// </summary>
-		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
-		{
-			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
-				
-			global::Company.TestMart.Concern sourceConcern1 = sourceElement as global::Company.TestMart.Concern;
-			if (sourceConcern1 != null)
-			{
-				// Delete link for path ImpactLevelHasConcerned.Concerned
-				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelHasConcerned.GetLinks((global::Company.TestMart.ImpactLevel)this, sourceConcern1))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.ImpactLevelHasConcerned.ImpactLevelDomainRoleId, global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId);
-				}
-
-				return;
-			}
-			// Fall through to base class if this class hasn't handled the unmerge.
-			base.MergeDisconnect(sourceElement);
-		}
-		#endregion
 	}
 }
 namespace Company.TestMart
@@ -433,7 +304,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("beefb504-550b-4f41-b4d8-a8eefd6f1526")]
-	public partial class SocialConcern : Concern
+	public partial class SocialConcern : Element
 	{
 		#region Constructors, domain class Id
 	
@@ -561,7 +432,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5b9e7ce6-0858-4e57-80e6-e2d3716fae3e")]
-	public partial class EnvironmentalConcern : Concern
+	public partial class EnvironmentalConcern : Element
 	{
 		#region Constructors, domain class Id
 	
@@ -689,7 +560,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("396c8e99-afe7-4d09-9402-48edd3163546")]
-	public partial class EconomicConcern : Concern
+	public partial class EconomicConcern : Element
 	{
 		#region Constructors, domain class Id
 	
@@ -817,7 +688,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("482f4b9f-e0bb-4c93-94ac-fa2edf8790e0")]
-	public partial class TechnicalConcern : Concern
+	public partial class TechnicalConcern : Element
 	{
 		#region Constructors, domain class Id
 	
@@ -937,20 +808,20 @@ namespace Company.TestMart
 namespace Company.TestMart
 {
 	/// <summary>
-	/// DomainClass Concern
-	/// Description for Company.TestMart.Concern
+	/// DomainClass Element
+	/// Description for Company.TestMart.Element
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.Concern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.Concern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.TestMart.Element.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.Element.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("d456544b-e3e3-480a-8131-4b81db81910b")]
-	public partial class Concern : DslModeling::ModelElement
+	public partial class Element : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Concern domain class Id.
+		/// Element domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd456544b, 0xe3e3, 0x480a, 0x81, 0x31, 0x4b, 0x81, 0xdb, 0x81, 0x91, 0x0b);
 		/// <summary>
@@ -958,7 +829,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Concern(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Element(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -968,59 +839,615 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Concern(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Element(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
 		#endregion
-		#region TargetConcerned opposite domain role accessor
+		#region TargetElements opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of TargetConcerned.
-		/// Description for Company.TestMart.ConcernReferencesTargetConcerned.SourceConcern
+		/// Gets a list of TargetElements.
+		/// Description for Company.TestMart.ElementReferencesTargetElements.SourceElement
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Concern> TargetConcerned
+		public virtual DslModeling::LinkedElementCollection<Element> TargetElements
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ConcernReferencesTargetConcerned.SourceConcernDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(global::Company.TestMart.ElementReferencesTargetElements.SourceElementDomainRoleId);
 			}
 		}
 		#endregion
-		#region SourceConcerned opposite domain role accessor
+		#region SourceElements opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of SourceConcerned.
-		/// Description for Company.TestMart.ConcernReferencesTargetConcerned.TargetConcern
+		/// Gets a list of SourceElements.
+		/// Description for Company.TestMart.ElementReferencesTargetElements.TargetElement
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Concern> SourceConcerned
+		public virtual DslModeling::LinkedElementCollection<Element> SourceElements
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ConcernReferencesTargetConcerned.TargetConcernDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(global::Company.TestMart.ElementReferencesTargetElements.TargetElementDomainRoleId);
 			}
 		}
 		#endregion
-		#region ImpactLevel opposite domain role accessor
+		#region ImpactLevels opposite domain role accessor
 		/// <summary>
-		/// Gets or sets ImpactLevel.
-		/// Description for Company.TestMart.ImpactLevelHasConcerned.Concern
+		/// Gets or sets ImpactLevels.
+		/// Description for Company.TestMart.ImpactLevelsHasElements.Element
 		/// </summary>
-		public virtual ImpactLevel ImpactLevel
+		public virtual ImpactLevels ImpactLevels
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId) as ImpactLevel;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId) as ImpactLevels;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelHasConcerned.ConcernDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId, value);
 			}
 		}
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass Solution
+	/// Description for Company.TestMart.Solution
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.Solution.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.Solution.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("e659f591-3954-4113-ab89-4759861ba173")]
+	public partial class Solution : Element
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Solution domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe659f591, 0x3954, 0x4113, 0xab, 0x89, 0x47, 0x59, 0x86, 0x1b, 0xa1, 0x73);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Solution(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Solution(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x4f60711f, 0x388a, 0x48f5, 0xaa, 0xc3, 0x15, 0xad, 0x75, 0x4f, 0x16, 0x69);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Company.TestMart.Solution.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.Solution/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.Solution/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("4f60711f-388a-48f5-aac3-15ad754f1669")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Solution.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Solution, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Solution.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Solution.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Solution element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Solution element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass ImpactStructural
+	/// Description for Company.TestMart.ImpactStructural
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.ImpactStructural.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ImpactStructural.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("00ebb6f1-cebf-43df-aed5-1b305758698b")]
+	public partial class ImpactStructural : ImpactLevels
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ImpactStructural domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x00ebb6f1, 0xcebf, 0x43df, 0xae, 0xd5, 0x1b, 0x30, 0x57, 0x58, 0x69, 0x8b);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImpactStructural(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImpactStructural(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x8467cbac, 0x8e43, 0x4615, 0x94, 0xd8, 0x79, 0x3a, 0xaf, 0x99, 0xfc, 0x69);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Company.TestMart.ImpactStructural.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactStructural/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactStructural/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("8467cbac-8e43-4615-94d8-793aaf99fc69")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ImpactStructural.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ImpactStructural, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ImpactStructural.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ImpactStructural.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ImpactStructural element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ImpactStructural element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass ImpactLevels
+	/// Description for Company.TestMart.ImpactLevels
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevels.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ImpactLevels.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("13c745b1-40de-48b1-88fd-0c9562ec114c")]
+	public partial class ImpactLevels : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ImpactLevels domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x13c745b1, 0x40de, 0x48b1, 0x88, 0xfd, 0x0c, 0x95, 0x62, 0xec, 0x11, 0x4c);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImpactLevels(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImpactLevels(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Elements opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Elements.
+		/// Description for Company.TestMart.ImpactLevelsHasElements.ImpactLevels
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Element> Elements
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId);
+			}
+		}
+		#endregion
+		#region SoSA opposite domain role accessor
+		/// <summary>
+		/// Gets or sets SoSA.
+		/// Description for Company.TestMart.SoSAHasImpactLevel.ImpactLevels
+		/// </summary>
+		public virtual SoSA SoSA
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId) as SoSA;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Element.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::Company.TestMart.Element sourceElement1 = sourceElement as global::Company.TestMart.Element;
+			if (sourceElement1 != null)
+			{
+				// Create link for path ImpactLevelsHasElements.Elements
+				this.Elements.Add(sourceElement1);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::Company.TestMart.Element sourceElement1 = sourceElement as global::Company.TestMart.Element;
+			if (sourceElement1 != null)
+			{
+				// Delete link for path ImpactLevelsHasElements.Elements
+				
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelsHasElements.GetLinks((global::Company.TestMart.ImpactLevels)this, sourceElement1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass ImpactEnabling
+	/// Description for Company.TestMart.ImpactEnabling
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.ImpactEnabling.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ImpactEnabling.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("ff74f75f-7df6-4691-9817-d7005e3f30ba")]
+	public partial class ImpactEnabling : ImpactLevels
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ImpactEnabling domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xff74f75f, 0x7df6, 0x4691, 0x98, 0x17, 0xd7, 0x00, 0x5e, 0x3f, 0x30, 0xba);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImpactEnabling(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ImpactEnabling(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x660ae282, 0x1c7c, 0x4d73, 0x94, 0xb0, 0xb3, 0x18, 0x76, 0x64, 0x1d, 0xac);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for Company.TestMart.ImpactEnabling.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactEnabling/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactEnabling/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("660ae282-1c7c-4d73-94b0-b31876641dac")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ImpactEnabling.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ImpactEnabling, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ImpactEnabling.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ImpactEnabling.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ImpactEnabling element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ImpactEnabling element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }

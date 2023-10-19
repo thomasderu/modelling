@@ -1,41 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <soSA xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5bbcd38e-7edb-44fd-96c7-a65cd391bc26" xmlns="http://schemas.microsoft.com/dsltools/TestMart">
-  <impactLeveled>
-    <impactLevel Id="bbde13f7-1398-4ec3-914f-deab81c52eae" name="LIFECYCLE">
-      <concerned>
-        <impactLevelHasConcerned Id="2ac8d609-c5f7-419f-8ebb-f249bea30a2b">
-          <economicConcern Id="38a4bc31-6aa7-4ef6-83d2-f9e74c1e7ccc" />
-        </impactLevelHasConcerned>
-      </concerned>
-    </impactLevel>
-    <impactLevel Id="29f07f68-8e91-4ef2-be25-5f029fb7d11b" name="ENABLING">
-      <concerned>
-        <impactLevelHasConcerned Id="097ae37b-8d16-429f-b4a1-a2247ee0a61d">
-          <environmentalConcern Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6">
-            <targetConcerned>
-              <concernReferencesTargetConcerned Id="8d51fa7f-b828-4137-9299-b6e43ce04ed4">
-                <environmentalConcernMoniker Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6" />
-              </concernReferencesTargetConcerned>
-            </targetConcerned>
-          </environmentalConcern>
-        </impactLevelHasConcerned>
-      </concerned>
-    </impactLevel>
-    <impactLevel Id="134923b2-e1a4-4373-afd6-a66e0f06e282" name="STRUCTURAL">
-      <concerned>
-        <impactLevelHasConcerned Id="2f4b811c-d860-4592-aabe-e076b7c545e3">
-          <socialConcern Id="bb59bbf1-d4bb-480a-8229-dc53711f88e2">
-            <targetConcerned>
-              <concernReferencesTargetConcerned Id="d6791770-6e37-42da-8ed9-a6aa28d31039">
-                <economicConcernMoniker Id="38a4bc31-6aa7-4ef6-83d2-f9e74c1e7ccc" />
-              </concernReferencesTargetConcerned>
-              <concernReferencesTargetConcerned Id="03d59b5b-9438-4c1e-b739-cc0bd9393cd5">
-                <environmentalConcernMoniker Id="3593cad4-a87c-4ecd-b2c4-34b43fb3efc6" />
-              </concernReferencesTargetConcerned>
-            </targetConcerned>
-          </socialConcern>
-        </impactLevelHasConcerned>
-      </concerned>
-    </impactLevel>
-  </impactLeveled>
+  <impactLevel>
+    <soSAHasImpactLevel Id="33660073-9dc2-4de7-9aab-5927b1e63b29">
+      <impactStructural Id="9e496609-d14c-4e31-8a44-7a305ba4b481">
+        <elements>
+          <impactLevelsHasElements Id="f4ae0942-30d9-4bf7-a100-c93d9113ea7e">
+            <economicConcern Id="4e21eacb-443c-4c01-bbc2-c038bedea826" />
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="6f101f4f-84cb-4dca-8c6f-b34d3c5e66a5">
+            <technicalConcern Id="a9566856-aace-4683-bc30-ef491ac69a6e" />
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="3d991b7b-55c7-43e8-b59e-3f41fbdddedf">
+            <environmentalConcern Id="174a77ac-fd5b-4c83-a26a-e9440a9f6b6a" />
+          </impactLevelsHasElements>
+        </elements>
+      </impactStructural>
+    </soSAHasImpactLevel>
+    <soSAHasImpactLevel Id="1cc6687c-1898-4942-9c43-1f6de0c4b637">
+      <impactEnabling Id="c24559b2-b42e-45a6-8d82-3856a1d0409c">
+        <elements>
+          <impactLevelsHasElements Id="9acd866f-f598-4dce-84f0-9bffcc851b05">
+            <economicConcern Id="43c7d29c-7498-4870-b1e5-f6989ff99929" />
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="578708d0-e112-438f-855e-4e95df666771">
+            <socialConcern Id="0ee06009-2d01-46cd-9e8f-ccd2a098ff9b">
+              <targetElements>
+                <elementReferencesTargetElements Id="5e31e081-30ae-47d9-ab00-007feeac1fd3" sign="-">
+                  <technicalConcernMoniker Id="327b0a86-27e0-4fc1-955f-1f94d05fd918" />
+                </elementReferencesTargetElements>
+              </targetElements>
+            </socialConcern>
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="4d3e73a3-fadd-44f7-866c-9c9ce59571b3">
+            <technicalConcern Id="327b0a86-27e0-4fc1-955f-1f94d05fd918" />
+          </impactLevelsHasElements>
+        </elements>
+      </impactEnabling>
+    </soSAHasImpactLevel>
+    <soSAHasImpactLevel Id="720977e1-2968-49ad-89bf-4d883fddf044">
+      <impactImmediate Id="282c0300-1dfb-4aa4-ad0e-319b53617ccc" name="IMMEDIATE">
+        <elements>
+          <impactLevelsHasElements Id="f493d634-4f48-486f-84e0-77982b7cd09c">
+            <solution Id="22cf21cd-86d6-40cd-9f65-3ac0775e674f" name="MaaS">
+              <targetElements>
+                <elementReferencesTargetElements Id="8dd80f8f-cc9d-410e-9fa1-935737a1aafd">
+                  <socialConcernMoniker Id="4f9aabff-0bd5-4b57-81a0-3269fdb4d23e" />
+                </elementReferencesTargetElements>
+                <elementReferencesTargetElements Id="a2a8a408-9c7e-447c-b1d1-356d54e1b0fd" sign="+">
+                  <environmentalConcernMoniker Id="6f3fb033-823e-488f-bcc1-ef4ff3c988a8" />
+                </elementReferencesTargetElements>
+                <elementReferencesTargetElements Id="ab875c11-f3bc-4642-8956-e713975fd511">
+                  <economicConcernMoniker Id="cb45c976-50cf-488f-88bf-5902310042db" />
+                </elementReferencesTargetElements>
+              </targetElements>
+            </solution>
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="ba3d6100-71f6-48c8-9cf2-b4a480c880ce">
+            <socialConcern Id="4f9aabff-0bd5-4b57-81a0-3269fdb4d23e" name="Concern">
+              <targetElements>
+                <elementReferencesTargetElements Id="b1ab4866-734d-46fd-a6e1-40eef4c25184" sign="+">
+                  <environmentalConcernMoniker Id="6f3fb033-823e-488f-bcc1-ef4ff3c988a8" />
+                </elementReferencesTargetElements>
+              </targetElements>
+            </socialConcern>
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="353cf3c1-0a3f-4c93-83ec-5d183f756744">
+            <environmentalConcern Id="6f3fb033-823e-488f-bcc1-ef4ff3c988a8">
+              <targetElements>
+                <elementReferencesTargetElements Id="5d57de98-fa3d-4638-9d1d-9d1696a53c32" sign="+">
+                  <economicConcernMoniker Id="43c7d29c-7498-4870-b1e5-f6989ff99929" />
+                </elementReferencesTargetElements>
+                <elementReferencesTargetElements Id="89e30d22-d82f-484e-b068-d84bb6f63684" sign="+">
+                  <socialConcernMoniker Id="0ee06009-2d01-46cd-9e8f-ccd2a098ff9b" />
+                </elementReferencesTargetElements>
+              </targetElements>
+            </environmentalConcern>
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="8779268b-2ea7-4a1c-83de-2cdc8541b1af">
+            <economicConcern Id="cb45c976-50cf-488f-88bf-5902310042db" name="Hai" />
+          </impactLevelsHasElements>
+        </elements>
+      </impactImmediate>
+    </soSAHasImpactLevel>
+  </impactLevel>
 </soSA>

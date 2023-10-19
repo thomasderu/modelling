@@ -15,7 +15,7 @@ namespace Company.TestMart
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class ConcernReferencesTargetConcernedBuilder
+	public static partial class ElementReferencesTargetElementsBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -27,7 +27,7 @@ namespace Company.TestMart
 		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::Company.TestMart.Concern)
+			else if (candidate is global::Company.TestMart.Element)
 			{ 
 				return true;
 			}
@@ -44,7 +44,7 @@ namespace Company.TestMart
 		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::Company.TestMart.Concern)
+			else if (candidate is global::Company.TestMart.Element)
 			{ 
 				return true;
 			}
@@ -83,13 +83,13 @@ namespace Company.TestMart
 			}
 			else // Check combinations
 			{
-				if (candidateSource is global::Company.TestMart.Concern)
+				if (candidateSource is global::Company.TestMart.Element)
 				{
-					if (candidateTarget is global::Company.TestMart.Concern)
+					if (candidateTarget is global::Company.TestMart.Element)
 					{
-						global::Company.TestMart.Concern sourceConcern = (global::Company.TestMart.Concern)candidateSource;
-						global::Company.TestMart.Concern targetConcern = (global::Company.TestMart.Concern)candidateTarget;
-						if(targetConcern == null || sourceConcern == null || global::Company.TestMart.ConcernReferencesTargetConcerned.GetLinks(sourceConcern, targetConcern).Count > 0) return false;
+						global::Company.TestMart.Element sourceElement = (global::Company.TestMart.Element)candidateSource;
+						global::Company.TestMart.Element targetElement = (global::Company.TestMart.Element)candidateTarget;
+						if(targetElement == null || sourceElement == null || global::Company.TestMart.ElementReferencesTargetElements.GetLinks(sourceElement, targetElement).Count > 0) return false;
 						return true;
 					}
 				}
@@ -121,13 +121,13 @@ namespace Company.TestMart
 			
 			if (CanAcceptSourceAndTarget(source, target))
 			{
-				if (source is global::Company.TestMart.Concern)
+				if (source is global::Company.TestMart.Element)
 				{
-					if (target is global::Company.TestMart.Concern)
+					if (target is global::Company.TestMart.Element)
 					{
-						global::Company.TestMart.Concern sourceAccepted = (global::Company.TestMart.Concern)source;
-						global::Company.TestMart.Concern targetAccepted = (global::Company.TestMart.Concern)target;
-						DslModeling::ElementLink result = new global::Company.TestMart.ConcernReferencesTargetConcerned(sourceAccepted, targetAccepted);
+						global::Company.TestMart.Element sourceAccepted = (global::Company.TestMart.Element)source;
+						global::Company.TestMart.Element targetAccepted = (global::Company.TestMart.Element)target;
+						DslModeling::ElementLink result = new global::Company.TestMart.ElementReferencesTargetElements(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -146,14 +146,14 @@ namespace Company.TestMart
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class ConnectionTool1ConnectAction : DslDiagrams::ConnectAction
+	internal partial class EffectRelationConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new ConnectionTool1ConnectAction for the given Diagram.
+		/// Constructs a new EffectRelationConnectAction for the given Diagram.
 		/// </summary>
-		public ConnectionTool1ConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public EffectRelationConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -183,24 +183,24 @@ namespace Company.TestMart
 		
 		
 		/// <summary>
-		/// Returns the ConnectionTool1ConnectionType associated with this action.
+		/// Returns the EffectRelationConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ConnectionTool1ConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new EffectRelationConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class ConnectionTool1ConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class EffectRelationConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the ConnectionTool1ConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the EffectRelationConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected ConnectionTool1ConnectionTypeBase() : base() {}
+			protected EffectRelationConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -220,7 +220,7 @@ namespace Company.TestMart
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder ConcernReferencesTargetConcernedBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ElementReferencesTargetElementsBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -246,11 +246,11 @@ namespace Company.TestMart
 				{				
 					if(targetShapeElement == null)
 					{
-						return ConcernReferencesTargetConcernedBuilder.CanAcceptSource(sourceElement);
+						return ElementReferencesTargetElementsBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return ConcernReferencesTargetConcernedBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return ElementReferencesTargetElementsBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -275,7 +275,7 @@ namespace Company.TestMart
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder ConcernReferencesTargetConcernedBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ElementReferencesTargetElementsBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -289,16 +289,16 @@ namespace Company.TestMart
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				ConcernReferencesTargetConcernedBuilder.Connect(sourceElement, targetElement);
+				ElementReferencesTargetElementsBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class ConnectionTool1ConnectionType : ConnectionTool1ConnectionTypeBase
+		private partial class EffectRelationConnectionType : EffectRelationConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the ConnectionTool1ConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the EffectRelationConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public ConnectionTool1ConnectionType() : base() {}
+			public EffectRelationConnectionType() : base() {}
 		}
 	}
 }

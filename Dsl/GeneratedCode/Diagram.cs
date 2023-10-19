@@ -191,15 +191,9 @@ namespace Company.TestMart
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Company.TestMart.SocialConcern)
+			if(element is global::Company.TestMart.TechnicalConcern)
 			{
-				global::Company.TestMart.SocialConcernShape newShape = new global::Company.TestMart.SocialConcernShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::Company.TestMart.EnvironmentalConcern)
-			{
-				global::Company.TestMart.EnvironmentalShape newShape = new global::Company.TestMart.EnvironmentalShape(this.Partition);
+				global::Company.TestMart.TechnicalShape newShape = new global::Company.TestMart.TechnicalShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -209,25 +203,49 @@ namespace Company.TestMart
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.TestMart.TechnicalConcern)
+			if(element is global::Company.TestMart.EnvironmentalConcern)
 			{
-				global::Company.TestMart.TechnicalShape newShape = new global::Company.TestMart.TechnicalShape(this.Partition);
+				global::Company.TestMart.EnvironmentalShape newShape = new global::Company.TestMart.EnvironmentalShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.TestMart.ImpactLevel)
+			if(element is global::Company.TestMart.SocialConcern)
 			{
-				global::Company.TestMart.ImpactShape newShape = new global::Company.TestMart.ImpactShape(this.Partition);
+				global::Company.TestMart.SocialConcernShape newShape = new global::Company.TestMart.SocialConcernShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.TestMart.Concern)
+			if(element is global::Company.TestMart.Solution)
 			{
-				global::Company.TestMart.concernShape newShape = new global::Company.TestMart.concernShape(this.Partition);
+				global::Company.TestMart.SolutionShape newShape = new global::Company.TestMart.SolutionShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.TestMart.ConcernReferencesTargetConcerned)
+			if(element is global::Company.TestMart.ImpactStructural)
+			{
+				global::Company.TestMart.ImpactStructuralShape newShape = new global::Company.TestMart.ImpactStructuralShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.TestMart.ImpactImmediate)
+			{
+				global::Company.TestMart.ImpactImmediateShape newShape = new global::Company.TestMart.ImpactImmediateShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.TestMart.ImpactEnabling)
+			{
+				global::Company.TestMart.ImpactEnablingShape newShape = new global::Company.TestMart.ImpactEnablingShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.TestMart.Element)
+			{
+				global::Company.TestMart.ElementShape newShape = new global::Company.TestMart.ElementShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.TestMart.ElementReferencesTargetElements)
 			{
 				global::Company.TestMart.ConcernRela newShape = new global::Company.TestMart.ConcernRela(this.Partition);
 				return newShape;
@@ -243,41 +261,62 @@ namespace Company.TestMart
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Company.TestMart.ImpactShape.DecoratorsInitialized += ImpactShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Company.TestMart.SocialConcernShape.DecoratorsInitialized += SocialConcernShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.SolutionShape.DecoratorsInitialized += SolutionShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.ImpactImmediateShape.DecoratorsInitialized += ImpactImmediateShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.ConcernRela.DecoratorsInitialized += ConcernRelaDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for ImpactShape.
+		/// Class containing decorator path traversal methods for SolutionShape.
 		/// </summary>
-		internal static partial class ImpactShapeDecoratorMap
+		internal static partial class SolutionShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for ImpactShape.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for SolutionShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactLevel.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactLevel.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.Solution.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for SocialConcernShape.
+		/// Class containing decorator path traversal methods for ImpactImmediateShape.
 		/// </summary>
-		internal static partial class SocialConcernShapeDecoratorMap
+		internal static partial class ImpactImmediateShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for SocialConcernShape.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for ImpactImmediateShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ConcernRela.
+		/// </summary>
+		internal static partial class ConcernRelaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ConcernRela.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ElementReferencesTargetElements.SignDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Sign").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -285,7 +324,7 @@ namespace Company.TestMart
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::Company.TestMart.ConnectionTool1ConnectAction connectionTool1ConnectAction;
+		private global::Company.TestMart.EffectRelationConnectAction effectRelationConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -308,14 +347,14 @@ namespace Company.TestMart
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::Company.TestMart.TestMartToolboxHelper.ConnectionTool1FilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::Company.TestMart.TestMartToolboxHelper.EffectRelationFilterString))
 				{
-					if (this.connectionTool1ConnectAction == null)
+					if (this.effectRelationConnectAction == null)
 					{
-						this.connectionTool1ConnectAction = new global::Company.TestMart.ConnectionTool1ConnectAction(this);
-						this.connectionTool1ConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.effectRelationConnectAction = new global::Company.TestMart.EffectRelationConnectAction(this);
+						this.effectRelationConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.connectionTool1ConnectAction;
+					action = this.effectRelationConnectAction;
 				} 
 				else
 				{
@@ -374,10 +413,10 @@ namespace Company.TestMart
 			{
 				if(disposing)
 				{
-					if(this.connectionTool1ConnectAction != null)
+					if(this.effectRelationConnectAction != null)
 					{
-						this.connectionTool1ConnectAction.Dispose();
-						this.connectionTool1ConnectAction = null;
+						this.effectRelationConnectAction.Dispose();
+						this.effectRelationConnectAction = null;
 					}
 				}
 			}
@@ -432,13 +471,16 @@ namespace Company.TestMart
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.SocialConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.EnvironmentalConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.EconomicConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.TechnicalConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactLevel), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.Concern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.ConcernReferencesTargetConcerned), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.EconomicConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.EnvironmentalConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.SocialConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.Solution), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactStructural), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactImmediate), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactEnabling), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.Element), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ElementReferencesTargetElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -454,29 +496,41 @@ namespace Company.TestMart
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::Company.TestMart.SocialConcern)
+				if(childElement is global::Company.TestMart.TechnicalConcern)
 				{
-					parentElement = GetParentForSocialConcern((global::Company.TestMart.SocialConcern)childElement);
-				} else
-				if(childElement is global::Company.TestMart.EnvironmentalConcern)
-				{
-					parentElement = GetParentForEnvironmentalConcern((global::Company.TestMart.EnvironmentalConcern)childElement);
+					parentElement = GetParentForTechnicalConcern((global::Company.TestMart.TechnicalConcern)childElement);
 				} else
 				if(childElement is global::Company.TestMart.EconomicConcern)
 				{
 					parentElement = GetParentForEconomicConcern((global::Company.TestMart.EconomicConcern)childElement);
 				} else
-				if(childElement is global::Company.TestMart.TechnicalConcern)
+				if(childElement is global::Company.TestMart.EnvironmentalConcern)
 				{
-					parentElement = GetParentForTechnicalConcern((global::Company.TestMart.TechnicalConcern)childElement);
+					parentElement = GetParentForEnvironmentalConcern((global::Company.TestMart.EnvironmentalConcern)childElement);
 				} else
-				if(childElement is global::Company.TestMart.ImpactLevel)
+				if(childElement is global::Company.TestMart.SocialConcern)
 				{
-					parentElement = GetParentForImpactLevel((global::Company.TestMart.ImpactLevel)childElement);
+					parentElement = GetParentForSocialConcern((global::Company.TestMart.SocialConcern)childElement);
 				} else
-				if(childElement is global::Company.TestMart.Concern)
+				if(childElement is global::Company.TestMart.Solution)
 				{
-					parentElement = GetParentForConcern((global::Company.TestMart.Concern)childElement);
+					parentElement = GetParentForSolution((global::Company.TestMart.Solution)childElement);
+				} else
+				if(childElement is global::Company.TestMart.ImpactStructural)
+				{
+					parentElement = GetParentForImpactStructural((global::Company.TestMart.ImpactStructural)childElement);
+				} else
+				if(childElement is global::Company.TestMart.ImpactImmediate)
+				{
+					parentElement = GetParentForImpactImmediate((global::Company.TestMart.ImpactImmediate)childElement);
+				} else
+				if(childElement is global::Company.TestMart.ImpactEnabling)
+				{
+					parentElement = GetParentForImpactEnabling((global::Company.TestMart.ImpactEnabling)childElement);
+				} else
+				if(childElement is global::Company.TestMart.Element)
+				{
+					parentElement = GetParentForElement((global::Company.TestMart.Element)childElement);
 				} else
 				{
 					parentElement = null;
@@ -487,60 +541,84 @@ namespace Company.TestMart
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Company.TestMart.SoSA GetParentForImpactLevel( global::Company.TestMart.ImpactLevel root )
+			public static global::Company.TestMart.SoSA GetParentForTechnicalConcern( global::Company.TestMart.Element root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.ImpactLevels root2 = root.ImpactLevels;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Company.TestMart.SoSA result = root2.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForEconomicConcern( global::Company.TestMart.Element root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.ImpactLevels root2 = root.ImpactLevels;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Company.TestMart.SoSA result = root2.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForEnvironmentalConcern( global::Company.TestMart.Element root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.ImpactLevels root2 = root.ImpactLevels;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Company.TestMart.SoSA result = root2.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForSocialConcern( global::Company.TestMart.Element root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.ImpactLevels root2 = root.ImpactLevels;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Company.TestMart.SoSA result = root2.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForSolution( global::Company.TestMart.Element root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.ImpactLevels root2 = root.ImpactLevels;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Company.TestMart.SoSA result = root2.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForElement( global::Company.TestMart.Element root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.ImpactLevels root2 = root.ImpactLevels;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::Company.TestMart.SoSA result = root2.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForImpactStructural( global::Company.TestMart.ImpactLevels root )
 			{
 				// Segments 0 and 1
 				global::Company.TestMart.SoSA result = root.SoSA;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Company.TestMart.SoSA GetParentForConcern( global::Company.TestMart.Concern root )
+			public static global::Company.TestMart.SoSA GetParentForImpactImmediate( global::Company.TestMart.ImpactLevels root )
 			{
 				// Segments 0 and 1
-				global::Company.TestMart.ImpactLevel root2 = root.ImpactLevel;
-				if ( root2 == null ) return null;
-				// Segments 2 and 3
-				global::Company.TestMart.SoSA result = root2.SoSA;
+				global::Company.TestMart.SoSA result = root.SoSA;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Company.TestMart.SoSA GetParentForSocialConcern( global::Company.TestMart.Concern root )
+			public static global::Company.TestMart.SoSA GetParentForImpactEnabling( global::Company.TestMart.ImpactLevels root )
 			{
 				// Segments 0 and 1
-				global::Company.TestMart.ImpactLevel root2 = root.ImpactLevel;
-				if ( root2 == null ) return null;
-				// Segments 2 and 3
-				global::Company.TestMart.SoSA result = root2.SoSA;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::Company.TestMart.SoSA GetParentForEnvironmentalConcern( global::Company.TestMart.Concern root )
-			{
-				// Segments 0 and 1
-				global::Company.TestMart.ImpactLevel root2 = root.ImpactLevel;
-				if ( root2 == null ) return null;
-				// Segments 2 and 3
-				global::Company.TestMart.SoSA result = root2.SoSA;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::Company.TestMart.SoSA GetParentForEconomicConcern( global::Company.TestMart.Concern root )
-			{
-				// Segments 0 and 1
-				global::Company.TestMart.ImpactLevel root2 = root.ImpactLevel;
-				if ( root2 == null ) return null;
-				// Segments 2 and 3
-				global::Company.TestMart.SoSA result = root2.SoSA;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::Company.TestMart.SoSA GetParentForTechnicalConcern( global::Company.TestMart.Concern root )
-			{
-				// Segments 0 and 1
-				global::Company.TestMart.ImpactLevel root2 = root.ImpactLevel;
-				if ( root2 == null ) return null;
-				// Segments 2 and 3
-				global::Company.TestMart.SoSA result = root2.SoSA;
+				global::Company.TestMart.SoSA result = root.SoSA;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -634,7 +712,7 @@ namespace Company.TestMart
 		/// A rule which fires when data mapped to outer text decorators has changed,
 		/// so we can update the decorator host's bounds.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactLevel), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ElementReferencesTargetElements), InitiallyDisabled=true)]
 		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
@@ -642,12 +720,12 @@ namespace Company.TestMart
 			{
 				if(e == null) throw new global::System.ArgumentNullException("e");
 				
-				if (e.DomainProperty.Id == global::Company.TestMart.ImpactLevel.NameDomainPropertyId)
+				if (e.DomainProperty.Id == global::Company.TestMart.ElementReferencesTargetElements.SignDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::Company.TestMart.ImpactShape.FindImpactShapeDecorator("Name");
+					DslDiagrams::Decorator decorator = global::Company.TestMart.ConcernRela.FindConcernRelaDecorator("Sign");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Company.TestMart.ImpactLevel.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Company.TestMart.ElementReferencesTargetElements.DomainClassId);
 					}
 				}
 			}
@@ -656,7 +734,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.ConcernReferencesTargetConcerned), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ElementReferencesTargetElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>
