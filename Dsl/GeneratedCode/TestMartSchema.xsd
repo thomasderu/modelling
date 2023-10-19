@@ -97,10 +97,10 @@
   </xsd:complexType>
   
   <!-- SocialConcern -->
-  <xsd:element name="socialConcern" type="SocialConcern" substitutionGroup="element" />
+  <xsd:element name="socialConcern" type="SocialConcern" substitutionGroup="concern" />
   <xsd:complexType name="SocialConcern">
     <xsd:complexContent>
-      <xsd:extension base="Element">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -114,22 +114,22 @@
   </xsd:complexType>
   
   <!-- SocialConcern Moniker -->
-  <xsd:element name="socialConcernMoniker" type="SocialConcernMoniker" substitutionGroup="elementMoniker" />
+  <xsd:element name="socialConcernMoniker" type="SocialConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="SocialConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for SocialConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementMoniker">
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- EnvironmentalConcern -->
-  <xsd:element name="environmentalConcern" type="EnvironmentalConcern" substitutionGroup="element" />
+  <xsd:element name="environmentalConcern" type="EnvironmentalConcern" substitutionGroup="concern" />
   <xsd:complexType name="EnvironmentalConcern">
     <xsd:complexContent>
-      <xsd:extension base="Element">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -143,22 +143,22 @@
   </xsd:complexType>
   
   <!-- EnvironmentalConcern Moniker -->
-  <xsd:element name="environmentalConcernMoniker" type="EnvironmentalConcernMoniker" substitutionGroup="elementMoniker" />
+  <xsd:element name="environmentalConcernMoniker" type="EnvironmentalConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="EnvironmentalConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for EnvironmentalConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementMoniker">
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- EconomicConcern -->
-  <xsd:element name="economicConcern" type="EconomicConcern" substitutionGroup="element" />
+  <xsd:element name="economicConcern" type="EconomicConcern" substitutionGroup="concern" />
   <xsd:complexType name="EconomicConcern">
     <xsd:complexContent>
-      <xsd:extension base="Element">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -172,22 +172,22 @@
   </xsd:complexType>
   
   <!-- EconomicConcern Moniker -->
-  <xsd:element name="economicConcernMoniker" type="EconomicConcernMoniker" substitutionGroup="elementMoniker" />
+  <xsd:element name="economicConcernMoniker" type="EconomicConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="EconomicConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for EconomicConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementMoniker">
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
   <!-- TechnicalConcern -->
-  <xsd:element name="technicalConcern" type="TechnicalConcern" substitutionGroup="element" />
+  <xsd:element name="technicalConcern" type="TechnicalConcern" substitutionGroup="concern" />
   <xsd:complexType name="TechnicalConcern">
     <xsd:complexContent>
-      <xsd:extension base="Element">
+      <xsd:extension base="Concern">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -201,13 +201,13 @@
   </xsd:complexType>
   
   <!-- TechnicalConcern Moniker -->
-  <xsd:element name="technicalConcernMoniker" type="TechnicalConcernMoniker" substitutionGroup="elementMoniker" />
+  <xsd:element name="technicalConcernMoniker" type="TechnicalConcernMoniker" substitutionGroup="concernMoniker" />
   <xsd:complexType name="TechnicalConcernMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for TechnicalConcern instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ElementMoniker">
+      <xsd:extension base="ConcernMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -393,6 +393,33 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ImpactLevelsMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Concern -->
+  <xsd:element name="concern" type="Concern" substitutionGroup="element" />
+  <xsd:complexType name="Concern">
+    <xsd:complexContent>
+      <xsd:extension base="Element">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Concern Moniker -->
+  <xsd:element name="concernMoniker" type="ConcernMoniker" substitutionGroup="elementMoniker" />
+  <xsd:complexType name="ConcernMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Concern instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ElementMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

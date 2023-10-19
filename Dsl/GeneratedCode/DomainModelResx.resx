@@ -277,6 +277,14 @@
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ImpactEnabling&apos;</comment>
   </data>
+  <data name="Company.TestMart.Concern.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.Concern</value>
+    <comment>Description for DomainClass &apos;Concern&apos;</comment>
+  </data>
+  <data name="Company.TestMart.Concern.DisplayName" xml:space="preserve">
+    <value>Concern</value>
+    <comment>DisplayName for DomainClass &apos;Concern&apos;</comment>
+  </data>
   <data name="Company.TestMart.ElementReferencesTargetElements.Description" xml:space="preserve">
     <value>Description for Company.TestMart.ElementReferencesTargetElements</value>
     <comment>Description for DomainClass &apos;ElementReferencesTargetElements&apos;</comment>

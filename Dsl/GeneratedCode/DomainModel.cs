@@ -78,6 +78,7 @@ namespace Company.TestMart
 				typeof(ImpactStructural),
 				typeof(ImpactLevels),
 				typeof(ImpactEnabling),
+				typeof(Concern),
 				typeof(ElementReferencesTargetElements),
 				typeof(ImpactLevelsHasElements),
 				typeof(SoSAHasImpactLevel),
@@ -152,7 +153,7 @@ namespace Company.TestMart
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(22);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(23);
 				createElementMap.Add(typeof(SoSA), 0);
 				createElementMap.Add(typeof(ImpactImmediate), 1);
 				createElementMap.Add(typeof(SocialConcern), 2);
@@ -164,17 +165,18 @@ namespace Company.TestMart
 				createElementMap.Add(typeof(ImpactStructural), 8);
 				createElementMap.Add(typeof(ImpactLevels), 9);
 				createElementMap.Add(typeof(ImpactEnabling), 10);
-				createElementMap.Add(typeof(TestMartDiagram), 11);
-				createElementMap.Add(typeof(ConcernRela), 12);
-				createElementMap.Add(typeof(ImpactImmediateShape), 13);
-				createElementMap.Add(typeof(SocialConcernShape), 14);
-				createElementMap.Add(typeof(EnvironmentalShape), 15);
-				createElementMap.Add(typeof(EconomicShape), 16);
-				createElementMap.Add(typeof(TechnicalShape), 17);
-				createElementMap.Add(typeof(ElementShape), 18);
-				createElementMap.Add(typeof(SolutionShape), 19);
-				createElementMap.Add(typeof(ImpactStructuralShape), 20);
-				createElementMap.Add(typeof(ImpactEnablingShape), 21);
+				createElementMap.Add(typeof(Concern), 11);
+				createElementMap.Add(typeof(TestMartDiagram), 12);
+				createElementMap.Add(typeof(ConcernRela), 13);
+				createElementMap.Add(typeof(ImpactImmediateShape), 14);
+				createElementMap.Add(typeof(SocialConcernShape), 15);
+				createElementMap.Add(typeof(EnvironmentalShape), 16);
+				createElementMap.Add(typeof(EconomicShape), 17);
+				createElementMap.Add(typeof(TechnicalShape), 18);
+				createElementMap.Add(typeof(ElementShape), 19);
+				createElementMap.Add(typeof(SolutionShape), 20);
+				createElementMap.Add(typeof(ImpactStructuralShape), 21);
+				createElementMap.Add(typeof(ImpactEnablingShape), 22);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -199,17 +201,18 @@ namespace Company.TestMart
 				case 8: return new ImpactStructural(partition, propertyAssignments);
 				case 9: return new ImpactLevels(partition, propertyAssignments);
 				case 10: return new ImpactEnabling(partition, propertyAssignments);
-				case 11: return new TestMartDiagram(partition, propertyAssignments);
-				case 12: return new ConcernRela(partition, propertyAssignments);
-				case 13: return new ImpactImmediateShape(partition, propertyAssignments);
-				case 14: return new SocialConcernShape(partition, propertyAssignments);
-				case 15: return new EnvironmentalShape(partition, propertyAssignments);
-				case 16: return new EconomicShape(partition, propertyAssignments);
-				case 17: return new TechnicalShape(partition, propertyAssignments);
-				case 18: return new ElementShape(partition, propertyAssignments);
-				case 19: return new SolutionShape(partition, propertyAssignments);
-				case 20: return new ImpactStructuralShape(partition, propertyAssignments);
-				case 21: return new ImpactEnablingShape(partition, propertyAssignments);
+				case 11: return new Concern(partition, propertyAssignments);
+				case 12: return new TestMartDiagram(partition, propertyAssignments);
+				case 13: return new ConcernRela(partition, propertyAssignments);
+				case 14: return new ImpactImmediateShape(partition, propertyAssignments);
+				case 15: return new SocialConcernShape(partition, propertyAssignments);
+				case 16: return new EnvironmentalShape(partition, propertyAssignments);
+				case 17: return new EconomicShape(partition, propertyAssignments);
+				case 18: return new TechnicalShape(partition, propertyAssignments);
+				case 19: return new ElementShape(partition, propertyAssignments);
+				case 20: return new SolutionShape(partition, propertyAssignments);
+				case 21: return new ImpactStructuralShape(partition, propertyAssignments);
+				case 22: return new ImpactEnablingShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

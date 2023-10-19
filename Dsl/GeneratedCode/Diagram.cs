@@ -399,6 +399,9 @@ namespace Company.TestMart
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

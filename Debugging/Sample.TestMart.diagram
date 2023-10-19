@@ -2,13 +2,13 @@
 <testMartDiagram dslVersion="1.0.0.0" Id="6da5293f-dac7-4ef4-a3c4-fc55b8698a2f" absoluteBounds="0, 0, 11, 8.5" name="Sample">
   <soSAMoniker Id="5bbcd38e-7edb-44fd-96c7-a65cd391bc26" />
   <nestedChildShapes>
-    <impactStructuralShape Id="3fc3fcf3-b5db-4da4-935d-383c234b2b51" absoluteBounds="0.5, 0.5, 7.25, 5.625">
+    <impactStructuralShape Id="3fc3fcf3-b5db-4da4-935d-383c234b2b51" absoluteBounds="0.5, 0.5, 8.75, 6.625">
       <impactStructuralMoniker Id="9e496609-d14c-4e31-8a44-7a305ba4b481" />
     </impactStructuralShape>
-    <impactEnablingShape Id="6a236697-ec60-4adb-97b2-a7812b37042f" absoluteBounds="1.375, 0.875, 5.5, 4">
+    <impactEnablingShape Id="6a236697-ec60-4adb-97b2-a7812b37042f" absoluteBounds="1.375, 0.875, 6.875, 4.375">
       <impactEnablingMoniker Id="c24559b2-b42e-45a6-8d82-3856a1d0409c" />
     </impactEnablingShape>
-    <impactImmediateShape Id="b7b8c562-4c56-44cb-bad8-0048b53b975c" absoluteBounds="2, 1, 4.5, 3">
+    <impactImmediateShape Id="b7b8c562-4c56-44cb-bad8-0048b53b975c" absoluteBounds="2, 1, 4.875, 3.25">
       <impactImmediateMoniker name="/5bbcd38e-7edb-44fd-96c7-a65cd391bc26/IMMEDIATE" />
     </impactImmediateShape>
     <solutionShape Id="71a71106-8ce9-4648-9f1c-e46ef5f5d67a" absoluteBounds="3.75, 1.125, 1, 1">
@@ -23,10 +23,10 @@
     <economicShape Id="940a0bc2-ec57-43dd-9734-5dfe7427219e" absoluteBounds="1.875, 3.375, 1.25, 0.75">
       <economicConcernMoniker Id="43c7d29c-7498-4870-b1e5-f6989ff99929" />
     </economicShape>
-    <socialConcernShape Id="0cf1a0cb-3e19-4cec-a39d-ad642170988e" absoluteBounds="3.5, 4.125, 1.25, 0.75">
+    <socialConcernShape Id="0cf1a0cb-3e19-4cec-a39d-ad642170988e" absoluteBounds="4.125, 4.375, 1.25, 0.75">
       <socialConcernMoniker Id="0ee06009-2d01-46cd-9e8f-ccd2a098ff9b" />
     </socialConcernShape>
-    <technicalShape Id="a4d5194a-963d-47c2-98ce-503bf491d9c9" absoluteBounds="5.375, 3.75, 1.25, 0.75">
+    <technicalShape Id="a4d5194a-963d-47c2-98ce-503bf491d9c9" absoluteBounds="6.625, 3.25, 1.25, 0.75">
       <technicalConcernMoniker Id="327b0a86-27e0-4fc1-955f-1f94d05fd918" />
     </technicalShape>
     <economicShape Id="fd7f3be9-7fdd-4da4-88fb-e92b292687fd" absoluteBounds="5.125, 2.125, 1.25, 0.75">
@@ -75,36 +75,39 @@
         <environmentalShapeMoniker Id="bb26fbec-a989-47f6-94d3-98a12423ce85" />
       </nodes>
     </concernRela>
-    <concernRela Id="d16cb5cb-754b-4dce-b6e6-aa29499ae66c" edgePoints="[(4 : 3.5); (4.125 : 4.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <concernRela Id="d16cb5cb-754b-4dce-b6e6-aa29499ae66c" edgePoints="[(4 : 3.5); (4.75 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <elementReferencesTargetElementsMoniker Id="89e30d22-d82f-484e-b068-d84bb6f63684" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.875, 3.6875, 0.14415599405765533, 0.2020941823720932" shapeFieldName="Sign" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.02293839184744, 3.6764993879401051, 0.14415599405765533, 0.2020941823720932" shapeFieldName="Sign" />
       </moveableDecoratorHostShapes>
       <nodes>
         <environmentalShapeMoniker Id="bb26fbec-a989-47f6-94d3-98a12423ce85" />
         <socialConcernShapeMoniker Id="0cf1a0cb-3e19-4cec-a39d-ad642170988e" />
       </nodes>
     </concernRela>
-    <concernRela Id="183b3d50-4773-43a0-aeea-6c3c9de8d9c2" edgePoints="[(4.75 : 4.5); (5.375 : 4.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <concernRela Id="183b3d50-4773-43a0-aeea-6c3c9de8d9c2" edgePoints="[(5.375 : 4.375); (6.625 : 4)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <elementReferencesTargetElementsMoniker Id="5e31e081-30ae-47d9-ab00-007feeac1fd3" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.9375, 4.125, 0.1388888955116272, 0.2020941823720932" shapeFieldName="Sign" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="5.6220796875087, 4.0717571688113061, 0.1388888955116272, 0.2020941823720932" shapeFieldName="Sign" />
       </moveableDecoratorHostShapes>
       <nodes>
         <socialConcernShapeMoniker Id="0cf1a0cb-3e19-4cec-a39d-ad642170988e" />
         <technicalShapeMoniker Id="a4d5194a-963d-47c2-98ce-503bf491d9c9" />
       </nodes>
     </concernRela>
-    <economicShape Id="57ca3eb6-ac54-4af0-a09c-7fd815941fa0" absoluteBounds="1.125, 4.25, 1.25, 0.75">
+    <economicShape Id="57ca3eb6-ac54-4af0-a09c-7fd815941fa0" absoluteBounds="1.25, 5, 1.25, 0.75">
       <economicConcernMoniker Id="4e21eacb-443c-4c01-bbc2-c038bedea826" />
     </economicShape>
-    <technicalShape Id="b27d4ec0-8bab-4c75-aaae-080a102dba1f" absoluteBounds="3.125, 5.25, 1.25, 0.75">
+    <technicalShape Id="b27d4ec0-8bab-4c75-aaae-080a102dba1f" absoluteBounds="2.625, 5.625, 1.25, 0.75">
       <technicalConcernMoniker Id="a9566856-aace-4683-bc30-ef491ac69a6e" />
     </technicalShape>
-    <environmentalShape Id="d069b4a0-38a4-45b4-ab7f-9464e6a7aac5" absoluteBounds="5, 5, 1.25, 0.75">
+    <environmentalShape Id="d069b4a0-38a4-45b4-ab7f-9464e6a7aac5" absoluteBounds="5.625, 5.75, 1.25, 0.75">
       <environmentalConcernMoniker Id="174a77ac-fd5b-4c83-a26a-e9440a9f6b6a" />
     </environmentalShape>
+    <socialConcernShape Id="66e01560-7f99-490a-8fce-7bb96f1a707d" absoluteBounds="0.5, 4.125, 1.25, 0.75">
+      <socialConcernMoniker Id="3a26577e-2450-4a43-ae78-874931fc3e98" />
+    </socialConcernShape>
   </nestedChildShapes>
 </testMartDiagram>

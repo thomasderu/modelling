@@ -13,6 +13,9 @@
           <impactLevelsHasElements Id="3d991b7b-55c7-43e8-b59e-3f41fbdddedf">
             <environmentalConcern Id="174a77ac-fd5b-4c83-a26a-e9440a9f6b6a" name="hallo" />
           </impactLevelsHasElements>
+          <impactLevelsHasElements Id="eb701135-b974-44ea-be24-0898f2221d11">
+            <socialConcern Id="3a26577e-2450-4a43-ae78-874931fc3e98" name="Social concern" />
+          </impactLevelsHasElements>
         </elements>
       </impactStructural>
     </soSAHasImpactLevel>
@@ -49,7 +52,7 @@
                 <elementReferencesTargetElements Id="a2a8a408-9c7e-447c-b1d1-356d54e1b0fd" sign="+">
                   <environmentalConcernMoniker Id="6f3fb033-823e-488f-bcc1-ef4ff3c988a8" />
                 </elementReferencesTargetElements>
-                <elementReferencesTargetElements Id="ab875c11-f3bc-4642-8956-e713975fd511">
+                <elementReferencesTargetElements Id="ab875c11-f3bc-4642-8956-e713975fd511" sign="-">
                   <economicConcernMoniker Id="cb45c976-50cf-488f-88bf-5902310042db" />
                 </elementReferencesTargetElements>
               </targetElements>

@@ -304,7 +304,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("beefb504-550b-4f41-b4d8-a8eefd6f1526")]
-	public partial class SocialConcern : Element
+	public partial class SocialConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -432,7 +432,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5b9e7ce6-0858-4e57-80e6-e2d3716fae3e")]
-	public partial class EnvironmentalConcern : Element
+	public partial class EnvironmentalConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -560,7 +560,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("396c8e99-afe7-4d09-9402-48edd3163546")]
-	public partial class EconomicConcern : Element
+	public partial class EconomicConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -688,7 +688,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("482f4b9f-e0bb-4c93-94ac-fa2edf8790e0")]
-	public partial class TechnicalConcern : Element
+	public partial class TechnicalConcern : Concern
 	{
 		#region Constructors, domain class Id
 	
@@ -1448,6 +1448,47 @@ namespace Company.TestMart
 			}
 		}
 		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass Concern
+	/// Description for Company.TestMart.Concern
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.Concern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.Concern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("ec935230-be28-4105-94dc-59c8939eb7cd")]
+	public partial class Concern : Element
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Concern domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xec935230, 0xbe28, 0x4105, 0x94, 0xdc, 0x59, 0xc8, 0x93, 0x9e, 0xb7, 0xcd);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Concern(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Concern(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
 		#endregion
 	}
 }

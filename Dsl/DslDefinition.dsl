@@ -27,7 +27,7 @@
     </DomainClass>
     <DomainClass Id="beefb504-550b-4f41-b4d8-a8eefd6f1526" Description="Description for Company.TestMart.SocialConcern" Name="SocialConcern" DisplayName="Social Concern" Namespace="Company.TestMart">
       <BaseClass>
-        <DomainClassMoniker Name="Element" />
+        <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="191eb0fc-eb22-40c4-8ccb-b822c885e847" Description="Description for Company.TestMart.SocialConcern.Name" Name="Name" DisplayName="Name">
@@ -39,7 +39,7 @@
     </DomainClass>
     <DomainClass Id="5b9e7ce6-0858-4e57-80e6-e2d3716fae3e" Description="Description for Company.TestMart.EnvironmentalConcern" Name="EnvironmentalConcern" DisplayName="Environmental Concern" Namespace="Company.TestMart">
       <BaseClass>
-        <DomainClassMoniker Name="Element" />
+        <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="2271e7b4-cde0-4aeb-be64-70486195ceaa" Description="Description for Company.TestMart.EnvironmentalConcern.Name" Name="Name" DisplayName="Name">
@@ -51,7 +51,7 @@
     </DomainClass>
     <DomainClass Id="396c8e99-afe7-4d09-9402-48edd3163546" Description="Description for Company.TestMart.EconomicConcern" Name="EconomicConcern" DisplayName="Economic Concern" Namespace="Company.TestMart">
       <BaseClass>
-        <DomainClassMoniker Name="Element" />
+        <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="7b95dac3-62d3-4da3-84e1-315e323fd494" Description="Description for Company.TestMart.EconomicConcern.Name" Name="Name" DisplayName="Name">
@@ -63,7 +63,7 @@
     </DomainClass>
     <DomainClass Id="482f4b9f-e0bb-4c93-94ac-fa2edf8790e0" Description="Description for Company.TestMart.TechnicalConcern" Name="TechnicalConcern" DisplayName="Technical Concern" Namespace="Company.TestMart">
       <BaseClass>
-        <DomainClassMoniker Name="Element" />
+        <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="98ebb92f-08e8-44d1-9a19-5099a105686f" Description="Description for Company.TestMart.TechnicalConcern.Name" Name="Name" DisplayName="Name">
@@ -121,6 +121,11 @@
           </Type>
         </DomainProperty>
       </Properties>
+    </DomainClass>
+    <DomainClass Id="ec935230-be28-4105-94dc-59c8939eb7cd" Description="Description for Company.TestMart.Concern" Name="Concern" DisplayName="Concern" Namespace="Company.TestMart">
+      <BaseClass>
+        <DomainClassMoniker Name="Element" />
+      </BaseClass>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -384,6 +389,9 @@
       </XmlClassData>
       <XmlClassData TypeName="ImpactEnablingShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactEnablingShapeMoniker" ElementName="impactEnablingShape" MonikerTypeName="ImpactEnablingShapeMoniker">
         <GeometryShapeMoniker Name="ImpactEnablingShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="Concern" MonikerAttributeName="" SerializeId="true" MonikerElementName="concernMoniker" ElementName="concern" MonikerTypeName="ConcernMoniker">
+        <DomainClassMoniker Name="Concern" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
