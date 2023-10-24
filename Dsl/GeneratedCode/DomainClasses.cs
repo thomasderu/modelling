@@ -1701,7 +1701,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for TempName
 		/// </summary>
-		private global::System.String tempNamePropertyStorage = string.Empty;
+		private global::System.String tempNamePropertyStorage = "*add concern*";
 		
 		/// <summary>
 		/// Gets or sets the value of TempName domain property.
@@ -1709,6 +1709,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.TemporaryConcern/TempName.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.TemporaryConcern/TempName.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add concern*")]
 		[DslModeling::DomainObjectId("fa279f03-baf8-4aa2-9249-9e6acdc41178")]
 		public global::System.String TempName
 		{

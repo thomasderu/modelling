@@ -309,17 +309,17 @@ namespace Company.TestMart
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Company.TestMart.ElementTool1ToolboxItem":
-					// Add ElementTool1 shape tool.
+				case "Company.TestMart.TemporaryConcernToolboxItem":
+					// Add TemporaryConcern shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Company.TestMart.ElementTool1ToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"Company.TestMart.TemporaryConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						11, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ElementTool1ToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ElementTool1ToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("TemporaryConcernToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TemporaryConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ElementTool1", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ElementTool1ToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						"TemporaryConcern", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("TemporaryConcernToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::Company.TestMart.TemporaryConcern.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 

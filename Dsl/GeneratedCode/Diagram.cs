@@ -278,6 +278,7 @@ namespace Company.TestMart
 			global::Company.TestMart.EconomicShape.DecoratorsInitialized += EconomicShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.EnvironmentalShape.DecoratorsInitialized += EnvironmentalShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.SocialConcernShape.DecoratorsInitialized += SocialConcernShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.TestMart.TempShape.DecoratorsInitialized += TempShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.ConcernRela.DecoratorsInitialized += ConcernRelaDecoratorMap.OnDecoratorsInitialized;
 		}
 		
@@ -389,6 +390,24 @@ namespace Company.TestMart
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.SocialConcern.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for TempShape.
+		/// </summary>
+		internal static partial class TempShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for TempShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.TemporaryConcern.TempNameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TempShapeName").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

@@ -110,11 +110,11 @@ namespace Company.TestMart
 					0xff00ff,
 					Index = 9)]
 	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@ElementTool1ToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.ElementTool1ToolboxItem", 
+					"@TemporaryConcernToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.TemporaryConcernToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ElementTool1", 
-					"@ElementTool1ToolboxBitmap;Company.TestMart.Dsl.dll", 
+					"TemporaryConcern", 
+					"@TemporaryConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
 					Index = 10)]
 	[VSShell::ProvideEditorFactory(typeof(TestMartEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]

@@ -9277,9 +9277,10 @@ namespace Company.TestMart
 				global::System.String propValue = instanceOfTemporaryConcern.TempName;
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
+					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "*add concern*") != 0))
+					{	// No need to write the value out if it's the same as default value.
 						TestMartSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tempName", propValue);
-	
+					}
 				}
 			}
 		}

@@ -11,7 +11,13 @@
       <impactImmediate Id="d95f9f81-a41e-4d17-899a-537dd0e5207c" name="ImpactImmediate2">
         <elements>
           <impactLevelsHasElements Id="cf4c483b-6c76-43b0-bce5-0c02f0ada694">
-            <socialConcern Id="afbf19f8-b8a2-4346-a528-2c9696a7207a" name="" />
+            <socialConcern Id="afbf19f8-b8a2-4346-a528-2c9696a7207a" name="">
+              <targetElements>
+                <elementReferencesTargetElements Id="c66be4b0-4f0c-47a2-9662-07550b8a02e6">
+                  <environmentalConcernMoniker Id="7ce08a4c-16ec-4f8c-a193-223923ea78fe" />
+                </elementReferencesTargetElements>
+              </targetElements>
+            </socialConcern>
           </impactLevelsHasElements>
           <impactLevelsHasElements Id="8796ac01-22eb-4811-a8d0-2b3fca4fcf8f">
             <technicalConcern Id="8e3f7c1a-705e-45b1-a2c8-53db8fac6e5f" name="" />
@@ -21,6 +27,9 @@
           </impactLevelsHasElements>
           <impactLevelsHasElements Id="ebabba1d-a2cc-4e99-8263-fd2e5d43c108">
             <environmentalConcern Id="7ce08a4c-16ec-4f8c-a193-223923ea78fe" name="" />
+          </impactLevelsHasElements>
+          <impactLevelsHasElements Id="d81dd4de-68c3-4b30-b729-b30b02ecdb1b">
+            <solution Id="8df574a4-4413-4840-a067-13018d5db277" name="" />
           </impactLevelsHasElements>
         </elements>
       </impactImmediate>
@@ -32,8 +41,8 @@
     </soSAHasLegend>
   </legend>
   <temporaryConcerned>
-    <soSAHasTemporaryConcerned Id="6f008563-a8a2-4dc7-b917-8bb9d36b953c">
-      <temporaryConcern Id="752f748c-69bf-4f87-a98d-aaaae9216427" />
+    <soSAHasTemporaryConcerned Id="421b2355-8c7e-4f5f-be1f-1487b1a4462d">
+      <temporaryConcern Id="887325bd-f2ff-4665-ba27-2118e20c46ed" />
     </soSAHasTemporaryConcerned>
   </temporaryConcerned>
 </soSA>

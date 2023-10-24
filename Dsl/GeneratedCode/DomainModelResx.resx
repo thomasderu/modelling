@@ -598,7 +598,7 @@
     <comment>DisplayName for DomainClass &apos;TempShape&apos;</comment>
   </data>
   <data name="TempShapeTempShapeNameDefaultText" xml:space="preserve">
-    <value>TempShapeName</value>
+    <value>*add concern*</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.TestMart.ConcernRela.Description" xml:space="preserve">
@@ -709,12 +709,12 @@
     <value>Legend</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ElementTool1ToolboxItem" xml:space="preserve">
-    <value>ElementTool1</value>
+  <data name="TemporaryConcernToolboxItem" xml:space="preserve">
+    <value>TemporaryConcern</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ElementTool1ToolboxTooltip" xml:space="preserve">
-    <value>Element Tool1</value>
+  <data name="TemporaryConcernToolboxTooltip" xml:space="preserve">
+    <value>Temporary Concern</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -886,7 +886,7 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ElementTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="TemporaryConcernToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

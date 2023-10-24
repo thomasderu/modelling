@@ -146,7 +146,7 @@
     <DomainClass Id="1b22ac0a-6a6c-4769-8e0a-9ade0a56a916" Description="Description for Company.TestMart.Legend" Name="Legend" DisplayName="Legend" Namespace="Company.TestMart" />
     <DomainClass Id="fdb34555-2b30-4945-a4a7-d236f54cb26a" Description="Description for Company.TestMart.TemporaryConcern" Name="TemporaryConcern" DisplayName="Temporary Concern" Namespace="Company.TestMart">
       <Properties>
-        <DomainProperty Id="fa279f03-baf8-4aa2-9249-9e6acdc41178" Description="Description for Company.TestMart.TemporaryConcern.Temp Name" Name="TempName" DisplayName="Temp Name">
+        <DomainProperty Id="fa279f03-baf8-4aa2-9249-9e6acdc41178" Description="Description for Company.TestMart.TemporaryConcern.Temp Name" Name="TempName" DisplayName="Temp Name" DefaultValue="*add concern*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -304,7 +304,7 @@
     </GeometryShape>
     <ImageShape Id="43454b0c-9708-4e08-9e45-46b39693b070" Description="Description for Company.TestMart.LegendShape" Name="LegendShape" DisplayName="Legend Shape" Namespace="Company.TestMart" FixedTooltipText="Legend Shape" InitialHeight="1" Image="Resources\SoSA legend.png" />
     <GeometryShape Id="becd3492-81c7-41fc-abd3-3c9d49d559b5" Description="Description for Company.TestMart.TempShape" Name="TempShape" DisplayName="Temp Shape" Namespace="Company.TestMart" FixedTooltipText="Temp Shape" InitialHeight="1" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="TempShapeName" DisplayName="Temp Shape Name" DefaultText="*add concern*" />
       </ShapeHasDecorators>
     </GeometryShape>
@@ -781,7 +781,7 @@
       <ElementTool Name="Legend" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Legend" Tooltip="Legend" HelpKeyword="Legend">
         <DomainClassMoniker Name="Legend" />
       </ElementTool>
-      <ElementTool Name="ElementTool1" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ElementTool1" Tooltip="Element Tool1" HelpKeyword="ElementTool1">
+      <ElementTool Name="TemporaryConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="TemporaryConcern" Tooltip="Temporary Concern" HelpKeyword="TemporaryConcern">
         <DomainClassMoniker Name="TemporaryConcern" />
       </ElementTool>
     </ToolboxTab>
