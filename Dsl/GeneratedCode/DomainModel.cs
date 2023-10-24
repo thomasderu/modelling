@@ -84,7 +84,6 @@ namespace Company.TestMart
 				typeof(SoSAHasImpactLevel),
 				typeof(TestMartDiagram),
 				typeof(ConcernRela),
-				typeof(ImpactImmediateShape),
 				typeof(SocialConcernShape),
 				typeof(EnvironmentalShape),
 				typeof(EconomicShape),
@@ -93,6 +92,7 @@ namespace Company.TestMart
 				typeof(SolutionShape),
 				typeof(ImpactStructuralShape),
 				typeof(ImpactEnablingShape),
+				typeof(ImpactImmediateShape),
 				typeof(global::Company.TestMart.FixUpDiagram),
 				typeof(global::Company.TestMart.DecoratorPropertyChanged),
 				typeof(global::Company.TestMart.ConnectorRolePlayerChanged),
@@ -168,15 +168,15 @@ namespace Company.TestMart
 				createElementMap.Add(typeof(Concern), 11);
 				createElementMap.Add(typeof(TestMartDiagram), 12);
 				createElementMap.Add(typeof(ConcernRela), 13);
-				createElementMap.Add(typeof(ImpactImmediateShape), 14);
-				createElementMap.Add(typeof(SocialConcernShape), 15);
-				createElementMap.Add(typeof(EnvironmentalShape), 16);
-				createElementMap.Add(typeof(EconomicShape), 17);
-				createElementMap.Add(typeof(TechnicalShape), 18);
-				createElementMap.Add(typeof(ElementShape), 19);
-				createElementMap.Add(typeof(SolutionShape), 20);
-				createElementMap.Add(typeof(ImpactStructuralShape), 21);
-				createElementMap.Add(typeof(ImpactEnablingShape), 22);
+				createElementMap.Add(typeof(SocialConcernShape), 14);
+				createElementMap.Add(typeof(EnvironmentalShape), 15);
+				createElementMap.Add(typeof(EconomicShape), 16);
+				createElementMap.Add(typeof(TechnicalShape), 17);
+				createElementMap.Add(typeof(ElementShape), 18);
+				createElementMap.Add(typeof(SolutionShape), 19);
+				createElementMap.Add(typeof(ImpactStructuralShape), 20);
+				createElementMap.Add(typeof(ImpactEnablingShape), 21);
+				createElementMap.Add(typeof(ImpactImmediateShape), 22);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -204,15 +204,15 @@ namespace Company.TestMart
 				case 11: return new Concern(partition, propertyAssignments);
 				case 12: return new TestMartDiagram(partition, propertyAssignments);
 				case 13: return new ConcernRela(partition, propertyAssignments);
-				case 14: return new ImpactImmediateShape(partition, propertyAssignments);
-				case 15: return new SocialConcernShape(partition, propertyAssignments);
-				case 16: return new EnvironmentalShape(partition, propertyAssignments);
-				case 17: return new EconomicShape(partition, propertyAssignments);
-				case 18: return new TechnicalShape(partition, propertyAssignments);
-				case 19: return new ElementShape(partition, propertyAssignments);
-				case 20: return new SolutionShape(partition, propertyAssignments);
-				case 21: return new ImpactStructuralShape(partition, propertyAssignments);
-				case 22: return new ImpactEnablingShape(partition, propertyAssignments);
+				case 14: return new SocialConcernShape(partition, propertyAssignments);
+				case 15: return new EnvironmentalShape(partition, propertyAssignments);
+				case 16: return new EconomicShape(partition, propertyAssignments);
+				case 17: return new TechnicalShape(partition, propertyAssignments);
+				case 18: return new ElementShape(partition, propertyAssignments);
+				case 19: return new SolutionShape(partition, propertyAssignments);
+				case 20: return new ImpactStructuralShape(partition, propertyAssignments);
+				case 21: return new ImpactEnablingShape(partition, propertyAssignments);
+				case 22: return new ImpactImmediateShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

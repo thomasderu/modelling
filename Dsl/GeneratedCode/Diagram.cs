@@ -227,15 +227,15 @@ namespace Company.TestMart
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.TestMart.ImpactImmediate)
-			{
-				global::Company.TestMart.ImpactImmediateShape newShape = new global::Company.TestMart.ImpactImmediateShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::Company.TestMart.ImpactEnabling)
 			{
 				global::Company.TestMart.ImpactEnablingShape newShape = new global::Company.TestMart.ImpactEnablingShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.TestMart.ImpactImmediate)
+			{
+				global::Company.TestMart.ImpactImmediateShape newShape = new global::Company.TestMart.ImpactImmediateShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -266,7 +266,6 @@ namespace Company.TestMart
 			global::Company.TestMart.EconomicShape.DecoratorsInitialized += EconomicShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.EnvironmentalShape.DecoratorsInitialized += EnvironmentalShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.SocialConcernShape.DecoratorsInitialized += SocialConcernShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Company.TestMart.ImpactImmediateShape.DecoratorsInitialized += ImpactImmediateShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.TestMart.ConcernRela.DecoratorsInitialized += ConcernRelaDecoratorMap.OnDecoratorsInitialized;
 		}
 		
@@ -377,30 +376,6 @@ namespace Company.TestMart
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.SocialConcern.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for ImpactImmediateShape.
-		/// </summary>
-		internal static partial class ImpactImmediateShapeDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for ImpactImmediateShape.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.TestMart.ImpactImmediate.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Name").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -580,8 +555,8 @@ namespace Company.TestMart
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.SocialConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.Solution), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactStructural), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactImmediate), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactEnabling), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactImmediate), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.Element), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.ElementReferencesTargetElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
@@ -623,13 +598,13 @@ namespace Company.TestMart
 				{
 					parentElement = GetParentForImpactStructural((global::Company.TestMart.ImpactStructural)childElement);
 				} else
-				if(childElement is global::Company.TestMart.ImpactImmediate)
-				{
-					parentElement = GetParentForImpactImmediate((global::Company.TestMart.ImpactImmediate)childElement);
-				} else
 				if(childElement is global::Company.TestMart.ImpactEnabling)
 				{
 					parentElement = GetParentForImpactEnabling((global::Company.TestMart.ImpactEnabling)childElement);
+				} else
+				if(childElement is global::Company.TestMart.ImpactImmediate)
+				{
+					parentElement = GetParentForImpactImmediate((global::Company.TestMart.ImpactImmediate)childElement);
 				} else
 				if(childElement is global::Company.TestMart.Element)
 				{
@@ -711,14 +686,14 @@ namespace Company.TestMart
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Company.TestMart.SoSA GetParentForImpactImmediate( global::Company.TestMart.ImpactLevels root )
+			public static global::Company.TestMart.SoSA GetParentForImpactEnabling( global::Company.TestMart.ImpactLevels root )
 			{
 				// Segments 0 and 1
 				global::Company.TestMart.SoSA result = root.SoSA;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Company.TestMart.SoSA GetParentForImpactEnabling( global::Company.TestMart.ImpactLevels root )
+			public static global::Company.TestMart.SoSA GetParentForImpactImmediate( global::Company.TestMart.ImpactLevels root )
 			{
 				// Segments 0 and 1
 				global::Company.TestMart.SoSA result = root.SoSA;

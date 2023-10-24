@@ -30,7 +30,7 @@
         <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="191eb0fc-eb22-40c4-8ccb-b822c885e847" Description="Description for Company.TestMart.SocialConcern.Name" Name="Name" DisplayName="Name">
+        <DomainProperty Id="191eb0fc-eb22-40c4-8ccb-b822c885e847" Description="Description for Company.TestMart.SocialConcern.Name" Name="Name" DisplayName="Name" DefaultValue="*add concern*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -42,7 +42,7 @@
         <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="2271e7b4-cde0-4aeb-be64-70486195ceaa" Description="Description for Company.TestMart.EnvironmentalConcern.Name" Name="Name" DisplayName="Name">
+        <DomainProperty Id="2271e7b4-cde0-4aeb-be64-70486195ceaa" Description="Description for Company.TestMart.EnvironmentalConcern.Name" Name="Name" DisplayName="Name" DefaultValue="*add concern*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -54,7 +54,7 @@
         <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="7b95dac3-62d3-4da3-84e1-315e323fd494" Description="Description for Company.TestMart.EconomicConcern.Name" Name="Name" DisplayName="Name">
+        <DomainProperty Id="7b95dac3-62d3-4da3-84e1-315e323fd494" Description="Description for Company.TestMart.EconomicConcern.Name" Name="Name" DisplayName="Name" DefaultValue="*add concern*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -66,7 +66,7 @@
         <DomainClassMoniker Name="Concern" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="98ebb92f-08e8-44d1-9a19-5099a105686f" Description="Description for Company.TestMart.TechnicalConcern.Name" Name="Name" DisplayName="Name">
+        <DomainProperty Id="98ebb92f-08e8-44d1-9a19-5099a105686f" Description="Description for Company.TestMart.TechnicalConcern.Name" Name="Name" DisplayName="Name" DefaultValue="*add concern*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -79,7 +79,7 @@
         <DomainClassMoniker Name="Element" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="4f60711f-388a-48f5-aac3-15ad754f1669" Description="Description for Company.TestMart.Solution.Name" Name="Name" DisplayName="Name">
+        <DomainProperty Id="4f60711f-388a-48f5-aac3-15ad754f1669" Description="Description for Company.TestMart.Solution.Name" Name="Name" DisplayName="Name" DefaultValue="*add solution*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -131,7 +131,7 @@
   <Relationships>
     <DomainRelationship Id="a49f47b6-cb34-4a1e-b8c3-e321e303f5f2" Description="Description for Company.TestMart.ElementReferencesTargetElements" Name="ElementReferencesTargetElements" DisplayName="Element References Target Elements" Namespace="Company.TestMart">
       <Properties>
-        <DomainProperty Id="36ab6d9e-16c2-4815-a493-3431689824f6" Description="Description for Company.TestMart.ElementReferencesTargetElements.Sign" Name="Sign" DisplayName="Sign">
+        <DomainProperty Id="36ab6d9e-16c2-4815-a493-3431689824f6" Description="Description for Company.TestMart.ElementReferencesTargetElements.Sign" Name="Sign" DisplayName="Sign" DefaultValue="*add sign*">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -203,30 +203,24 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="11ee30dc-89b7-463f-961b-3be7751bf234" Description="Shape used to represent ExampleElements on a Diagram." Name="ImpactImmediateShape" DisplayName="Impact Immediate Shape" Namespace="Company.TestMart" FixedTooltipText="Impact Immediate Shape" FillColor="Transparent" OutlineColor="113, 111, 110" InitialWidth="4.5" InitialHeight="3" OutlineThickness="0.01" FillGradientMode="None" Geometry="Ellipse">
-      <Notes>The shape has a text decorator used to display the Name property of the mapped ExampleElement.</Notes>
-      <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="IMMEDIATE" />
-      </ShapeHasDecorators>
-    </GeometryShape>
     <GeometryShape Id="33c836a4-b091-438a-b29f-b63babca1fdc" Description="Description for Company.TestMart.SocialConcernShape" Name="SocialConcernShape" DisplayName="Social Concern Shape" Namespace="Company.TestMart" FixedTooltipText="Social Concern Shape" FillColor="Yellow" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Concern" DefaultText="Name" />
+        <TextDecorator Name="Name" DisplayName="Concern" DefaultText="Name" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="8d065975-b76a-4ded-9d09-3617cbb91cef" Description="Description for Company.TestMart.EnvironmentalShape" Name="EnvironmentalShape" DisplayName="Environmental Shape" Namespace="Company.TestMart" FixedTooltipText="Environmental Shape" FillColor="Green" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="8d065975-b76a-4ded-9d09-3617cbb91cef" Description="Description for Company.TestMart.EnvironmentalShape" Name="EnvironmentalShape" DisplayName="Environmental Shape" Namespace="Company.TestMart" FixedTooltipText="Environmental Shape" FillColor="LimeGreen" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="7a8a499d-09e5-4882-a6eb-da940bd9b321" Description="Description for Company.TestMart.EconomicShape" Name="EconomicShape" DisplayName="Economic Shape" Namespace="Company.TestMart" FixedTooltipText="Economic Shape" FillColor="Red" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="7a8a499d-09e5-4882-a6eb-da940bd9b321" Description="Description for Company.TestMart.EconomicShape" Name="EconomicShape" DisplayName="Economic Shape" Namespace="Company.TestMart" FixedTooltipText="Economic Shape" FillColor="Tomato" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="91604d28-667c-4f73-9196-02bb1ba8e196" Description="Description for Company.TestMart.TechnicalShape" Name="TechnicalShape" DisplayName="Technical Shape" Namespace="Company.TestMart" FixedTooltipText="Technical Shape" FillColor="Blue" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="91604d28-667c-4f73-9196-02bb1ba8e196" Description="Description for Company.TestMart.TechnicalShape" Name="TechnicalShape" DisplayName="Technical Shape" Namespace="Company.TestMart" FixedTooltipText="Technical Shape" FillColor="CornflowerBlue" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" />
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="ee699f92-6dba-4b91-815c-092734bda0b2" Description="Description for Company.TestMart.ElementShape" Name="ElementShape" DisplayName="Element Shape" Namespace="Company.TestMart" FixedTooltipText="Element Shape" InitialHeight="1" Geometry="Rectangle" />
@@ -243,6 +237,11 @@
     <GeometryShape Id="39620851-547a-4490-8fdf-5efcab90359e" Description="Description for Company.TestMart.ImpactEnablingShape" Name="ImpactEnablingShape" DisplayName="Impact Enabling Shape" Namespace="Company.TestMart" FixedTooltipText="Impact Enabling Shape" FillColor="Transparent" OutlineColor="113, 111, 110" InitialWidth="5.5" InitialHeight="4" OutlineThickness="0.01" FillGradientMode="None" Geometry="Ellipse">
       <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="ENABLING" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="11eba1c9-6e0b-4cc4-bd78-3c6b826f5966" Description="Description for Company.TestMart.ImpactImmediateShape" Name="ImpactImmediateShape" DisplayName="Impact Immediate Shape" Namespace="Company.TestMart" FixedTooltipText="Impact Immediate Shape" FillColor="Transparent" OutlineColor="113, 111, 110" InitialWidth="4.5" InitialHeight="3" OutlineThickness="0.01" FillGradientMode="None" Geometry="Ellipse">
+      <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="IMMEDIATE" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
@@ -270,9 +269,6 @@
             <DomainPropertyMoniker Name="ImpactImmediate/Name" />
           </XmlPropertyData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ImpactImmediateShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactImmediateShapeMoniker" ElementName="impactImmediateShape" MonikerTypeName="ImpactImmediateShapeMoniker">
-        <GeometryShapeMoniker Name="ImpactImmediateShape" />
       </XmlClassData>
       <XmlClassData TypeName="TestMartDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="testMartDiagramMoniker" ElementName="testMartDiagram" MonikerTypeName="TestMartDiagramMoniker">
         <DiagramMoniker Name="TestMartDiagram" />
@@ -392,6 +388,9 @@
       </XmlClassData>
       <XmlClassData TypeName="Concern" MonikerAttributeName="" SerializeId="true" MonikerElementName="concernMoniker" ElementName="concern" MonikerTypeName="ConcernMoniker">
         <DomainClassMoniker Name="Concern" />
+      </XmlClassData>
+      <XmlClassData TypeName="ImpactImmediateShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactImmediateShapeMoniker" ElementName="impactImmediateShape" MonikerTypeName="ImpactImmediateShapeMoniker">
+        <GeometryShapeMoniker Name="ImpactImmediateShape" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -566,14 +565,6 @@
           <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="ImpactImmediateShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ImpactStructural/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
           <TextDecoratorMoniker Name="SocialConcernShape/Name" />
           <PropertyDisplayed>
             <PropertyPath>
@@ -592,49 +583,10 @@
         <GeometryShapeMoniker Name="ImpactStructuralShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="ImpactImmediate" />
-        <ParentElementPath>
-          <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ImpactImmediateShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ImpactImmediate/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ImpactImmediate/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="EnvironmentalShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ImpactImmediate/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="ImpactImmediateShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="ImpactEnabling" />
         <ParentElementPath>
           <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
         </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ImpactImmediateShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ImpactEnabling/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
         <DecoratorMap>
           <TextDecoratorMoniker Name="SocialConcernShape/Name" />
           <PropertyDisplayed>
@@ -652,6 +604,13 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="ImpactEnablingShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="ImpactImmediate" />
+        <ParentElementPath>
+          <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="ImpactImmediateShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -677,7 +636,7 @@
       <XmlSerializationBehaviorMoniker Name="TestMartSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="TestMart">
-      <ElementTool Name="LevelImpactImmediate" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="LevelImpactImmediate" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
+      <ElementTool Name="LevelImpactImmediate" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="LevelImpactImmediate" Tooltip="LevelImpactImmediate" HelpKeyword="LevelImpactImmediate">
         <DomainClassMoniker Name="ImpactImmediate" />
       </ElementTool>
       <ElementTool Name="SocialConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="SocialConcern" Tooltip="Create an ExampleConcern" HelpKeyword="SocialConcern">

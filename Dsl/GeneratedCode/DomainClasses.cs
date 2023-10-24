@@ -342,7 +342,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Name
 		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
+		private global::System.String namePropertyStorage = "*add concern*";
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
@@ -350,6 +350,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.SocialConcern/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.SocialConcern/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add concern*")]
 		[DslModeling::DomainObjectId("191eb0fc-eb22-40c4-8ccb-b822c885e847")]
 		public global::System.String Name
 		{
@@ -470,7 +471,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Name
 		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
+		private global::System.String namePropertyStorage = "*add concern*";
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
@@ -478,6 +479,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.EnvironmentalConcern/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.EnvironmentalConcern/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add concern*")]
 		[DslModeling::DomainObjectId("2271e7b4-cde0-4aeb-be64-70486195ceaa")]
 		public global::System.String Name
 		{
@@ -598,7 +600,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Name
 		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
+		private global::System.String namePropertyStorage = "*add concern*";
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
@@ -606,6 +608,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.EconomicConcern/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.EconomicConcern/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add concern*")]
 		[DslModeling::DomainObjectId("7b95dac3-62d3-4da3-84e1-315e323fd494")]
 		public global::System.String Name
 		{
@@ -726,7 +729,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Name
 		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
+		private global::System.String namePropertyStorage = "*add concern*";
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
@@ -734,6 +737,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.TechnicalConcern/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.TechnicalConcern/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add concern*")]
 		[DslModeling::DomainObjectId("98ebb92f-08e8-44d1-9a19-5099a105686f")]
 		public global::System.String Name
 		{

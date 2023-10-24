@@ -156,7 +156,7 @@ namespace Company.TestMart
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LevelImpactImmediateToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"CreateExampleClassF1Keyword", // F1 help keyword for the toolbox item.
+						"LevelImpactImmediate", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("LevelImpactImmediateToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::Company.TestMart.ImpactImmediate.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.

@@ -176,7 +176,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Sign
 		/// </summary>
-		private global::System.String signPropertyStorage = string.Empty;
+		private global::System.String signPropertyStorage = "*Add sign*";
 		
 		/// <summary>
 		/// Gets or sets the value of Sign domain property.
@@ -184,6 +184,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.ElementReferencesTargetElements/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.ElementReferencesTargetElements/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*Add sign*")]
 		[DslModeling::DomainObjectId("36ab6d9e-16c2-4815-a493-3431689824f6")]
 		public global::System.String Sign
 		{

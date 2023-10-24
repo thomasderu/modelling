@@ -389,18 +389,6 @@
     <value>So SA</value>
     <comment>PropertyDisplayName for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
   </data>
-  <data name="Company.TestMart.ImpactImmediateShape.Description" xml:space="preserve">
-    <value>Shape used to represent ExampleElements on a Diagram.</value>
-    <comment>Description for DomainClass &apos;ImpactImmediateShape&apos;</comment>
-  </data>
-  <data name="Company.TestMart.ImpactImmediateShape.DisplayName" xml:space="preserve">
-    <value>Impact Immediate Shape</value>
-    <comment>DisplayName for DomainClass &apos;ImpactImmediateShape&apos;</comment>
-  </data>
-  <data name="ImpactImmediateShapeNameDefaultText" xml:space="preserve">
-    <value>IMMEDIATE</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="Company.TestMart.SocialConcernShape.Description" xml:space="preserve">
     <value>Description for Company.TestMart.SocialConcernShape</value>
     <comment>Description for DomainClass &apos;SocialConcernShape&apos;</comment>
@@ -493,6 +481,18 @@
     <value>ENABLING</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="Company.TestMart.ImpactImmediateShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.ImpactImmediateShape</value>
+    <comment>Description for DomainClass &apos;ImpactImmediateShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.ImpactImmediateShape.DisplayName" xml:space="preserve">
+    <value>Impact Immediate Shape</value>
+    <comment>DisplayName for DomainClass &apos;ImpactImmediateShape&apos;</comment>
+  </data>
+  <data name="ImpactImmediateShapeNameDefaultText" xml:space="preserve">
+    <value>IMMEDIATE</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="Company.TestMart.ConcernRela.Description" xml:space="preserve">
     <value>Description for Company.TestMart.ConcernRela</value>
     <comment>Description for DomainClass &apos;ConcernRela&apos;</comment>
@@ -526,7 +526,7 @@
     <comment>Toolbox item name</comment>
   </data>
   <data name="LevelImpactImmediateToolboxTooltip" xml:space="preserve">
-    <value>Create an ExampleElement</value>
+    <value>LevelImpactImmediate</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="SocialConcernToolboxItem" xml:space="preserve">

@@ -33,7 +33,7 @@ namespace Company.TestMart
 					"@LevelImpactImmediateToolboxItem;Company.TestMart.Dsl.dll", 
 					"Company.TestMart.LevelImpactImmediateToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"CreateExampleClassF1Keyword", 
+					"LevelImpactImmediate", 
 					"@LevelImpactImmediateToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
