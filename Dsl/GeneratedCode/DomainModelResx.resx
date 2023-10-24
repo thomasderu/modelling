@@ -629,72 +629,24 @@
     <value>TestMart</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="LevelImpactImmediateToolboxItem" xml:space="preserve">
-    <value>LevelImpactImmediate</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="LevelImpactImmediateToolboxTooltip" xml:space="preserve">
-    <value>LevelImpactImmediate</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="SocialConcernToolboxItem" xml:space="preserve">
-    <value>SocialConcern</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="SocialConcernToolboxTooltip" xml:space="preserve">
-    <value>Create an ExampleConcern</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="EnvironmentalConcernToolboxItem" xml:space="preserve">
-    <value>EnvironmentalConcern</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="EnvironmentalConcernToolboxTooltip" xml:space="preserve">
-    <value>Environmental Concern</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="EconomicConcernToolboxItem" xml:space="preserve">
-    <value>EconomicConcern</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="EconomicConcernToolboxTooltip" xml:space="preserve">
-    <value>Economic Concern</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="TechnicalConcernToolboxItem" xml:space="preserve">
-    <value>TechnicalConcern</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="TechnicalConcernToolboxTooltip" xml:space="preserve">
-    <value>Technical Concern</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="EffectRelationToolboxItem" xml:space="preserve">
-    <value>EffectRelation</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="EffectRelationToolboxTooltip" xml:space="preserve">
-    <value>Effect Relation</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="SolutionToolboxItem" xml:space="preserve">
-    <value>Solution</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="SolutionToolboxTooltip" xml:space="preserve">
-    <value>Solution</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="LevelImpactStructuralToolboxItem" xml:space="preserve">
-    <value>LevelImpactStructural</value>
+    <value>Impact Level: Structural</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="LevelImpactStructuralToolboxTooltip" xml:space="preserve">
     <value>Level Impact Structural</value>
     <comment>Toolbox tooltip text</comment>
   </data>
+  <data name="LevelImpactImmediateToolboxItem" xml:space="preserve">
+    <value>Impact Level: Immediate</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="LevelImpactImmediateToolboxTooltip" xml:space="preserve">
+    <value>LevelImpactImmediate</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
   <data name="LevelImpactEnablingToolboxItem" xml:space="preserve">
-    <value>LevelImpactEnabling</value>
+    <value>Impact Level: Enabling</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="LevelImpactEnablingToolboxTooltip" xml:space="preserve">
@@ -709,13 +661,65 @@
     <value>Legend</value>
     <comment>Toolbox tooltip text</comment>
   </data>
+  <data name="SolutionToolboxItem" xml:space="preserve">
+    <value>Solution / software</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="SolutionToolboxTooltip" xml:space="preserve">
+    <value>Solution</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
   <data name="TemporaryConcernToolboxItem" xml:space="preserve">
-    <value>TemporaryConcern</value>
+    <value>Temporary Concern</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="TemporaryConcernToolboxTooltip" xml:space="preserve">
     <value>Temporary Concern</value>
     <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="SocialConcernToolboxItem" xml:space="preserve">
+    <value>Concern: Social</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="SocialConcernToolboxTooltip" xml:space="preserve">
+    <value>Create an ExampleConcern</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EnvironmentalConcernToolboxItem" xml:space="preserve">
+    <value>Concern: Environmental</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EnvironmentalConcernToolboxTooltip" xml:space="preserve">
+    <value>Environmental Concern</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EconomicConcernToolboxItem" xml:space="preserve">
+    <value>Concern: Economic</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EconomicConcernToolboxTooltip" xml:space="preserve">
+    <value>Economic Concern</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TechnicalConcernToolboxItem" xml:space="preserve">
+    <value>Concern: Technical</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="TechnicalConcernToolboxTooltip" xml:space="preserve">
+    <value>Technical Concern</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EffectRelationToolboxItem" xml:space="preserve">
+    <value>Relation between concerns</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EffectRelationToolboxTooltip" xml:space="preserve">
+    <value>Effect Relation</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="TestMart2ToolboxTab" xml:space="preserve">
+    <value>TestMart2</value>
+    <comment>Toolbox item tab name</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
@@ -846,8 +850,28 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\SoSA legend.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>LegendShape shape image</comment>
   </data>
+  <data name="LevelImpactStructuralToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
   <data name="LevelImpactImmediateToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="LevelImpactEnablingToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="LegendToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="SolutionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="TemporaryConcernToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="SocialConcernToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -868,26 +892,6 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="EffectRelationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="SolutionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="LevelImpactStructuralToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="LevelImpactEnablingToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="LegendToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="TemporaryConcernToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

@@ -147,11 +147,27 @@ namespace Company.TestMart
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 			switch(itemId)
 			{
+				case "Company.TestMart.LevelImpactStructuralToolboxItem":
+					// Add LevelImpactStructural shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.TestMart.LevelImpactStructuralToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						1, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("LevelImpactStructuralToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LevelImpactStructuralToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"LevelImpactStructural", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("LevelImpactStructuralToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.TestMart.ImpactStructural.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
 				case "Company.TestMart.LevelImpactImmediateToolboxItem":
 					// Add LevelImpactImmediate shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.TestMart.LevelImpactImmediateToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						1, // Position relative to other items in the same toolbox tab.
+						2, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("LevelImpactImmediateToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LevelImpactImmediateToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -163,11 +179,75 @@ namespace Company.TestMart
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
+				case "Company.TestMart.LevelImpactEnablingToolboxItem":
+					// Add LevelImpactEnabling shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.TestMart.LevelImpactEnablingToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						3, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("LevelImpactEnablingToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LevelImpactEnablingToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"LevelImpactEnabling", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("LevelImpactEnablingToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.TestMart.ImpactEnabling.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.TestMart.LegendToolboxItem":
+					// Add Legend shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.TestMart.LegendToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						4, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("LegendToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LegendToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Legend", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("LegendToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.TestMart.Legend.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.TestMart.SolutionToolboxItem":
+					// Add Solution shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.TestMart.SolutionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						5, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("SolutionToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SolutionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Solution", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("SolutionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.TestMart.Solution.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.TestMart.TemporaryConcernToolboxItem":
+					// Add TemporaryConcern shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.TestMart.TemporaryConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						6, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("TemporaryConcernToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TemporaryConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"TemporaryConcern", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("TemporaryConcernToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.TestMart.TemporaryConcern.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
 				case "Company.TestMart.SocialConcernToolboxItem":
 					// Add SocialConcern shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.TestMart.SocialConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						2, // Position relative to other items in the same toolbox tab.
+						7, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("SocialConcernToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SocialConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -183,7 +263,7 @@ namespace Company.TestMart
 					// Add EnvironmentalConcern shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.TestMart.EnvironmentalConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						3, // Position relative to other items in the same toolbox tab.
+						8, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("EnvironmentalConcernToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EnvironmentalConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -199,7 +279,7 @@ namespace Company.TestMart
 					// Add EconomicConcern shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.TestMart.EconomicConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						4, // Position relative to other items in the same toolbox tab.
+						9, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("EconomicConcernToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EconomicConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -215,7 +295,7 @@ namespace Company.TestMart
 					// Add TechnicalConcern shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.TestMart.TechnicalConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						5, // Position relative to other items in the same toolbox tab.
+						10, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("TechnicalConcernToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TechnicalConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -232,7 +312,7 @@ namespace Company.TestMart
 					// Add EffectRelation connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.TestMart.EffectRelationToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						6, // Position relative to other items in the same toolbox tab.
+						11, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("EffectRelationToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EffectRelationToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -243,86 +323,6 @@ namespace Company.TestMart
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(EffectRelationFilterString)
-						});
-					break;
-				case "Company.TestMart.SolutionToolboxItem":
-					// Add Solution shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.TestMart.SolutionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						7, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("SolutionToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SolutionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"Solution", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("SolutionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.TestMart.Solution.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "Company.TestMart.LevelImpactStructuralToolboxItem":
-					// Add LevelImpactStructural shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.TestMart.LevelImpactStructuralToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						8, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("LevelImpactStructuralToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LevelImpactStructuralToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"LevelImpactStructural", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("LevelImpactStructuralToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.TestMart.ImpactStructural.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "Company.TestMart.LevelImpactEnablingToolboxItem":
-					// Add LevelImpactEnabling shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.TestMart.LevelImpactEnablingToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						9, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("LevelImpactEnablingToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LevelImpactEnablingToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"LevelImpactEnabling", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("LevelImpactEnablingToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.TestMart.ImpactEnabling.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "Company.TestMart.LegendToolboxItem":
-					// Add Legend shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.TestMart.LegendToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						10, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("LegendToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("LegendToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"Legend", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("LegendToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.TestMart.Legend.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "Company.TestMart.TemporaryConcernToolboxItem":
-					// Add TemporaryConcern shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.TestMart.TemporaryConcernToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						11, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("TemporaryConcernToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("TemporaryConcernToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.TestMart.TestMartToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("TestMartToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"TemporaryConcern", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("TemporaryConcernToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.TestMart.TemporaryConcern.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
 				default:

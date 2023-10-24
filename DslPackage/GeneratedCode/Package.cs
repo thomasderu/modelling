@@ -30,69 +30,21 @@ namespace Company.TestMart
 	[VSShell::ProvideToolWindowVisibility(typeof(TestMartExplorerToolWindow), Constants.TestMartEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@TestMartToolboxTab;Company.TestMart.Dsl.dll", "Company.TestMart.TestMartToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@LevelImpactImmediateToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.LevelImpactImmediateToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"LevelImpactImmediate", 
-					"@LevelImpactImmediateToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 0)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@SocialConcernToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.SocialConcernToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"SocialConcern", 
-					"@SocialConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 1)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@EnvironmentalConcernToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.EnvironmentalConcernToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EnvironmentalConcern", 
-					"@EnvironmentalConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 2)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@EconomicConcernToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.EconomicConcernToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EconomicConcern", 
-					"@EconomicConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 3)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@TechnicalConcernToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.TechnicalConcernToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"TechnicalConcern", 
-					"@TechnicalConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 4)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@EffectRelationToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.EffectRelationToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EffectRelation", 
-					"@EffectRelationToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 5)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
-					"@SolutionToolboxItem;Company.TestMart.Dsl.dll", 
-					"Company.TestMart.SolutionToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"Solution", 
-					"@SolutionToolboxBitmap;Company.TestMart.Dsl.dll", 
-					0xff00ff,
-					Index = 6)]
-	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
 					"@LevelImpactStructuralToolboxItem;Company.TestMart.Dsl.dll", 
 					"Company.TestMart.LevelImpactStructuralToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"LevelImpactStructural", 
 					"@LevelImpactStructuralToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
-					Index = 7)]
+					Index = 0)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@LevelImpactImmediateToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.LevelImpactImmediateToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"LevelImpactImmediate", 
+					"@LevelImpactImmediateToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
 					"@LevelImpactEnablingToolboxItem;Company.TestMart.Dsl.dll", 
 					"Company.TestMart.LevelImpactEnablingToolboxItem", 
@@ -100,7 +52,7 @@ namespace Company.TestMart
 					"LevelImpactEnabling", 
 					"@LevelImpactEnablingToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
-					Index = 8)]
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
 					"@LegendToolboxItem;Company.TestMart.Dsl.dll", 
 					"Company.TestMart.LegendToolboxItem", 
@@ -108,7 +60,15 @@ namespace Company.TestMart
 					"Legend", 
 					"@LegendToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
-					Index = 9)]
+					Index = 3)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@SolutionToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.SolutionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Solution", 
+					"@SolutionToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
 					"@TemporaryConcernToolboxItem;Company.TestMart.Dsl.dll", 
 					"Company.TestMart.TemporaryConcernToolboxItem", 
@@ -116,7 +76,48 @@ namespace Company.TestMart
 					"TemporaryConcern", 
 					"@TemporaryConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
+					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@SocialConcernToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.SocialConcernToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"SocialConcern", 
+					"@SocialConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@EnvironmentalConcernToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.EnvironmentalConcernToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EnvironmentalConcern", 
+					"@EnvironmentalConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@EconomicConcernToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.EconomicConcernToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EconomicConcern", 
+					"@EconomicConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@TechnicalConcernToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.TechnicalConcernToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"TechnicalConcern", 
+					"@TechnicalConcernToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 9)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@EffectRelationToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.EffectRelationToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EffectRelation", 
+					"@EffectRelationToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
 					Index = 10)]
+	[VSShell::ProvideStaticToolboxGroup("@TestMart2ToolboxTab;Company.TestMart.Dsl.dll", "Company.TestMart.TestMart2ToolboxTab")]
 	[VSShell::ProvideEditorFactory(typeof(TestMartEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(TestMartEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(TestMartEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

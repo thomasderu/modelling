@@ -751,40 +751,41 @@
       <XmlSerializationBehaviorMoniker Name="TestMartSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="TestMart">
-      <ElementTool Name="LevelImpactImmediate" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="LevelImpactImmediate" Tooltip="LevelImpactImmediate" HelpKeyword="LevelImpactImmediate">
-        <DomainClassMoniker Name="ImpactImmediate" />
-      </ElementTool>
-      <ElementTool Name="SocialConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="SocialConcern" Tooltip="Create an ExampleConcern" HelpKeyword="SocialConcern">
-        <DomainClassMoniker Name="SocialConcern" />
-      </ElementTool>
-      <ElementTool Name="EnvironmentalConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="EnvironmentalConcern" Tooltip="Environmental Concern" HelpKeyword="EnvironmentalConcern">
-        <DomainClassMoniker Name="EnvironmentalConcern" />
-      </ElementTool>
-      <ElementTool Name="EconomicConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="EconomicConcern" Tooltip="Economic Concern" HelpKeyword="EconomicConcern">
-        <DomainClassMoniker Name="EconomicConcern" />
-      </ElementTool>
-      <ElementTool Name="TechnicalConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="TechnicalConcern" Tooltip="Technical Concern" HelpKeyword="TechnicalConcern">
-        <DomainClassMoniker Name="TechnicalConcern" />
-      </ElementTool>
-      <ConnectionTool Name="EffectRelation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="EffectRelation" Tooltip="Effect Relation" HelpKeyword="EffectRelation">
-        <ConnectionBuilderMoniker Name="TestMart/ElementReferencesTargetElementsBuilder" />
-      </ConnectionTool>
-      <ElementTool Name="Solution" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Solution" Tooltip="Solution" HelpKeyword="Solution">
-        <DomainClassMoniker Name="Solution" />
-      </ElementTool>
-      <ElementTool Name="LevelImpactStructural" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="LevelImpactStructural" Tooltip="Level Impact Structural" HelpKeyword="LevelImpactStructural">
+      <ElementTool Name="LevelImpactStructural" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Impact Level: Structural" Tooltip="Level Impact Structural" HelpKeyword="LevelImpactStructural">
         <DomainClassMoniker Name="ImpactStructural" />
       </ElementTool>
-      <ElementTool Name="LevelImpactEnabling" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="LevelImpactEnabling" Tooltip="Level Impact Enabling" HelpKeyword="LevelImpactEnabling">
+      <ElementTool Name="LevelImpactImmediate" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Impact Level: Immediate" Tooltip="LevelImpactImmediate" HelpKeyword="LevelImpactImmediate">
+        <DomainClassMoniker Name="ImpactImmediate" />
+      </ElementTool>
+      <ElementTool Name="LevelImpactEnabling" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Impact Level: Enabling" Tooltip="Level Impact Enabling" HelpKeyword="LevelImpactEnabling">
         <DomainClassMoniker Name="ImpactEnabling" />
       </ElementTool>
       <ElementTool Name="Legend" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Legend" Tooltip="Legend" HelpKeyword="Legend">
         <DomainClassMoniker Name="Legend" />
       </ElementTool>
-      <ElementTool Name="TemporaryConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="TemporaryConcern" Tooltip="Temporary Concern" HelpKeyword="TemporaryConcern">
+      <ElementTool Name="Solution" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Solution / software" Tooltip="Solution" HelpKeyword="Solution">
+        <DomainClassMoniker Name="Solution" />
+      </ElementTool>
+      <ElementTool Name="TemporaryConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Temporary Concern" Tooltip="Temporary Concern" HelpKeyword="TemporaryConcern">
         <DomainClassMoniker Name="TemporaryConcern" />
       </ElementTool>
+      <ElementTool Name="SocialConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Concern: Social" Tooltip="Create an ExampleConcern" HelpKeyword="SocialConcern">
+        <DomainClassMoniker Name="SocialConcern" />
+      </ElementTool>
+      <ElementTool Name="EnvironmentalConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Concern: Environmental" Tooltip="Environmental Concern" HelpKeyword="EnvironmentalConcern">
+        <DomainClassMoniker Name="EnvironmentalConcern" />
+      </ElementTool>
+      <ElementTool Name="EconomicConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Concern: Economic" Tooltip="Economic Concern" HelpKeyword="EconomicConcern">
+        <DomainClassMoniker Name="EconomicConcern" />
+      </ElementTool>
+      <ElementTool Name="TechnicalConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Concern: Technical" Tooltip="Technical Concern" HelpKeyword="TechnicalConcern">
+        <DomainClassMoniker Name="TechnicalConcern" />
+      </ElementTool>
+      <ConnectionTool Name="EffectRelation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Relation between concerns" Tooltip="Effect Relation" HelpKeyword="EffectRelation">
+        <ConnectionBuilderMoniker Name="TestMart/ElementReferencesTargetElementsBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
+    <ToolboxTab TabText="TestMart2" />
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="TestMartDiagram" />
   </Designer>
