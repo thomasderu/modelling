@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<testMartDiagram dslVersion="1.0.0.0" Id="6da5293f-dac7-4ef4-a3c4-fc55b8698a2f" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+<testMartDiagram dslVersion="1.0.0.0" Id="6da5293f-dac7-4ef4-a3c4-fc55b8698a2f" absoluteBounds="0, 0, 11, 8.75" name="Sample">
   <soSAMoniker Id="5bbcd38e-7edb-44fd-96c7-a65cd391bc26" />
   <nestedChildShapes>
     <impactStructuralShape Id="37d2a928-45e8-40cb-b8da-c6f33f373f27" absoluteBounds="0.5, 0.5, 7.125, 5.625">
@@ -8,39 +8,26 @@
     <impactEnablingShape Id="65d2281e-4800-4d13-8341-be9495ea51ab" absoluteBounds="1.5, 0.625, 5.75, 4.875">
       <impactEnablingMoniker Id="78b3dc75-7432-4eba-bdb0-7dc9d06512ba" />
     </impactEnablingShape>
-    <impactImmediateShape Id="b401035e-b53d-4837-a975-851e25e34e16" absoluteBounds="2.125, 1.125, 4.5, 3">
+    <impactImmediateShape Id="b401035e-b53d-4837-a975-851e25e34e16" absoluteBounds="2.375, 0.875, 4.5, 3">
       <impactImmediateMoniker name="/5bbcd38e-7edb-44fd-96c7-a65cd391bc26/ImpactImmediate2" />
     </impactImmediateShape>
-    <socialConcernShape Id="91987393-5585-40b1-9809-55ca8a99dcc3" absoluteBounds="3, 2.625, 1.25, 0.75">
-      <socialConcernMoniker Id="1468075d-d0ee-42e6-95bc-df7bec7363ce" />
+    <socialConcernShape Id="1addc3df-d9b5-4609-ba78-a5e51e3d9573" absoluteBounds="3.25, 2.125, 1.25, 0.75">
+      <socialConcernMoniker Id="afbf19f8-b8a2-4346-a528-2c9696a7207a" />
     </socialConcernShape>
-    <environmentalShape Id="7fadf793-14ed-4fb7-b90c-870b993dcc00" absoluteBounds="4.625, 3.25, 1.25, 0.75">
-      <environmentalConcernMoniker Id="2f7936b1-2c3f-47eb-9843-2a68c07a28df" />
-    </environmentalShape>
-    <concernRela Id="3caed3fb-6349-4f9a-b843-8efbf7258a00" edgePoints="[(4.25 : 3); (4.625 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <elementReferencesTargetElementsMoniker Id="93a73e6a-3241-4f49-b82c-5863c891a758" />
-      <relativeChildShapes />
-      <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.0625, 3.4375, 0.38585522770881653, 0.2020941823720932" shapeFieldName="Sign" />
-      </moveableDecoratorHostShapes>
-      <nodes>
-        <socialConcernShapeMoniker Id="91987393-5585-40b1-9809-55ca8a99dcc3" />
-        <environmentalShapeMoniker Id="7fadf793-14ed-4fb7-b90c-870b993dcc00" />
-      </nodes>
-    </concernRela>
-    <economicShape Id="d91b7cd2-998f-44a5-8b13-1182c915937f" absoluteBounds="2.125, 4, 1.25, 0.75">
-      <economicConcernMoniker Id="49019a6e-f381-4873-b530-e358bc72b19e" />
+    <technicalShape Id="3c259ccf-f463-4fee-9e13-b560b5ef715f" absoluteBounds="4.75, 1.5, 1.25, 0.75">
+      <technicalConcernMoniker Id="8e3f7c1a-705e-45b1-a2c8-53db8fac6e5f" />
+    </technicalShape>
+    <economicShape Id="2aad5300-2f4f-4825-acac-b8631751cc55" absoluteBounds="3.5, 1.375, 1.25, 0.75">
+      <economicConcernMoniker Id="a368402b-c98e-4938-a467-3a8b3c68c557" />
     </economicShape>
-    <concernRela Id="09e8722b-14f3-4b5c-8c17-4a2ab09c81ec" edgePoints="[(3.625 : 3.375); (2.75 : 4)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <elementReferencesTargetElementsMoniker Id="f7c5c633-ce79-4d73-8a57-da68f4f612f1" />
-      <relativeChildShapes />
-      <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.0436355769634247, 3.5625, 0.1388888955116272, 0.2020941823720932" shapeFieldName="Sign" />
-      </moveableDecoratorHostShapes>
-      <nodes>
-        <socialConcernShapeMoniker Id="91987393-5585-40b1-9809-55ca8a99dcc3" />
-        <economicShapeMoniker Id="d91b7cd2-998f-44a5-8b13-1182c915937f" />
-      </nodes>
-    </concernRela>
+    <environmentalShape Id="f35d71df-4351-405a-8502-6c849d746d01" absoluteBounds="4.25, 3.25, 1.25, 0.75">
+      <environmentalConcernMoniker Id="7ce08a4c-16ec-4f8c-a193-223923ea78fe" />
+    </environmentalShape>
+    <tempShape Id="5d716dd6-e37b-462a-9c3b-2dfdba666bda" absoluteBounds="0.5, 6.625, 1.5, 1">
+      <temporaryConcernMoniker Id="752f748c-69bf-4f87-a98d-aaaae9216427" />
+    </tempShape>
+    <legendShape Id="b75d625d-dbdf-4dbe-9c4d-4a492f1414d2" absoluteBounds="2.5, 6.625, 4.5931763648986816, 1.9372580051422119">
+      <legendMoniker Id="262de88a-7b43-4d37-8638-a3d86a2bfd56" />
+    </legendShape>
   </nestedChildShapes>
 </testMartDiagram>

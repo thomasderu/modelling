@@ -11,6 +11,22 @@
             <DomainPath>SoSAHasImpactLevel.ImpactLevel</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Legend" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>SoSAHasLegend.Legend</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="TemporaryConcern" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>SoSAHasTemporaryConcerned.TemporaryConcerned</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="f3b749eb-136a-4956-b0cd-d1b565e13cd6" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="ImpactImmediate" DisplayName="Impact Immediate" Namespace="Company.TestMart">
@@ -127,6 +143,16 @@
         <DomainClassMoniker Name="Element" />
       </BaseClass>
     </DomainClass>
+    <DomainClass Id="1b22ac0a-6a6c-4769-8e0a-9ade0a56a916" Description="Description for Company.TestMart.Legend" Name="Legend" DisplayName="Legend" Namespace="Company.TestMart" />
+    <DomainClass Id="fdb34555-2b30-4945-a4a7-d236f54cb26a" Description="Description for Company.TestMart.TemporaryConcern" Name="TemporaryConcern" DisplayName="Temporary Concern" Namespace="Company.TestMart">
+      <Properties>
+        <DomainProperty Id="fa279f03-baf8-4aa2-9249-9e6acdc41178" Description="Description for Company.TestMart.TemporaryConcern.Temp Name" Name="TempName" DisplayName="Temp Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="a49f47b6-cb34-4a1e-b8c3-e321e303f5f2" Description="Description for Company.TestMart.ElementReferencesTargetElements" Name="ElementReferencesTargetElements" DisplayName="Element References Target Elements" Namespace="Company.TestMart">
@@ -184,6 +210,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="950fc492-f810-4c48-9ed0-5bc920008319" Description="Description for Company.TestMart.SoSAHasLegend" Name="SoSAHasLegend" DisplayName="So SAHas Legend" Namespace="Company.TestMart" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="f9fd5c9a-0e45-441d-82ce-872a4ce1e993" Description="Description for Company.TestMart.SoSAHasLegend.SoSA" Name="SoSA" DisplayName="So SA" PropertyName="Legend" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Legend">
+          <RolePlayer>
+            <DomainClassMoniker Name="SoSA" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d57656c1-600d-4e3c-b529-294bf579d65b" Description="Description for Company.TestMart.SoSAHasLegend.Legend" Name="Legend" DisplayName="Legend" PropertyName="SoSA" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="So SA">
+          <RolePlayer>
+            <DomainClassMoniker Name="Legend" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="49820fd6-1695-4eb4-aec4-1051a0ddf8c3" Description="Description for Company.TestMart.SoSAHasTemporaryConcerned" Name="SoSAHasTemporaryConcerned" DisplayName="So SAHas Temporary Concerned" Namespace="Company.TestMart" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="8d9e5a51-6951-48f5-b0a9-72e5cf17c290" Description="Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA" Name="SoSA" DisplayName="So SA" PropertyName="TemporaryConcerned" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Temporary Concerned">
+          <RolePlayer>
+            <DomainClassMoniker Name="SoSA" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="7546660b-bf49-4fdf-b443-f7273ef63312" Description="Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern" Name="TemporaryConcern" DisplayName="Temporary Concern" PropertyName="SoSA" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="So SA">
+          <RolePlayer>
+            <DomainClassMoniker Name="TemporaryConcern" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -220,7 +278,7 @@
     </GeometryShape>
     <GeometryShape Id="91604d28-667c-4f73-9196-02bb1ba8e196" Description="Description for Company.TestMart.TechnicalShape" Name="TechnicalShape" DisplayName="Technical Shape" Namespace="Company.TestMart" FixedTooltipText="Technical Shape" FillColor="CornflowerBlue" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" FontSize="9" />
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="*add concern*" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="ee699f92-6dba-4b91-815c-092734bda0b2" Description="Description for Company.TestMart.ElementShape" Name="ElementShape" DisplayName="Element Shape" Namespace="Company.TestMart" FixedTooltipText="Element Shape" InitialHeight="1" Geometry="Rectangle" />
@@ -244,6 +302,12 @@
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="IMMEDIATE" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <ImageShape Id="43454b0c-9708-4e08-9e45-46b39693b070" Description="Description for Company.TestMart.LegendShape" Name="LegendShape" DisplayName="Legend Shape" Namespace="Company.TestMart" FixedTooltipText="Legend Shape" InitialHeight="1" Image="Resources\SoSA legend.png" />
+    <GeometryShape Id="becd3492-81c7-41fc-abd3-3c9d49d559b5" Description="Description for Company.TestMart.TempShape" Name="TempShape" DisplayName="Temp Shape" Namespace="Company.TestMart" FixedTooltipText="Temp Shape" InitialHeight="1" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TempShapeName" DisplayName="Temp Shape Name" DefaultText="*add concern*" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="a46a11c5-424c-432c-a4c7-b1c1d6073aeb" Description="Description for Company.TestMart.ConcernRela" Name="ConcernRela" DisplayName="Concern Rela" Namespace="Company.TestMart" FixedTooltipText="Concern Rela" TargetEndStyle="FilledArrow" Thickness="0.01" RoutingStyle="Straight" targetEndWidth="0.07" targetEndHeight="0.07">
@@ -259,6 +323,12 @@
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="impactLevel">
             <DomainRelationshipMoniker Name="SoSAHasImpactLevel" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="legend">
+            <DomainRelationshipMoniker Name="SoSAHasLegend" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="temporaryConcerned">
+            <DomainRelationshipMoniker Name="SoSAHasTemporaryConcerned" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -391,6 +461,29 @@
       </XmlClassData>
       <XmlClassData TypeName="ImpactImmediateShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactImmediateShapeMoniker" ElementName="impactImmediateShape" MonikerTypeName="ImpactImmediateShapeMoniker">
         <GeometryShapeMoniker Name="ImpactImmediateShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="LegendShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="legendShapeMoniker" ElementName="legendShape" MonikerTypeName="LegendShapeMoniker">
+        <ImageShapeMoniker Name="LegendShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="Legend" MonikerAttributeName="" SerializeId="true" MonikerElementName="legendMoniker" ElementName="legend" MonikerTypeName="LegendMoniker">
+        <DomainClassMoniker Name="Legend" />
+      </XmlClassData>
+      <XmlClassData TypeName="SoSAHasLegend" MonikerAttributeName="" SerializeId="true" MonikerElementName="soSAHasLegendMoniker" ElementName="soSAHasLegend" MonikerTypeName="SoSAHasLegendMoniker">
+        <DomainRelationshipMoniker Name="SoSAHasLegend" />
+      </XmlClassData>
+      <XmlClassData TypeName="TemporaryConcern" MonikerAttributeName="" SerializeId="true" MonikerElementName="temporaryConcernMoniker" ElementName="temporaryConcern" MonikerTypeName="TemporaryConcernMoniker">
+        <DomainClassMoniker Name="TemporaryConcern" />
+        <ElementData>
+          <XmlPropertyData XmlName="tempName">
+            <DomainPropertyMoniker Name="TemporaryConcern/TempName" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="SoSAHasTemporaryConcerned" MonikerAttributeName="" SerializeId="true" MonikerElementName="soSAHasTemporaryConcernedMoniker" ElementName="soSAHasTemporaryConcerned" MonikerTypeName="SoSAHasTemporaryConcernedMoniker">
+        <DomainRelationshipMoniker Name="SoSAHasTemporaryConcerned" />
+      </XmlClassData>
+      <XmlClassData TypeName="TempShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="tempShapeMoniker" ElementName="tempShape" MonikerTypeName="TempShapeMoniker">
+        <GeometryShapeMoniker Name="TempShape" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -612,6 +705,28 @@
         </ParentElementPath>
         <GeometryShapeMoniker Name="ImpactImmediateShape" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Legend" />
+        <ParentElementPath>
+          <DomainPath>SoSAHasLegend.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <ImageShapeMoniker Name="LegendShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="TemporaryConcern" />
+        <ParentElementPath>
+          <DomainPath>SoSAHasTemporaryConcerned.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="TempShape/TempShapeName" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="TemporaryConcern/TempName" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="TempShape" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -662,6 +777,12 @@
       </ElementTool>
       <ElementTool Name="LevelImpactEnabling" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="LevelImpactEnabling" Tooltip="Level Impact Enabling" HelpKeyword="LevelImpactEnabling">
         <DomainClassMoniker Name="ImpactEnabling" />
+      </ElementTool>
+      <ElementTool Name="Legend" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Legend" Tooltip="Legend" HelpKeyword="Legend">
+        <DomainClassMoniker Name="Legend" />
+      </ElementTool>
+      <ElementTool Name="ElementTool1" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ElementTool1" Tooltip="Element Tool1" HelpKeyword="ElementTool1">
+        <DomainClassMoniker Name="TemporaryConcern" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

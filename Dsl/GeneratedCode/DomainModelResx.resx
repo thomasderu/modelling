@@ -285,6 +285,30 @@
     <value>Concern</value>
     <comment>DisplayName for DomainClass &apos;Concern&apos;</comment>
   </data>
+  <data name="Company.TestMart.Legend.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.Legend</value>
+    <comment>Description for DomainClass &apos;Legend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.Legend.DisplayName" xml:space="preserve">
+    <value>Legend</value>
+    <comment>DisplayName for DomainClass &apos;Legend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.TemporaryConcern.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.TemporaryConcern</value>
+    <comment>Description for DomainClass &apos;TemporaryConcern&apos;</comment>
+  </data>
+  <data name="Company.TestMart.TemporaryConcern.DisplayName" xml:space="preserve">
+    <value>Temporary Concern</value>
+    <comment>DisplayName for DomainClass &apos;TemporaryConcern&apos;</comment>
+  </data>
+  <data name="Company.TestMart.TemporaryConcern/TempName.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.TemporaryConcern.Temp Name</value>
+    <comment>Description for DomainProperty &apos;TempName&apos; on DomainClass &apos;TemporaryConcern&apos;</comment>
+  </data>
+  <data name="Company.TestMart.TemporaryConcern/TempName.DisplayName" xml:space="preserve">
+    <value>Temp Name</value>
+    <comment>DisplayName for DomainProperty &apos;TempName&apos; on DomainClass &apos;TemporaryConcern&apos;</comment>
+  </data>
   <data name="Company.TestMart.ElementReferencesTargetElements.Description" xml:space="preserve">
     <value>Description for Company.TestMart.ElementReferencesTargetElements</value>
     <comment>Description for DomainClass &apos;ElementReferencesTargetElements&apos;</comment>
@@ -389,6 +413,70 @@
     <value>So SA</value>
     <comment>PropertyDisplayName for DomainRole &apos;ImpactLevels&apos; on DomainRelationship &apos;SoSAHasImpactLevel&apos;</comment>
   </data>
+  <data name="Company.TestMart.SoSAHasLegend.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasLegend</value>
+    <comment>Description for DomainClass &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend.DisplayName" xml:space="preserve">
+    <value>So SAHas Legend</value>
+    <comment>DisplayName for DomainClass &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend/SoSA.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasLegend.SoSA</value>
+    <comment>Description for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend/SoSA.DisplayName" xml:space="preserve">
+    <value>So SA</value>
+    <comment>DisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend/SoSA.PropertyDisplayName" xml:space="preserve">
+    <value>Legend</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend/Legend.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasLegend.Legend</value>
+    <comment>Description for DomainRole &apos;Legend&apos; on DomainRelationship &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend/Legend.DisplayName" xml:space="preserve">
+    <value>Legend</value>
+    <comment>DisplayName for DomainRole &apos;Legend&apos; on DomainRelationship &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasLegend/Legend.PropertyDisplayName" xml:space="preserve">
+    <value>So SA</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Legend&apos; on DomainRelationship &apos;SoSAHasLegend&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasTemporaryConcerned</value>
+    <comment>Description for DomainClass &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned.DisplayName" xml:space="preserve">
+    <value>So SAHas Temporary Concerned</value>
+    <comment>DisplayName for DomainClass &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned/SoSA.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA</value>
+    <comment>Description for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned/SoSA.DisplayName" xml:space="preserve">
+    <value>So SA</value>
+    <comment>DisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned/SoSA.PropertyDisplayName" xml:space="preserve">
+    <value>Temporary Concerned</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SoSA&apos; on DomainRelationship &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern</value>
+    <comment>Description for DomainRole &apos;TemporaryConcern&apos; on DomainRelationship &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.DisplayName" xml:space="preserve">
+    <value>Temporary Concern</value>
+    <comment>DisplayName for DomainRole &apos;TemporaryConcern&apos; on DomainRelationship &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
+  <data name="Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.PropertyDisplayName" xml:space="preserve">
+    <value>So SA</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TemporaryConcern&apos; on DomainRelationship &apos;SoSAHasTemporaryConcerned&apos;</comment>
+  </data>
   <data name="Company.TestMart.SocialConcernShape.Description" xml:space="preserve">
     <value>Description for Company.TestMart.SocialConcernShape</value>
     <comment>Description for DomainClass &apos;SocialConcernShape&apos;</comment>
@@ -434,7 +522,7 @@
     <comment>DisplayName for DomainClass &apos;TechnicalShape&apos;</comment>
   </data>
   <data name="TechnicalShapeNameDefaultText" xml:space="preserve">
-    <value>Name</value>
+    <value>*add concern*</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.TestMart.ElementShape.Description" xml:space="preserve">
@@ -491,6 +579,26 @@
   </data>
   <data name="ImpactImmediateShapeNameDefaultText" xml:space="preserve">
     <value>IMMEDIATE</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.TestMart.LegendShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.LegendShape</value>
+    <comment>Description for DomainClass &apos;LegendShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.LegendShape.DisplayName" xml:space="preserve">
+    <value>Legend Shape</value>
+    <comment>DisplayName for DomainClass &apos;LegendShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.TempShape.Description" xml:space="preserve">
+    <value>Description for Company.TestMart.TempShape</value>
+    <comment>Description for DomainClass &apos;TempShape&apos;</comment>
+  </data>
+  <data name="Company.TestMart.TempShape.DisplayName" xml:space="preserve">
+    <value>Temp Shape</value>
+    <comment>DisplayName for DomainClass &apos;TempShape&apos;</comment>
+  </data>
+  <data name="TempShapeTempShapeNameDefaultText" xml:space="preserve">
+    <value>TempShapeName</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.TestMart.ConcernRela.Description" xml:space="preserve">
@@ -591,6 +699,22 @@
   </data>
   <data name="LevelImpactEnablingToolboxTooltip" xml:space="preserve">
     <value>Level Impact Enabling</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="LegendToolboxItem" xml:space="preserve">
+    <value>Legend</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="LegendToolboxTooltip" xml:space="preserve">
+    <value>Legend</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ElementTool1ToolboxItem" xml:space="preserve">
+    <value>ElementTool1</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ElementTool1ToolboxTooltip" xml:space="preserve">
+    <value>Element Tool1</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -718,6 +842,10 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LegendShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\SoSA legend.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>LegendShape shape image</comment>
+  </data>
   <data name="LevelImpactImmediateToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -751,6 +879,14 @@ A DomainClass can be serialized as a moniker only if
     <comment>Toolbox item image</comment>
   </data>
   <data name="LevelImpactEnablingToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="LegendToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ElementTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

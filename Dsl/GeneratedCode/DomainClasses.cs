@@ -63,6 +63,40 @@ namespace Company.TestMart
 			}
 		}
 		#endregion
+		#region Legend opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Legend.
+		/// Description for Company.TestMart.SoSAHasLegend.SoSA
+		/// </summary>
+		public virtual Legend Legend
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasLegend.SoSADomainRoleId) as Legend;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasLegend.SoSADomainRoleId, value);
+			}
+		}
+		#endregion
+		#region TemporaryConcerned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of TemporaryConcerned.
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<TemporaryConcern> TemporaryConcerned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<TemporaryConcern>, TemporaryConcern>(global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -84,6 +118,21 @@ namespace Company.TestMart
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.ImpactLevels.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Legend.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: SoSAHasLegend.Legend
+					if (this.Legend != null)
+					{
+						return false;
+					}
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.TemporaryConcern.DomainClassId)) 
 				{
 					return true;
 				}
@@ -120,6 +169,24 @@ namespace Company.TestMart
 
 				return;
 			}
+				
+			global::Company.TestMart.Legend sourceLegend2 = sourceElement as global::Company.TestMart.Legend;
+			if (sourceLegend2 != null)
+			{
+				// Create link for path SoSAHasLegend.Legend
+				this.Legend = sourceLegend2;
+
+				return;
+			}
+				
+			global::Company.TestMart.TemporaryConcern sourceTemporaryConcern3 = sourceElement as global::Company.TestMart.TemporaryConcern;
+			if (sourceTemporaryConcern3 != null)
+			{
+				// Create link for path SoSAHasTemporaryConcerned.TemporaryConcerned
+				this.TemporaryConcerned.Add(sourceTemporaryConcern3);
+
+				return;
+			}
 		
 			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
 			// during a "Paste".
@@ -152,6 +219,34 @@ namespace Company.TestMart
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Company.TestMart.Legend sourceLegend2 = sourceElement as global::Company.TestMart.Legend;
+			if (sourceLegend2 != null)
+			{
+				// Delete link for path SoSAHasLegend.Legend
+				
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasLegend.GetLinks((global::Company.TestMart.SoSA)this, sourceLegend2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Company.TestMart.SoSAHasLegend.SoSADomainRoleId, global::Company.TestMart.SoSAHasLegend.LegendDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::Company.TestMart.TemporaryConcern sourceTemporaryConcern3 = sourceElement as global::Company.TestMart.TemporaryConcern;
+			if (sourceTemporaryConcern3 != null)
+			{
+				// Delete link for path SoSAHasTemporaryConcerned.TemporaryConcerned
+				
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasTemporaryConcerned.GetLinks((global::Company.TestMart.SoSA)this, sourceTemporaryConcern3))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId);
 				}
 
 				return;
@@ -948,7 +1043,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Name
 		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
+		private global::System.String namePropertyStorage = "*add solution*";
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
@@ -956,6 +1051,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.Solution/Name.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.Solution/Name.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add solution*")]
 		[DslModeling::DomainObjectId("4f60711f-388a-48f5-aac3-15ad754f1669")]
 		public global::System.String Name
 		{
@@ -1492,6 +1588,213 @@ namespace Company.TestMart
 		public Concern(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
+		}
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass Legend
+	/// Description for Company.TestMart.Legend
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.Legend.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.Legend.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("1b22ac0a-6a6c-4769-8e0a-9ade0a56a916")]
+	public partial class Legend : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Legend domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x1b22ac0a, 0x6a6c, 0x4769, 0x8e, 0x0a, 0x9a, 0xde, 0x0a, 0x56, 0xa9, 0x16);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Legend(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Legend(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SoSA opposite domain role accessor
+		/// <summary>
+		/// Gets or sets SoSA.
+		/// Description for Company.TestMart.SoSAHasLegend.Legend
+		/// </summary>
+		public virtual SoSA SoSA
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasLegend.LegendDomainRoleId) as SoSA;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasLegend.LegendDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainClass TemporaryConcern
+	/// Description for Company.TestMart.TemporaryConcern
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.TemporaryConcern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.TemporaryConcern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("fdb34555-2b30-4945-a4a7-d236f54cb26a")]
+	public partial class TemporaryConcern : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// TemporaryConcern domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfdb34555, 0x2b30, 0x4945, 0xa4, 0xa7, 0xd2, 0x36, 0xf5, 0x4c, 0xb2, 0x6a);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public TemporaryConcern(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public TemporaryConcern(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TempName domain property code
+		
+		/// <summary>
+		/// TempName domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TempNameDomainPropertyId = new global::System.Guid(0xfa279f03, 0xbaf8, 0x4aa2, 0x92, 0x49, 0x9e, 0x6a, 0xcd, 0xc4, 0x11, 0x78);
+		
+		/// <summary>
+		/// Storage for TempName
+		/// </summary>
+		private global::System.String tempNamePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of TempName domain property.
+		/// Description for Company.TestMart.TemporaryConcern.Temp Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.TemporaryConcern/TempName.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.TemporaryConcern/TempName.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("fa279f03-baf8-4aa2-9249-9e6acdc41178")]
+		public global::System.String TempName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tempNamePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TempNamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the TemporaryConcern.TempName domain property.
+		/// </summary>
+		internal sealed partial class TempNamePropertyHandler : DslModeling::DomainPropertyValueHandler<TemporaryConcern, global::System.String>
+		{
+			private TempNamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the TemporaryConcern.TempName domain property value handler.
+			/// </summary>
+			public static readonly TempNamePropertyHandler Instance = new TempNamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the TemporaryConcern.TempName domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TempNameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(TemporaryConcern element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tempNamePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(TemporaryConcern element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tempNamePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region SoSA opposite domain role accessor
+		/// <summary>
+		/// Gets or sets SoSA.
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern
+		/// </summary>
+		public virtual SoSA SoSA
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId) as SoSA;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId, value);
+			}
 		}
 		#endregion
 	}

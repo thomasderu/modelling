@@ -245,6 +245,18 @@ namespace Company.TestMart
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::Company.TestMart.Legend)
+			{
+				global::Company.TestMart.LegendShape newShape = new global::Company.TestMart.LegendShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.TestMart.TemporaryConcern)
+			{
+				global::Company.TestMart.TempShape newShape = new global::Company.TestMart.TempShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::Company.TestMart.ElementReferencesTargetElements)
 			{
 				global::Company.TestMart.ConcernRela newShape = new global::Company.TestMart.ConcernRela(this.Partition);
@@ -558,6 +570,8 @@ namespace Company.TestMart
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactEnabling), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.ImpactImmediate), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.Element), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.Legend), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.TestMart.TemporaryConcern), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.TestMart.ElementReferencesTargetElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -609,6 +623,14 @@ namespace Company.TestMart
 				if(childElement is global::Company.TestMart.Element)
 				{
 					parentElement = GetParentForElement((global::Company.TestMart.Element)childElement);
+				} else
+				if(childElement is global::Company.TestMart.Legend)
+				{
+					parentElement = GetParentForLegend((global::Company.TestMart.Legend)childElement);
+				} else
+				if(childElement is global::Company.TestMart.TemporaryConcern)
+				{
+					parentElement = GetParentForTemporaryConcern((global::Company.TestMart.TemporaryConcern)childElement);
 				} else
 				{
 					parentElement = null;
@@ -694,6 +716,20 @@ namespace Company.TestMart
 				return result;
 			}
 			public static global::Company.TestMart.SoSA GetParentForImpactImmediate( global::Company.TestMart.ImpactLevels root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.SoSA result = root.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForLegend( global::Company.TestMart.Legend root )
+			{
+				// Segments 0 and 1
+				global::Company.TestMart.SoSA result = root.SoSA;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::Company.TestMart.SoSA GetParentForTemporaryConcern( global::Company.TestMart.TemporaryConcern root )
 			{
 				// Segments 0 and 1
 				global::Company.TestMart.SoSA result = root.SoSA;

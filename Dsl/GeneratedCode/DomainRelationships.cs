@@ -176,7 +176,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Sign
 		/// </summary>
-		private global::System.String signPropertyStorage = "*Add sign*";
+		private global::System.String signPropertyStorage = "*add sign*";
 		
 		/// <summary>
 		/// Gets or sets the value of Sign domain property.
@@ -184,7 +184,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.ElementReferencesTargetElements/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.ElementReferencesTargetElements/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("*Add sign*")]
+		[global::System.ComponentModel.DefaultValue("*add sign*")]
 		[DslModeling::DomainObjectId("36ab6d9e-16c2-4815-a493-3431689824f6")]
 		public global::System.String Sign
 		{
@@ -785,6 +785,503 @@ namespace Company.TestMart
 			foreach ( global::Company.TestMart.SoSAHasImpactLevel link in links )
 			{
 				if ( target.Equals(link.ImpactLevels) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainRelationship SoSAHasLegend
+	/// Description for Company.TestMart.SoSAHasLegend
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasLegend.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.SoSAHasLegend.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("950fc492-f810-4c48-9ed0-5bc920008319")]
+	public partial class SoSAHasLegend : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// SoSAHasLegend domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x950fc492, 0xf810, 0x4c48, 0x9e, 0xd0, 0x5b, 0xc9, 0x20, 0x00, 0x83, 0x19);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a SoSAHasLegend link in the same Partition as the given SoSA
+		/// </summary>
+		/// <param name="source">SoSA to use as the source of the relationship.</param>
+		/// <param name="target">Legend to use as the target of the relationship.</param>
+		public SoSAHasLegend(SoSA source, Legend target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SoSAHasLegend.SoSADomainRoleId, source), new DslModeling::RoleAssignment(SoSAHasLegend.LegendDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SoSAHasLegend(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SoSAHasLegend(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SoSAHasLegend(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SoSAHasLegend(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SoSA domain role code
+		
+		/// <summary>
+		/// SoSA domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SoSADomainRoleId = new global::System.Guid(0xf9fd5c9a, 0x0e45, 0x441d, 0x82, 0xce, 0x87, 0x2a, 0x4c, 0xe1, 0xe9, 0x93);
+		
+		/// <summary>
+		/// DomainRole SoSA
+		/// Description for Company.TestMart.SoSAHasLegend.SoSA
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasLegend/SoSA.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasLegend/SoSA.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Legend", PropertyDisplayNameKey="Company.TestMart.SoSAHasLegend/SoSA.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("f9fd5c9a-0e45-441d-82ce-872a4ce1e993")]
+		public virtual SoSA SoSA
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (SoSA)DslModeling::DomainRoleInfo.GetRolePlayer(this, SoSADomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SoSADomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access SoSA of a Legend
+		/// <summary>
+		/// Gets SoSA.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static SoSA GetSoSA(Legend element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, LegendDomainRoleId) as SoSA;
+		}
+		
+		/// <summary>
+		/// Sets SoSA.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetSoSA(Legend element, SoSA newSoSA)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, LegendDomainRoleId, newSoSA);
+		}
+		#endregion
+		#region Legend domain role code
+		
+		/// <summary>
+		/// Legend domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid LegendDomainRoleId = new global::System.Guid(0xd57656c1, 0x600d, 0x4e3c, 0xb5, 0x29, 0x29, 0x4b, 0xf5, 0x79, 0xd6, 0x5b);
+		
+		/// <summary>
+		/// DomainRole Legend
+		/// Description for Company.TestMart.SoSAHasLegend.Legend
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasLegend/Legend.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasLegend/Legend.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SoSA", PropertyDisplayNameKey="Company.TestMart.SoSAHasLegend/Legend.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d57656c1-600d-4e3c-b529-294bf579d65b")]
+		public virtual Legend Legend
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Legend)DslModeling::DomainRoleInfo.GetRolePlayer(this, LegendDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, LegendDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Legend of a SoSA
+		/// <summary>
+		/// Gets Legend.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Legend GetLegend(SoSA element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SoSADomainRoleId) as Legend;
+		}
+		
+		/// <summary>
+		/// Sets Legend.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetLegend(SoSA element, Legend newLegend)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SoSADomainRoleId, newLegend);
+		}
+		#endregion
+		#region SoSA link accessor
+		/// <summary>
+		/// Get the SoSAHasLegend link to a SoSA.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SoSAHasLegend GetLinkToLegend (global::Company.TestMart.SoSA soSAInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasLegend> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasLegend>(soSAInstance, global::Company.TestMart.SoSAHasLegend.SoSADomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of SoSA not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Legend link accessor
+		/// <summary>
+		/// Get the SoSAHasLegend link to a Legend.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SoSAHasLegend GetLinkToSoSA (global::Company.TestMart.Legend legendInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasLegend> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasLegend>(legendInstance, global::Company.TestMart.SoSAHasLegend.LegendDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Legend not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region SoSAHasLegend instance accessors
+		
+		/// <summary>
+		/// Get any SoSAHasLegend links between a given SoSA and a Legend.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasLegend> GetLinks( global::Company.TestMart.SoSA source, global::Company.TestMart.Legend target )
+		{
+			global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasLegend> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasLegend>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasLegend> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasLegend>(source, global::Company.TestMart.SoSAHasLegend.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasLegend link in links )
+			{
+				if ( target.Equals(link.Legend) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one SoSAHasLegend link between a given SoSAand a Legend.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SoSAHasLegend GetLink( global::Company.TestMart.SoSA source, global::Company.TestMart.Legend target )
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasLegend> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasLegend>(source, global::Company.TestMart.SoSAHasLegend.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasLegend link in links )
+			{
+				if ( target.Equals(link.Legend) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainRelationship SoSAHasTemporaryConcerned
+	/// Description for Company.TestMart.SoSAHasTemporaryConcerned
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerned.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerned.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("49820fd6-1695-4eb4-aec4-1051a0ddf8c3")]
+	public partial class SoSAHasTemporaryConcerned : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// SoSAHasTemporaryConcerned domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x49820fd6, 0x1695, 0x4eb4, 0xae, 0xc4, 0x10, 0x51, 0xa0, 0xdd, 0xf8, 0xc3);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a SoSAHasTemporaryConcerned link in the same Partition as the given SoSA
+		/// </summary>
+		/// <param name="source">SoSA to use as the source of the relationship.</param>
+		/// <param name="target">TemporaryConcern to use as the target of the relationship.</param>
+		public SoSAHasTemporaryConcerned(SoSA source, TemporaryConcern target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SoSAHasTemporaryConcerned.SoSADomainRoleId, source), new DslModeling::RoleAssignment(SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SoSAHasTemporaryConcerned(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SoSAHasTemporaryConcerned(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SoSAHasTemporaryConcerned(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SoSAHasTemporaryConcerned(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SoSA domain role code
+		
+		/// <summary>
+		/// SoSA domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SoSADomainRoleId = new global::System.Guid(0x8d9e5a51, 0x6951, 0x48f5, 0xb0, 0xa9, 0x72, 0xe5, 0xcf, 0x17, 0xc2, 0x90);
+		
+		/// <summary>
+		/// DomainRole SoSA
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerned/SoSA.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerned/SoSA.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TemporaryConcerned", PropertyDisplayNameKey="Company.TestMart.SoSAHasTemporaryConcerned/SoSA.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("8d9e5a51-6951-48f5-b0a9-72e5cf17c290")]
+		public virtual SoSA SoSA
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (SoSA)DslModeling::DomainRoleInfo.GetRolePlayer(this, SoSADomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SoSADomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access SoSA of a TemporaryConcern
+		/// <summary>
+		/// Gets SoSA.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static SoSA GetSoSA(TemporaryConcern element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TemporaryConcernDomainRoleId) as SoSA;
+		}
+		
+		/// <summary>
+		/// Sets SoSA.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetSoSA(TemporaryConcern element, SoSA newSoSA)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TemporaryConcernDomainRoleId, newSoSA);
+		}
+		#endregion
+		#region TemporaryConcern domain role code
+		
+		/// <summary>
+		/// TemporaryConcern domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TemporaryConcernDomainRoleId = new global::System.Guid(0x7546660b, 0xbf49, 0x4fdf, 0xb4, 0x43, 0xf7, 0x27, 0x3e, 0xf6, 0x33, 0x12);
+		
+		/// <summary>
+		/// DomainRole TemporaryConcern
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SoSA", PropertyDisplayNameKey="Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("7546660b-bf49-4fdf-b443-f7273ef63312")]
+		public virtual TemporaryConcern TemporaryConcern
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TemporaryConcern)DslModeling::DomainRoleInfo.GetRolePlayer(this, TemporaryConcernDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TemporaryConcernDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TemporaryConcerned of a SoSA
+		/// <summary>
+		/// Gets a list of TemporaryConcerned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<TemporaryConcern> GetTemporaryConcerned(SoSA element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<TemporaryConcern>, TemporaryConcern>(element, SoSADomainRoleId);
+		}
+		#endregion
+		#region SoSA link accessor
+		/// <summary>
+		/// Get the list of SoSAHasTemporaryConcerned links to a SoSA.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasTemporaryConcerned> GetLinksToTemporaryConcerned ( global::Company.TestMart.SoSA soSAInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(soSAInstance, global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
+		}
+		#endregion
+		#region TemporaryConcern link accessor
+		/// <summary>
+		/// Get the SoSAHasTemporaryConcerned link to a TemporaryConcern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SoSAHasTemporaryConcerned GetLinkToSoSA (global::Company.TestMart.TemporaryConcern temporaryConcernInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(temporaryConcernInstance, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TemporaryConcern not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region SoSAHasTemporaryConcerned instance accessors
+		
+		/// <summary>
+		/// Get any SoSAHasTemporaryConcerned links between a given SoSA and a TemporaryConcern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasTemporaryConcerned> GetLinks( global::Company.TestMart.SoSA source, global::Company.TestMart.TemporaryConcern target )
+		{
+			global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasTemporaryConcerned> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasTemporaryConcerned>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(source, global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasTemporaryConcerned link in links )
+			{
+				if ( target.Equals(link.TemporaryConcern) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one SoSAHasTemporaryConcerned link between a given SoSAand a TemporaryConcern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SoSAHasTemporaryConcerned GetLink( global::Company.TestMart.SoSA source, global::Company.TestMart.TemporaryConcern target )
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(source, global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasTemporaryConcerned link in links )
+			{
+				if ( target.Equals(link.TemporaryConcern) )
 				{
 					return link;
 				}

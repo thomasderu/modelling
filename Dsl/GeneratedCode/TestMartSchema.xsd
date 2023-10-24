@@ -25,6 +25,36 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: SoSAHasLegend -->
+          <xsd:element name="legend" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of SoSAHasLegend</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="soSAHasLegend" minOccurs="1" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of SoSAHasLegend needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: SoSAHasTemporaryConcerned -->
+          <xsd:element name="temporaryConcerned" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of SoSAHasTemporaryConcerned</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="soSAHasTemporaryConcerned" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of SoSAHasTemporaryConcerned needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -424,6 +454,72 @@
     </xsd:complexContent>
   </xsd:complexType>
   
+  <!-- Legend -->
+  <xsd:element name="legend" type="Legend" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Legend">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Legend Moniker -->
+  <xsd:element name="legendMoniker" type="LegendMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="LegendMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Legend instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TemporaryConcern -->
+  <xsd:element name="temporaryConcern" type="TemporaryConcern" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TemporaryConcern">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TempName -->
+        <xsd:attribute name="tempName" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TemporaryConcern Moniker -->
+  <xsd:element name="temporaryConcernMoniker" type="TemporaryConcernMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TemporaryConcernMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TemporaryConcern instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <!-- ElementReferencesTargetElements -->
   <xsd:element name="elementReferencesTargetElements" type="ElementReferencesTargetElements" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ElementReferencesTargetElements">
@@ -534,6 +630,86 @@
   <xsd:complexType name="SoSAHasImpactLevelMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for SoSAHasImpactLevel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SoSAHasLegend -->
+  <xsd:element name="soSAHasLegend" type="SoSAHasLegend" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="SoSAHasLegend">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Legend -->
+          <xsd:element ref="legend" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SoSAHasLegend Moniker -->
+  <xsd:element name="soSAHasLegendMoniker" type="SoSAHasLegendMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="SoSAHasLegendMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SoSAHasLegend instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SoSAHasTemporaryConcerned -->
+  <xsd:element name="soSAHasTemporaryConcerned" type="SoSAHasTemporaryConcerned" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="SoSAHasTemporaryConcerned">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end TemporaryConcern -->
+          <xsd:element ref="temporaryConcern" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SoSAHasTemporaryConcerned Moniker -->
+  <xsd:element name="soSAHasTemporaryConcernedMoniker" type="SoSAHasTemporaryConcernedMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="SoSAHasTemporaryConcernedMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SoSAHasTemporaryConcerned instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

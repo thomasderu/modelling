@@ -101,6 +101,22 @@ namespace Company.TestMart
 					"@LevelImpactEnablingToolboxBitmap;Company.TestMart.Dsl.dll", 
 					0xff00ff,
 					Index = 8)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@LegendToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.LegendToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Legend", 
+					"@LegendToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 9)]
+	[VSShell::ProvideStaticToolboxItem("Company.TestMart.TestMartToolboxTab",
+					"@ElementTool1ToolboxItem;Company.TestMart.Dsl.dll", 
+					"Company.TestMart.ElementTool1ToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ElementTool1", 
+					"@ElementTool1ToolboxBitmap;Company.TestMart.Dsl.dll", 
+					0xff00ff,
+					Index = 10)]
 	[VSShell::ProvideEditorFactory(typeof(TestMartEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(TestMartEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(TestMartEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
