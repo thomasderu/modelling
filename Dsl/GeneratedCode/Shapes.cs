@@ -954,15 +954,15 @@ namespace Company.TestMart
 namespace Company.TestMart
 {
 	/// <summary>
-	/// DomainClass ElementShape
-	/// Description for Company.TestMart.ElementShape
+	/// DomainClass ConcernShape
+	/// Description for Company.TestMart.ConcernShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.ElementShape.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.ElementShape.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.TestMart.ConcernShape.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ConcernShape.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("ee699f92-6dba-4b91-815c-092734bda0b2")]
-	public partial class ElementShape : DslDiagrams::NodeShape
+	public partial class ConcernShape : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1027,9 +1027,9 @@ namespace Company.TestMart
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ElementShape.
+		/// Finds a decorator associated with ConcernShape.
 		/// </summary>
-		public static DslDiagrams::Decorator FindElementShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConcernShapeDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -1075,7 +1075,7 @@ namespace Company.TestMart
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ElementShape domain class Id.
+		/// ConcernShape domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xee699f92, 0x6dba, 0x4b91, 0x81, 0x5c, 0x09, 0x27, 0x34, 0xbd, 0xa0, 0xb2);
 		/// <summary>
@@ -1083,7 +1083,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ElementShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConcernShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -1093,7 +1093,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ElementShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConcernShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -2255,7 +2255,7 @@ namespace Company.TestMart
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(1, 0.5);
 			}
 		}
 		#endregion

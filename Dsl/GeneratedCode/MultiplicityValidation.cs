@@ -34,5 +34,53 @@ namespace Company.TestMart
 	} // class SoSA
 } // Company.TestMart
 
+namespace Company.TestMart
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class ImpactImmediate
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateImpactImmediateMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Solution == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Company.TestMart.TestMartDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ImpactImmediate", this.Name, "Solution"),
+						"DSL0001", this);
+			}
+		} // ValidateImpactImmediateMultiplicity
+	} // class ImpactImmediate
+} // Company.TestMart
+
+namespace Company.TestMart
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Concern
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateConcernMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Solution == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						Company.TestMart.TestMartDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Concern", "", "Solution"),
+						"DSL0001", this);
+			}
+		} // ValidateConcernMultiplicity
+	} // class Concern
+} // Company.TestMart
+
 	
  

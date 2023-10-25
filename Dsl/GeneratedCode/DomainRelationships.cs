@@ -12,580 +12,33 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.TestMart
 {
 	/// <summary>
-	/// DomainRelationship ElementReferencesTargetElements
-	/// Description for Company.TestMart.ElementReferencesTargetElements
+	/// DomainRelationship SoSAHasImpactLevels
+	/// Description for Company.TestMart.SoSAHasImpactLevels
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.ElementReferencesTargetElements.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.ElementReferencesTargetElements.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("a49f47b6-cb34-4a1e-b8c3-e321e303f5f2")]
-	public partial class ElementReferencesTargetElements : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ElementReferencesTargetElements domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa49f47b6, 0xcb34, 0x4a1e, 0xb8, 0xc3, 0xe3, 0x21, 0xe3, 0x03, 0xf5, 0xf2);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ElementReferencesTargetElements link in the same Partition as the given Element
-		/// </summary>
-		/// <param name="source">Element to use as the source of the relationship.</param>
-		/// <param name="target">Element to use as the target of the relationship.</param>
-		public ElementReferencesTargetElements(Element source, Element target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ElementReferencesTargetElements.SourceElementDomainRoleId, source), new DslModeling::RoleAssignment(ElementReferencesTargetElements.TargetElementDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ElementReferencesTargetElements(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ElementReferencesTargetElements(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ElementReferencesTargetElements(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ElementReferencesTargetElements(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region SourceElement domain role code
-		
-		/// <summary>
-		/// SourceElement domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceElementDomainRoleId = new global::System.Guid(0x1df2014b, 0xdf0b, 0x4308, 0x8c, 0xc4, 0x9a, 0x1d, 0xb7, 0xf7, 0x3f, 0xd5);
-		
-		/// <summary>
-		/// DomainRole SourceElement
-		/// Description for Company.TestMart.ElementReferencesTargetElements.SourceElement
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.ElementReferencesTargetElements/SourceElement.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.ElementReferencesTargetElements/SourceElement.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TargetElements", PropertyDisplayNameKey="Company.TestMart.ElementReferencesTargetElements/SourceElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("1df2014b-df0b-4308-8cc4-9a1db7f73fd5")]
-		public virtual Element SourceElement
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Element)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceElementDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceElementDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access SourceElements of a Element
-		/// <summary>
-		/// Gets a list of SourceElements.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Element> GetSourceElements(Element element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(element, TargetElementDomainRoleId);
-		}
-		#endregion
-		#region TargetElement domain role code
-		
-		/// <summary>
-		/// TargetElement domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetElementDomainRoleId = new global::System.Guid(0xc9d452d0, 0xbdd0, 0x4f47, 0xb3, 0x1b, 0x4f, 0xaf, 0xd8, 0x70, 0x58, 0x69);
-		
-		/// <summary>
-		/// DomainRole TargetElement
-		/// Description for Company.TestMart.ElementReferencesTargetElements.TargetElement
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.ElementReferencesTargetElements/TargetElement.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.ElementReferencesTargetElements/TargetElement.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SourceElements", PropertyDisplayNameKey="Company.TestMart.ElementReferencesTargetElements/TargetElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("c9d452d0-bdd0-4f47-b31b-4fafd8705869")]
-		public virtual Element TargetElement
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Element)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetElementDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetElementDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access TargetElements of a Element
-		/// <summary>
-		/// Gets a list of TargetElements.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Element> GetTargetElements(Element element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(element, SourceElementDomainRoleId);
-		}
-		#endregion
-		#region Sign domain property code
-		
-		/// <summary>
-		/// Sign domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid SignDomainPropertyId = new global::System.Guid(0x36ab6d9e, 0x16c2, 0x4815, 0xa4, 0x93, 0x34, 0x31, 0x68, 0x98, 0x24, 0xf6);
-		
-		/// <summary>
-		/// Storage for Sign
-		/// </summary>
-		private global::System.String signPropertyStorage = "*add sign*";
-		
-		/// <summary>
-		/// Gets or sets the value of Sign domain property.
-		/// Description for Company.TestMart.ElementReferencesTargetElements.Sign
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.ElementReferencesTargetElements/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.ElementReferencesTargetElements/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("*add sign*")]
-		[DslModeling::DomainObjectId("36ab6d9e-16c2-4815-a493-3431689824f6")]
-		public global::System.String Sign
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return signPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				SignPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ElementReferencesTargetElements.Sign domain property.
-		/// </summary>
-		internal sealed partial class SignPropertyHandler : DslModeling::DomainPropertyValueHandler<ElementReferencesTargetElements, global::System.String>
-		{
-			private SignPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ElementReferencesTargetElements.Sign domain property value handler.
-			/// </summary>
-			public static readonly SignPropertyHandler Instance = new SignPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ElementReferencesTargetElements.Sign domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return SignDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ElementReferencesTargetElements element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.signPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ElementReferencesTargetElements element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.signPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region SourceElement link accessor
-		/// <summary>
-		/// Get the list of ElementReferencesTargetElements links to a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ElementReferencesTargetElements> GetLinksToTargetElements ( global::Company.TestMart.Element sourceElementInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ElementReferencesTargetElements>(sourceElementInstance, global::Company.TestMart.ElementReferencesTargetElements.SourceElementDomainRoleId);
-		}
-		#endregion
-		#region TargetElement link accessor
-		/// <summary>
-		/// Get the list of ElementReferencesTargetElements links to a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ElementReferencesTargetElements> GetLinksToSourceElements ( global::Company.TestMart.Element targetElementInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ElementReferencesTargetElements>(targetElementInstance, global::Company.TestMart.ElementReferencesTargetElements.TargetElementDomainRoleId);
-		}
-		#endregion
-		#region ElementReferencesTargetElements instance accessors
-		
-		/// <summary>
-		/// Get any ElementReferencesTargetElements links between a given Element and a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ElementReferencesTargetElements> GetLinks( global::Company.TestMart.Element source, global::Company.TestMart.Element target )
-		{
-			global::System.Collections.Generic.List<global::Company.TestMart.ElementReferencesTargetElements> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.ElementReferencesTargetElements>();
-			global::System.Collections.Generic.IList<global::Company.TestMart.ElementReferencesTargetElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ElementReferencesTargetElements>(source, global::Company.TestMart.ElementReferencesTargetElements.SourceElementDomainRoleId);
-			foreach ( global::Company.TestMart.ElementReferencesTargetElements link in links )
-			{
-				if ( target.Equals(link.TargetElement) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ElementReferencesTargetElements link between a given Elementand a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.ElementReferencesTargetElements GetLink( global::Company.TestMart.Element source, global::Company.TestMart.Element target )
-		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.ElementReferencesTargetElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ElementReferencesTargetElements>(source, global::Company.TestMart.ElementReferencesTargetElements.SourceElementDomainRoleId);
-			foreach ( global::Company.TestMart.ElementReferencesTargetElements link in links )
-			{
-				if ( target.Equals(link.TargetElement) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Company.TestMart
-{
-	/// <summary>
-	/// DomainRelationship ImpactLevelsHasElements
-	/// Description for Company.TestMart.ImpactLevelsHasElements
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevelsHasElements.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.ImpactLevelsHasElements.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("2e837fcd-de39-423d-a7f4-2e4655890534")]
-	public partial class ImpactLevelsHasElements : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ImpactLevelsHasElements domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2e837fcd, 0xde39, 0x423d, 0xa7, 0xf4, 0x2e, 0x46, 0x55, 0x89, 0x05, 0x34);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ImpactLevelsHasElements link in the same Partition as the given ImpactLevels
-		/// </summary>
-		/// <param name="source">ImpactLevels to use as the source of the relationship.</param>
-		/// <param name="target">Element to use as the target of the relationship.</param>
-		public ImpactLevelsHasElements(ImpactLevels source, Element target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ImpactLevelsHasElements.ImpactLevelsDomainRoleId, source), new DslModeling::RoleAssignment(ImpactLevelsHasElements.ElementDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ImpactLevelsHasElements(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ImpactLevelsHasElements(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ImpactLevelsHasElements(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ImpactLevelsHasElements(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ImpactLevels domain role code
-		
-		/// <summary>
-		/// ImpactLevels domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ImpactLevelsDomainRoleId = new global::System.Guid(0x430b6816, 0xcc3a, 0x4ca6, 0x88, 0xf5, 0xb6, 0x8a, 0xcc, 0x75, 0xc0, 0xec);
-		
-		/// <summary>
-		/// DomainRole ImpactLevels
-		/// Description for Company.TestMart.ImpactLevelsHasElements.ImpactLevels
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevelsHasElements/ImpactLevels.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.ImpactLevelsHasElements/ImpactLevels.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Company.TestMart.ImpactLevelsHasElements/ImpactLevels.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("430b6816-cc3a-4ca6-88f5-b68acc75c0ec")]
-		public virtual ImpactLevels ImpactLevels
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ImpactLevels)DslModeling::DomainRoleInfo.GetRolePlayer(this, ImpactLevelsDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ImpactLevelsDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ImpactLevels of a Element
-		/// <summary>
-		/// Gets ImpactLevels.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ImpactLevels GetImpactLevels(Element element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ElementDomainRoleId) as ImpactLevels;
-		}
-		
-		/// <summary>
-		/// Sets ImpactLevels.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetImpactLevels(Element element, ImpactLevels newImpactLevels)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ElementDomainRoleId, newImpactLevels);
-		}
-		#endregion
-		#region Element domain role code
-		
-		/// <summary>
-		/// Element domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ElementDomainRoleId = new global::System.Guid(0x21ae0721, 0x0e82, 0x4a11, 0x84, 0x5b, 0x03, 0xd1, 0x1d, 0x96, 0xc1, 0xdf);
-		
-		/// <summary>
-		/// DomainRole Element
-		/// Description for Company.TestMart.ImpactLevelsHasElements.Element
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevelsHasElements/Element.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.ImpactLevelsHasElements/Element.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ImpactLevels", PropertyDisplayNameKey="Company.TestMart.ImpactLevelsHasElements/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("21ae0721-0e82-4a11-845b-03d11d96c1df")]
-		public virtual Element Element
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Element)DslModeling::DomainRoleInfo.GetRolePlayer(this, ElementDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ElementDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Elements of a ImpactLevels
-		/// <summary>
-		/// Gets a list of Elements.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Element> GetElements(ImpactLevels element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(element, ImpactLevelsDomainRoleId);
-		}
-		#endregion
-		#region ImpactLevels link accessor
-		/// <summary>
-		/// Get the list of ImpactLevelsHasElements links to a ImpactLevels.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ImpactLevelsHasElements> GetLinksToElements ( global::Company.TestMart.ImpactLevels impactLevelsInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasElements>(impactLevelsInstance, global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId);
-		}
-		#endregion
-		#region Element link accessor
-		/// <summary>
-		/// Get the ImpactLevelsHasElements link to a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.ImpactLevelsHasElements GetLinkToImpactLevels (global::Company.TestMart.Element elementInstance)
-		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactLevelsHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasElements>(elementInstance, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Element not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ImpactLevelsHasElements instance accessors
-		
-		/// <summary>
-		/// Get any ImpactLevelsHasElements links between a given ImpactLevels and a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ImpactLevelsHasElements> GetLinks( global::Company.TestMart.ImpactLevels source, global::Company.TestMart.Element target )
-		{
-			global::System.Collections.Generic.List<global::Company.TestMart.ImpactLevelsHasElements> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.ImpactLevelsHasElements>();
-			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactLevelsHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasElements>(source, global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId);
-			foreach ( global::Company.TestMart.ImpactLevelsHasElements link in links )
-			{
-				if ( target.Equals(link.Element) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ImpactLevelsHasElements link between a given ImpactLevelsand a Element.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.ImpactLevelsHasElements GetLink( global::Company.TestMart.ImpactLevels source, global::Company.TestMart.Element target )
-		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactLevelsHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasElements>(source, global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId);
-			foreach ( global::Company.TestMart.ImpactLevelsHasElements link in links )
-			{
-				if ( target.Equals(link.Element) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Company.TestMart
-{
-	/// <summary>
-	/// DomainRelationship SoSAHasImpactLevel
-	/// Description for Company.TestMart.SoSAHasImpactLevel
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasImpactLevel.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.SoSAHasImpactLevel.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasImpactLevels.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.SoSAHasImpactLevels.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("43aa9e11-3b2e-4512-8c7c-a44fe4105743")]
-	public partial class SoSAHasImpactLevel : DslModeling::ElementLink
+	public partial class SoSAHasImpactLevels : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// SoSAHasImpactLevel domain class Id.
+		/// SoSAHasImpactLevels domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x43aa9e11, 0x3b2e, 0x4512, 0x8c, 0x7c, 0xa4, 0x4f, 0xe4, 0x10, 0x57, 0x43);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a SoSAHasImpactLevel link in the same Partition as the given SoSA
+		/// Creates a SoSAHasImpactLevels link in the same Partition as the given SoSA
 		/// </summary>
 		/// <param name="source">SoSA to use as the source of the relationship.</param>
 		/// <param name="target">ImpactLevels to use as the target of the relationship.</param>
-		public SoSAHasImpactLevel(SoSA source, ImpactLevels target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SoSAHasImpactLevel.SoSADomainRoleId, source), new DslModeling::RoleAssignment(SoSAHasImpactLevel.ImpactLevelsDomainRoleId, target)}, null)
+		public SoSAHasImpactLevels(SoSA source, ImpactLevels target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SoSAHasImpactLevels.SoSADomainRoleId, source), new DslModeling::RoleAssignment(SoSAHasImpactLevels.ImpactLevelsDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -594,7 +47,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public SoSAHasImpactLevel(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public SoSAHasImpactLevels(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -605,7 +58,7 @@ namespace Company.TestMart
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public SoSAHasImpactLevel(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public SoSAHasImpactLevels(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -615,7 +68,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public SoSAHasImpactLevel(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public SoSAHasImpactLevels(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -626,7 +79,7 @@ namespace Company.TestMart
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public SoSAHasImpactLevel(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public SoSAHasImpactLevels(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -640,11 +93,11 @@ namespace Company.TestMart
 		
 		/// <summary>
 		/// DomainRole SoSA
-		/// Description for Company.TestMart.SoSAHasImpactLevel.SoSA
+		/// Description for Company.TestMart.SoSAHasImpactLevels.SoSA
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasImpactLevel/SoSA.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasImpactLevel/SoSA.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ImpactLevel", PropertyDisplayNameKey="Company.TestMart.SoSAHasImpactLevel/SoSA.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasImpactLevels/SoSA.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasImpactLevels/SoSA.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ImpactLevel", PropertyDisplayNameKey="Company.TestMart.SoSAHasImpactLevels/SoSA.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("1ebbca36-353b-4c6c-84d6-83e459b44120")]
 		public virtual SoSA SoSA
 		{
@@ -691,11 +144,11 @@ namespace Company.TestMart
 		
 		/// <summary>
 		/// DomainRole ImpactLevels
-		/// Description for Company.TestMart.SoSAHasImpactLevel.ImpactLevels
+		/// Description for Company.TestMart.SoSAHasImpactLevels.ImpactLevels
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasImpactLevel/ImpactLevels.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasImpactLevel/ImpactLevels.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SoSA", PropertyDisplayNameKey="Company.TestMart.SoSAHasImpactLevel/ImpactLevels.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasImpactLevels/ImpactLevels.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasImpactLevels/ImpactLevels.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SoSA", PropertyDisplayNameKey="Company.TestMart.SoSAHasImpactLevels/ImpactLevels.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("75089eb9-dace-4571-96c1-4ff9a93d2a59")]
 		public virtual ImpactLevels ImpactLevels
 		{
@@ -725,24 +178,24 @@ namespace Company.TestMart
 		#endregion
 		#region SoSA link accessor
 		/// <summary>
-		/// Get the list of SoSAHasImpactLevel links to a SoSA.
+		/// Get the list of SoSAHasImpactLevels links to a SoSA.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasImpactLevel> GetLinksToImpactLevel ( global::Company.TestMart.SoSA soSAInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasImpactLevels> GetLinksToImpactLevel ( global::Company.TestMart.SoSA soSAInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevel>(soSAInstance, global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevels>(soSAInstance, global::Company.TestMart.SoSAHasImpactLevels.SoSADomainRoleId);
 		}
 		#endregion
 		#region ImpactLevels link accessor
 		/// <summary>
-		/// Get the SoSAHasImpactLevel link to a ImpactLevels.
+		/// Get the SoSAHasImpactLevels link to a ImpactLevels.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.SoSAHasImpactLevel GetLinkToSoSA (global::Company.TestMart.ImpactLevels impactLevelsInstance)
+		public static global::Company.TestMart.SoSAHasImpactLevels GetLinkToSoSA (global::Company.TestMart.ImpactLevels impactLevelsInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasImpactLevel> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevel>(impactLevelsInstance, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasImpactLevels> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevels>(impactLevelsInstance, global::Company.TestMart.SoSAHasImpactLevels.ImpactLevelsDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ImpactLevels not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -754,18 +207,18 @@ namespace Company.TestMart
 			}
 		}
 		#endregion
-		#region SoSAHasImpactLevel instance accessors
+		#region SoSAHasImpactLevels instance accessors
 		
 		/// <summary>
-		/// Get any SoSAHasImpactLevel links between a given SoSA and a ImpactLevels.
+		/// Get any SoSAHasImpactLevels links between a given SoSA and a ImpactLevels.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasImpactLevel> GetLinks( global::Company.TestMart.SoSA source, global::Company.TestMart.ImpactLevels target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasImpactLevels> GetLinks( global::Company.TestMart.SoSA source, global::Company.TestMart.ImpactLevels target )
 		{
-			global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasImpactLevel> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasImpactLevel>();
-			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasImpactLevel> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevel>(source, global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId);
-			foreach ( global::Company.TestMart.SoSAHasImpactLevel link in links )
+			global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasImpactLevels> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasImpactLevels>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasImpactLevels> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevels>(source, global::Company.TestMart.SoSAHasImpactLevels.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasImpactLevels link in links )
 			{
 				if ( target.Equals(link.ImpactLevels) )
 				{
@@ -775,14 +228,14 @@ namespace Company.TestMart
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one SoSAHasImpactLevel link between a given SoSAand a ImpactLevels.
+		/// Get the one SoSAHasImpactLevels link between a given SoSAand a ImpactLevels.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.SoSAHasImpactLevel GetLink( global::Company.TestMart.SoSA source, global::Company.TestMart.ImpactLevels target )
+		public static global::Company.TestMart.SoSAHasImpactLevels GetLink( global::Company.TestMart.SoSA source, global::Company.TestMart.ImpactLevels target )
 		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasImpactLevel> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevel>(source, global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId);
-			foreach ( global::Company.TestMart.SoSAHasImpactLevel link in links )
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasImpactLevels> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasImpactLevels>(source, global::Company.TestMart.SoSAHasImpactLevels.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasImpactLevels link in links )
 			{
 				if ( target.Equals(link.ImpactLevels) )
 				{
@@ -1056,33 +509,33 @@ namespace Company.TestMart
 namespace Company.TestMart
 {
 	/// <summary>
-	/// DomainRelationship SoSAHasTemporaryConcerned
-	/// Description for Company.TestMart.SoSAHasTemporaryConcerned
+	/// DomainRelationship ImpactImmediateHasSolution
+	/// Description for Company.TestMart.ImpactImmediateHasSolution
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerned.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerned.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.TestMart.ImpactImmediateHasSolution.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ImpactImmediateHasSolution.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("49820fd6-1695-4eb4-aec4-1051a0ddf8c3")]
-	public partial class SoSAHasTemporaryConcerned : DslModeling::ElementLink
+	[DslModeling::DomainObjectId("9c1dbacf-eb26-4873-b464-61fd4db93850")]
+	public partial class ImpactImmediateHasSolution : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// SoSAHasTemporaryConcerned domain class Id.
+		/// ImpactImmediateHasSolution domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x49820fd6, 0x1695, 0x4eb4, 0xae, 0xc4, 0x10, 0x51, 0xa0, 0xdd, 0xf8, 0xc3);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9c1dbacf, 0xeb26, 0x4873, 0xb4, 0x64, 0x61, 0xfd, 0x4d, 0xb9, 0x38, 0x50);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a SoSAHasTemporaryConcerned link in the same Partition as the given SoSA
+		/// Creates a ImpactImmediateHasSolution link in the same Partition as the given ImpactImmediate
 		/// </summary>
-		/// <param name="source">SoSA to use as the source of the relationship.</param>
-		/// <param name="target">TemporaryConcern to use as the target of the relationship.</param>
-		public SoSAHasTemporaryConcerned(SoSA source, TemporaryConcern target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SoSAHasTemporaryConcerned.SoSADomainRoleId, source), new DslModeling::RoleAssignment(SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId, target)}, null)
+		/// <param name="source">ImpactImmediate to use as the source of the relationship.</param>
+		/// <param name="target">Solution to use as the target of the relationship.</param>
+		public ImpactImmediateHasSolution(ImpactImmediate source, Solution target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ImpactImmediateHasSolution.ImpactImmediateDomainRoleId, source), new DslModeling::RoleAssignment(ImpactImmediateHasSolution.SolutionDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1091,7 +544,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public SoSAHasTemporaryConcerned(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ImpactImmediateHasSolution(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1102,7 +555,7 @@ namespace Company.TestMart
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public SoSAHasTemporaryConcerned(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ImpactImmediateHasSolution(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1112,7 +565,7 @@ namespace Company.TestMart
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public SoSAHasTemporaryConcerned(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ImpactImmediateHasSolution(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1123,7 +576,265 @@ namespace Company.TestMart
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public SoSAHasTemporaryConcerned(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ImpactImmediateHasSolution(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ImpactImmediate domain role code
+		
+		/// <summary>
+		/// ImpactImmediate domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ImpactImmediateDomainRoleId = new global::System.Guid(0xf3630c08, 0xc910, 0x4101, 0xa6, 0x8a, 0x55, 0x8c, 0x1e, 0x4c, 0x16, 0x46);
+		
+		/// <summary>
+		/// DomainRole ImpactImmediate
+		/// Description for Company.TestMart.ImpactImmediateHasSolution.ImpactImmediate
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactImmediateHasSolution/ImpactImmediate.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactImmediateHasSolution/ImpactImmediate.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Solution", PropertyDisplayNameKey="Company.TestMart.ImpactImmediateHasSolution/ImpactImmediate.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("f3630c08-c910-4101-a68a-558c1e4c1646")]
+		public virtual ImpactImmediate ImpactImmediate
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ImpactImmediate)DslModeling::DomainRoleInfo.GetRolePlayer(this, ImpactImmediateDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ImpactImmediateDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ImpactImmediate of a Solution
+		/// <summary>
+		/// Gets ImpactImmediate.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ImpactImmediate GetImpactImmediate(Solution element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SolutionDomainRoleId) as ImpactImmediate;
+		}
+		
+		/// <summary>
+		/// Sets ImpactImmediate.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetImpactImmediate(Solution element, ImpactImmediate newImpactImmediate)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SolutionDomainRoleId, newImpactImmediate);
+		}
+		#endregion
+		#region Solution domain role code
+		
+		/// <summary>
+		/// Solution domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SolutionDomainRoleId = new global::System.Guid(0x643d00e4, 0xf6ec, 0x43d9, 0x90, 0xea, 0xee, 0x5a, 0xfa, 0xd1, 0x00, 0xc0);
+		
+		/// <summary>
+		/// DomainRole Solution
+		/// Description for Company.TestMart.ImpactImmediateHasSolution.Solution
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactImmediateHasSolution/Solution.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactImmediateHasSolution/Solution.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ImpactImmediate", PropertyDisplayNameKey="Company.TestMart.ImpactImmediateHasSolution/Solution.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("643d00e4-f6ec-43d9-90ea-ee5afad100c0")]
+		public virtual Solution Solution
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Solution)DslModeling::DomainRoleInfo.GetRolePlayer(this, SolutionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SolutionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Solution of a ImpactImmediate
+		/// <summary>
+		/// Gets Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Solution GetSolution(ImpactImmediate element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ImpactImmediateDomainRoleId) as Solution;
+		}
+		
+		/// <summary>
+		/// Sets Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetSolution(ImpactImmediate element, Solution newSolution)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ImpactImmediateDomainRoleId, newSolution);
+		}
+		#endregion
+		#region ImpactImmediate link accessor
+		/// <summary>
+		/// Get the ImpactImmediateHasSolution link to a ImpactImmediate.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.ImpactImmediateHasSolution GetLinkToSolution (global::Company.TestMart.ImpactImmediate impactImmediateInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactImmediateHasSolution> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactImmediateHasSolution>(impactImmediateInstance, global::Company.TestMart.ImpactImmediateHasSolution.ImpactImmediateDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ImpactImmediate not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Solution link accessor
+		/// <summary>
+		/// Get the ImpactImmediateHasSolution link to a Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.ImpactImmediateHasSolution GetLinkToImpactImmediate (global::Company.TestMart.Solution solutionInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactImmediateHasSolution> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactImmediateHasSolution>(solutionInstance, global::Company.TestMart.ImpactImmediateHasSolution.SolutionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Solution not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ImpactImmediateHasSolution instance accessors
+		
+		/// <summary>
+		/// Get any ImpactImmediateHasSolution links between a given ImpactImmediate and a Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ImpactImmediateHasSolution> GetLinks( global::Company.TestMart.ImpactImmediate source, global::Company.TestMart.Solution target )
+		{
+			global::System.Collections.Generic.List<global::Company.TestMart.ImpactImmediateHasSolution> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.ImpactImmediateHasSolution>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactImmediateHasSolution> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactImmediateHasSolution>(source, global::Company.TestMart.ImpactImmediateHasSolution.ImpactImmediateDomainRoleId);
+			foreach ( global::Company.TestMart.ImpactImmediateHasSolution link in links )
+			{
+				if ( target.Equals(link.Solution) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ImpactImmediateHasSolution link between a given ImpactImmediateand a Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.ImpactImmediateHasSolution GetLink( global::Company.TestMart.ImpactImmediate source, global::Company.TestMart.Solution target )
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactImmediateHasSolution> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactImmediateHasSolution>(source, global::Company.TestMart.ImpactImmediateHasSolution.ImpactImmediateDomainRoleId);
+			foreach ( global::Company.TestMart.ImpactImmediateHasSolution link in links )
+			{
+				if ( target.Equals(link.Solution) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainRelationship SoSAHasTemporaryConcerns
+	/// Description for Company.TestMart.SoSAHasTemporaryConcerns
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerns.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerns.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("defad783-e425-4e89-93cf-d498aea060b1")]
+	public partial class SoSAHasTemporaryConcerns : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// SoSAHasTemporaryConcerns domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xdefad783, 0xe425, 0x4e89, 0x93, 0xcf, 0xd4, 0x98, 0xae, 0xa0, 0x60, 0xb1);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a SoSAHasTemporaryConcerns link in the same Partition as the given SoSA
+		/// </summary>
+		/// <param name="source">SoSA to use as the source of the relationship.</param>
+		/// <param name="target">TemporaryConcern to use as the target of the relationship.</param>
+		public SoSAHasTemporaryConcerns(SoSA source, TemporaryConcern target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SoSAHasTemporaryConcerns.SoSADomainRoleId, source), new DslModeling::RoleAssignment(SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SoSAHasTemporaryConcerns(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SoSAHasTemporaryConcerns(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SoSAHasTemporaryConcerns(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SoSAHasTemporaryConcerns(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1133,16 +844,16 @@ namespace Company.TestMart
 		/// <summary>
 		/// SoSA domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid SoSADomainRoleId = new global::System.Guid(0x8d9e5a51, 0x6951, 0x48f5, 0xb0, 0xa9, 0x72, 0xe5, 0xcf, 0x17, 0xc2, 0x90);
+		public static readonly global::System.Guid SoSADomainRoleId = new global::System.Guid(0x81d1fdc5, 0x8f66, 0x494e, 0x91, 0xcb, 0x57, 0xcd, 0x53, 0x90, 0xe2, 0xfb);
 		
 		/// <summary>
 		/// DomainRole SoSA
-		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerns.SoSA
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerned/SoSA.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerned/SoSA.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TemporaryConcerned", PropertyDisplayNameKey="Company.TestMart.SoSAHasTemporaryConcerned/SoSA.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("8d9e5a51-6951-48f5-b0a9-72e5cf17c290")]
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerns/SoSA.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerns/SoSA.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TemporaryConcerned", PropertyDisplayNameKey="Company.TestMart.SoSAHasTemporaryConcerns/SoSA.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("81d1fdc5-8f66-494e-91cb-57cd5390e2fb")]
 		public virtual SoSA SoSA
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -1184,16 +895,16 @@ namespace Company.TestMart
 		/// <summary>
 		/// TemporaryConcern domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid TemporaryConcernDomainRoleId = new global::System.Guid(0x7546660b, 0xbf49, 0x4fdf, 0xb4, 0x43, 0xf7, 0x27, 0x3e, 0xf6, 0x33, 0x12);
+		public static readonly global::System.Guid TemporaryConcernDomainRoleId = new global::System.Guid(0x0f701701, 0xbdb2, 0x4188, 0x8c, 0xb8, 0xe9, 0x3a, 0x45, 0xb9, 0xd0, 0xaa);
 		
 		/// <summary>
 		/// DomainRole TemporaryConcern
-		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcern
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SoSA", PropertyDisplayNameKey="Company.TestMart.SoSAHasTemporaryConcerned/TemporaryConcern.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("7546660b-bf49-4fdf-b443-f7273ef63312")]
+		[DslDesign::DisplayNameResource("Company.TestMart.SoSAHasTemporaryConcerns/TemporaryConcern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SoSAHasTemporaryConcerns/TemporaryConcern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SoSA", PropertyDisplayNameKey="Company.TestMart.SoSAHasTemporaryConcerns/TemporaryConcern.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("0f701701-bdb2-4188-8cb8-e93a45b9d0aa")]
 		public virtual TemporaryConcern TemporaryConcern
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -1222,24 +933,24 @@ namespace Company.TestMart
 		#endregion
 		#region SoSA link accessor
 		/// <summary>
-		/// Get the list of SoSAHasTemporaryConcerned links to a SoSA.
+		/// Get the list of SoSAHasTemporaryConcerns links to a SoSA.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasTemporaryConcerned> GetLinksToTemporaryConcerned ( global::Company.TestMart.SoSA soSAInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasTemporaryConcerns> GetLinksToTemporaryConcerned ( global::Company.TestMart.SoSA soSAInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(soSAInstance, global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerns>(soSAInstance, global::Company.TestMart.SoSAHasTemporaryConcerns.SoSADomainRoleId);
 		}
 		#endregion
 		#region TemporaryConcern link accessor
 		/// <summary>
-		/// Get the SoSAHasTemporaryConcerned link to a TemporaryConcern.
+		/// Get the SoSAHasTemporaryConcerns link to a TemporaryConcern.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.SoSAHasTemporaryConcerned GetLinkToSoSA (global::Company.TestMart.TemporaryConcern temporaryConcernInstance)
+		public static global::Company.TestMart.SoSAHasTemporaryConcerns GetLinkToSoSA (global::Company.TestMart.TemporaryConcern temporaryConcernInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(temporaryConcernInstance, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerns>(temporaryConcernInstance, global::Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TemporaryConcern not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1251,18 +962,18 @@ namespace Company.TestMart
 			}
 		}
 		#endregion
-		#region SoSAHasTemporaryConcerned instance accessors
+		#region SoSAHasTemporaryConcerns instance accessors
 		
 		/// <summary>
-		/// Get any SoSAHasTemporaryConcerned links between a given SoSA and a TemporaryConcern.
+		/// Get any SoSAHasTemporaryConcerns links between a given SoSA and a TemporaryConcern.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasTemporaryConcerned> GetLinks( global::Company.TestMart.SoSA source, global::Company.TestMart.TemporaryConcern target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SoSAHasTemporaryConcerns> GetLinks( global::Company.TestMart.SoSA source, global::Company.TestMart.TemporaryConcern target )
 		{
-			global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasTemporaryConcerned> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasTemporaryConcerned>();
-			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(source, global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
-			foreach ( global::Company.TestMart.SoSAHasTemporaryConcerned link in links )
+			global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasTemporaryConcerns> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SoSAHasTemporaryConcerns>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerns>(source, global::Company.TestMart.SoSAHasTemporaryConcerns.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasTemporaryConcerns link in links )
 			{
 				if ( target.Equals(link.TemporaryConcern) )
 				{
@@ -1272,16 +983,888 @@ namespace Company.TestMart
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one SoSAHasTemporaryConcerned link between a given SoSAand a TemporaryConcern.
+		/// Get the one SoSAHasTemporaryConcerns link between a given SoSAand a TemporaryConcern.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.TestMart.SoSAHasTemporaryConcerned GetLink( global::Company.TestMart.SoSA source, global::Company.TestMart.TemporaryConcern target )
+		public static global::Company.TestMart.SoSAHasTemporaryConcerns GetLink( global::Company.TestMart.SoSA source, global::Company.TestMart.TemporaryConcern target )
 		{
-			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerned>(source, global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
-			foreach ( global::Company.TestMart.SoSAHasTemporaryConcerned link in links )
+			global::System.Collections.Generic.IList<global::Company.TestMart.SoSAHasTemporaryConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SoSAHasTemporaryConcerns>(source, global::Company.TestMart.SoSAHasTemporaryConcerns.SoSADomainRoleId);
+			foreach ( global::Company.TestMart.SoSAHasTemporaryConcerns link in links )
 			{
 				if ( target.Equals(link.TemporaryConcern) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainRelationship ImpactLevelsHasConcerns
+	/// Description for Company.TestMart.ImpactLevelsHasConcerns
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevelsHasConcerns.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ImpactLevelsHasConcerns.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("4a0610fa-9675-4239-9e3e-dcbe3b0759a6")]
+	public partial class ImpactLevelsHasConcerns : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ImpactLevelsHasConcerns domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x4a0610fa, 0x9675, 0x4239, 0x9e, 0x3e, 0xdc, 0xbe, 0x3b, 0x07, 0x59, 0xa6);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ImpactLevelsHasConcerns link in the same Partition as the given ImpactLevels
+		/// </summary>
+		/// <param name="source">ImpactLevels to use as the source of the relationship.</param>
+		/// <param name="target">Concern to use as the target of the relationship.</param>
+		public ImpactLevelsHasConcerns(ImpactLevels source, Concern target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId, source), new DslModeling::RoleAssignment(ImpactLevelsHasConcerns.ConcernDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ImpactLevelsHasConcerns(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ImpactLevelsHasConcerns(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ImpactLevelsHasConcerns(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ImpactLevelsHasConcerns(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ImpactLevels domain role code
+		
+		/// <summary>
+		/// ImpactLevels domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ImpactLevelsDomainRoleId = new global::System.Guid(0x58e55dc6, 0x5f53, 0x4c73, 0x9d, 0x59, 0xdf, 0x15, 0xfa, 0x61, 0x54, 0x4e);
+		
+		/// <summary>
+		/// DomainRole ImpactLevels
+		/// Description for Company.TestMart.ImpactLevelsHasConcerns.ImpactLevels
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevelsHasConcerns/ImpactLevels.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactLevelsHasConcerns/ImpactLevels.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Concerns", PropertyDisplayNameKey="Company.TestMart.ImpactLevelsHasConcerns/ImpactLevels.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("58e55dc6-5f53-4c73-9d59-df15fa61544e")]
+		public virtual ImpactLevels ImpactLevels
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ImpactLevels)DslModeling::DomainRoleInfo.GetRolePlayer(this, ImpactLevelsDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ImpactLevelsDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ImpactLevels of a Concern
+		/// <summary>
+		/// Gets ImpactLevels.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ImpactLevels GetImpactLevels(Concern element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ConcernDomainRoleId) as ImpactLevels;
+		}
+		
+		/// <summary>
+		/// Sets ImpactLevels.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetImpactLevels(Concern element, ImpactLevels newImpactLevels)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ConcernDomainRoleId, newImpactLevels);
+		}
+		#endregion
+		#region Concern domain role code
+		
+		/// <summary>
+		/// Concern domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ConcernDomainRoleId = new global::System.Guid(0x6a306ca2, 0x91c7, 0x4677, 0x8e, 0x1a, 0x74, 0x1b, 0x6e, 0x7b, 0x28, 0xe0);
+		
+		/// <summary>
+		/// DomainRole Concern
+		/// Description for Company.TestMart.ImpactLevelsHasConcerns.Concern
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ImpactLevelsHasConcerns/Concern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ImpactLevelsHasConcerns/Concern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ImpactLevels", PropertyDisplayNameKey="Company.TestMart.ImpactLevelsHasConcerns/Concern.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("6a306ca2-91c7-4677-8e1a-741b6e7b28e0")]
+		public virtual Concern Concern
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Concern)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConcernDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConcernDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Concerns of a ImpactLevels
+		/// <summary>
+		/// Gets a list of Concerns.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Concern> GetConcerns(ImpactLevels element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(element, ImpactLevelsDomainRoleId);
+		}
+		#endregion
+		#region ImpactLevels link accessor
+		/// <summary>
+		/// Get the list of ImpactLevelsHasConcerns links to a ImpactLevels.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ImpactLevelsHasConcerns> GetLinksToConcerns ( global::Company.TestMart.ImpactLevels impactLevelsInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasConcerns>(impactLevelsInstance, global::Company.TestMart.ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId);
+		}
+		#endregion
+		#region Concern link accessor
+		/// <summary>
+		/// Get the ImpactLevelsHasConcerns link to a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.ImpactLevelsHasConcerns GetLinkToImpactLevels (global::Company.TestMart.Concern concernInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactLevelsHasConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasConcerns>(concernInstance, global::Company.TestMart.ImpactLevelsHasConcerns.ConcernDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Concern not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ImpactLevelsHasConcerns instance accessors
+		
+		/// <summary>
+		/// Get any ImpactLevelsHasConcerns links between a given ImpactLevels and a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ImpactLevelsHasConcerns> GetLinks( global::Company.TestMart.ImpactLevels source, global::Company.TestMart.Concern target )
+		{
+			global::System.Collections.Generic.List<global::Company.TestMart.ImpactLevelsHasConcerns> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.ImpactLevelsHasConcerns>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactLevelsHasConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasConcerns>(source, global::Company.TestMart.ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId);
+			foreach ( global::Company.TestMart.ImpactLevelsHasConcerns link in links )
+			{
+				if ( target.Equals(link.Concern) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ImpactLevelsHasConcerns link between a given ImpactLevelsand a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.ImpactLevelsHasConcerns GetLink( global::Company.TestMart.ImpactLevels source, global::Company.TestMart.Concern target )
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.ImpactLevelsHasConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ImpactLevelsHasConcerns>(source, global::Company.TestMart.ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId);
+			foreach ( global::Company.TestMart.ImpactLevelsHasConcerns link in links )
+			{
+				if ( target.Equals(link.Concern) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainRelationship SolutionReferencesConcerns
+	/// Description for Company.TestMart.SolutionReferencesConcerns
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.SolutionReferencesConcerns.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.SolutionReferencesConcerns.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("9dcea834-357c-4fe5-8d6a-55f499bb360a")]
+	public partial class SolutionReferencesConcerns : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// SolutionReferencesConcerns domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9dcea834, 0x357c, 0x4fe5, 0x8d, 0x6a, 0x55, 0xf4, 0x99, 0xbb, 0x36, 0x0a);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a SolutionReferencesConcerns link in the same Partition as the given Solution
+		/// </summary>
+		/// <param name="source">Solution to use as the source of the relationship.</param>
+		/// <param name="target">Concern to use as the target of the relationship.</param>
+		public SolutionReferencesConcerns(Solution source, Concern target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SolutionReferencesConcerns.SolutionDomainRoleId, source), new DslModeling::RoleAssignment(SolutionReferencesConcerns.ConcernDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SolutionReferencesConcerns(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SolutionReferencesConcerns(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public SolutionReferencesConcerns(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public SolutionReferencesConcerns(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Solution domain role code
+		
+		/// <summary>
+		/// Solution domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SolutionDomainRoleId = new global::System.Guid(0xaa3f5c53, 0xaac2, 0x4a26, 0xbb, 0x00, 0xdf, 0x69, 0xc9, 0x9e, 0x41, 0x4f);
+		
+		/// <summary>
+		/// DomainRole Solution
+		/// Description for Company.TestMart.SolutionReferencesConcerns.Solution
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SolutionReferencesConcerns/Solution.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SolutionReferencesConcerns/Solution.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Concerns", PropertyDisplayNameKey="Company.TestMart.SolutionReferencesConcerns/Solution.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("aa3f5c53-aac2-4a26-bb00-df69c99e414f")]
+		public virtual Solution Solution
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Solution)DslModeling::DomainRoleInfo.GetRolePlayer(this, SolutionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SolutionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Solution of a Concern
+		/// <summary>
+		/// Gets Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Solution GetSolution(Concern element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ConcernDomainRoleId) as Solution;
+		}
+		
+		/// <summary>
+		/// Sets Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetSolution(Concern element, Solution newSolution)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ConcernDomainRoleId, newSolution);
+		}
+		#endregion
+		#region Concern domain role code
+		
+		/// <summary>
+		/// Concern domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ConcernDomainRoleId = new global::System.Guid(0xe5663cb6, 0x8da7, 0x4a8c, 0xb4, 0x5b, 0xe3, 0x3c, 0x8e, 0x66, 0x04, 0x82);
+		
+		/// <summary>
+		/// DomainRole Concern
+		/// Description for Company.TestMart.SolutionReferencesConcerns.Concern
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SolutionReferencesConcerns/Concern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SolutionReferencesConcerns/Concern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Solution", PropertyDisplayNameKey="Company.TestMart.SolutionReferencesConcerns/Concern.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("e5663cb6-8da7-4a8c-b45b-e33c8e660482")]
+		public virtual Concern Concern
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Concern)DslModeling::DomainRoleInfo.GetRolePlayer(this, ConcernDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ConcernDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Concerns of a Solution
+		/// <summary>
+		/// Gets a list of Concerns.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Concern> GetConcerns(Solution element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(element, SolutionDomainRoleId);
+		}
+		#endregion
+		#region Sign domain property code
+		
+		/// <summary>
+		/// Sign domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid SignDomainPropertyId = new global::System.Guid(0xe70bc6dc, 0x0058, 0x43ff, 0xb7, 0x3e, 0x61, 0x7c, 0xb1, 0xd0, 0x2f, 0xbc);
+		
+		/// <summary>
+		/// Storage for Sign
+		/// </summary>
+		private global::System.String signPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Sign domain property.
+		/// Description for Company.TestMart.SolutionReferencesConcerns.Sign
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.SolutionReferencesConcerns/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.SolutionReferencesConcerns/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e70bc6dc-0058-43ff-b73e-617cb1d02fbc")]
+		public global::System.String Sign
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return signPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				SignPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the SolutionReferencesConcerns.Sign domain property.
+		/// </summary>
+		internal sealed partial class SignPropertyHandler : DslModeling::DomainPropertyValueHandler<SolutionReferencesConcerns, global::System.String>
+		{
+			private SignPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the SolutionReferencesConcerns.Sign domain property value handler.
+			/// </summary>
+			public static readonly SignPropertyHandler Instance = new SignPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the SolutionReferencesConcerns.Sign domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return SignDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(SolutionReferencesConcerns element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.signPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(SolutionReferencesConcerns element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.signPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Solution link accessor
+		/// <summary>
+		/// Get the list of SolutionReferencesConcerns links to a Solution.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SolutionReferencesConcerns> GetLinksToConcerns ( global::Company.TestMart.Solution solutionInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SolutionReferencesConcerns>(solutionInstance, global::Company.TestMart.SolutionReferencesConcerns.SolutionDomainRoleId);
+		}
+		#endregion
+		#region Concern link accessor
+		/// <summary>
+		/// Get the SolutionReferencesConcerns link to a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SolutionReferencesConcerns GetLinkToSolution (global::Company.TestMart.Concern concernInstance)
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SolutionReferencesConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SolutionReferencesConcerns>(concernInstance, global::Company.TestMart.SolutionReferencesConcerns.ConcernDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Concern not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region SolutionReferencesConcerns instance accessors
+		
+		/// <summary>
+		/// Get any SolutionReferencesConcerns links between a given Solution and a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.SolutionReferencesConcerns> GetLinks( global::Company.TestMart.Solution source, global::Company.TestMart.Concern target )
+		{
+			global::System.Collections.Generic.List<global::Company.TestMart.SolutionReferencesConcerns> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.SolutionReferencesConcerns>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.SolutionReferencesConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SolutionReferencesConcerns>(source, global::Company.TestMart.SolutionReferencesConcerns.SolutionDomainRoleId);
+			foreach ( global::Company.TestMart.SolutionReferencesConcerns link in links )
+			{
+				if ( target.Equals(link.Concern) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one SolutionReferencesConcerns link between a given Solutionand a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.SolutionReferencesConcerns GetLink( global::Company.TestMart.Solution source, global::Company.TestMart.Concern target )
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.SolutionReferencesConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.SolutionReferencesConcerns>(source, global::Company.TestMart.SolutionReferencesConcerns.SolutionDomainRoleId);
+			foreach ( global::Company.TestMart.SolutionReferencesConcerns link in links )
+			{
+				if ( target.Equals(link.Concern) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace Company.TestMart
+{
+	/// <summary>
+	/// DomainRelationship ConcernReferencesTargetConcerns
+	/// Description for Company.TestMart.ConcernReferencesTargetConcerns
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.TestMart.ConcernReferencesTargetConcerns.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.TestMart.ConcernReferencesTargetConcerns.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("50588f75-0289-4023-93bd-9b2b2e387ae1")]
+	public partial class ConcernReferencesTargetConcerns : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ConcernReferencesTargetConcerns domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x50588f75, 0x0289, 0x4023, 0x93, 0xbd, 0x9b, 0x2b, 0x2e, 0x38, 0x7a, 0xe1);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ConcernReferencesTargetConcerns link in the same Partition as the given Concern
+		/// </summary>
+		/// <param name="source">Concern to use as the source of the relationship.</param>
+		/// <param name="target">Concern to use as the target of the relationship.</param>
+		public ConcernReferencesTargetConcerns(Concern source, Concern target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ConcernReferencesTargetConcerns.SourceConcernDomainRoleId, source), new DslModeling::RoleAssignment(ConcernReferencesTargetConcerns.TargetConcernDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ConcernReferencesTargetConcerns(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ConcernReferencesTargetConcerns(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ConcernReferencesTargetConcerns(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ConcernReferencesTargetConcerns(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SourceConcern domain role code
+		
+		/// <summary>
+		/// SourceConcern domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SourceConcernDomainRoleId = new global::System.Guid(0x00ac4eee, 0x796c, 0x4361, 0x84, 0x6f, 0x0c, 0x04, 0xf7, 0xe8, 0x97, 0xbd);
+		
+		/// <summary>
+		/// DomainRole SourceConcern
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerns.SourceConcern
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ConcernReferencesTargetConcerns/SourceConcern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ConcernReferencesTargetConcerns/SourceConcern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TargetConcerned", PropertyDisplayNameKey="Company.TestMart.ConcernReferencesTargetConcerns/SourceConcern.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("00ac4eee-796c-4361-846f-0c04f7e897bd")]
+		public virtual Concern SourceConcern
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Concern)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceConcernDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceConcernDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access SourceConcerned of a Concern
+		/// <summary>
+		/// Gets a list of SourceConcerned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Concern> GetSourceConcerned(Concern element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(element, TargetConcernDomainRoleId);
+		}
+		#endregion
+		#region TargetConcern domain role code
+		
+		/// <summary>
+		/// TargetConcern domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TargetConcernDomainRoleId = new global::System.Guid(0x63606090, 0x27c7, 0x4caa, 0x90, 0x63, 0x3c, 0x46, 0xda, 0xd4, 0x29, 0x23);
+		
+		/// <summary>
+		/// DomainRole TargetConcern
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerns.TargetConcern
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ConcernReferencesTargetConcerns/TargetConcern.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ConcernReferencesTargetConcerns/TargetConcern.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SourceConcerned", PropertyDisplayNameKey="Company.TestMart.ConcernReferencesTargetConcerns/TargetConcern.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("63606090-27c7-4caa-9063-3c46dad42923")]
+		public virtual Concern TargetConcern
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Concern)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetConcernDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetConcernDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TargetConcerned of a Concern
+		/// <summary>
+		/// Gets a list of TargetConcerned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Concern> GetTargetConcerned(Concern element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(element, SourceConcernDomainRoleId);
+		}
+		#endregion
+		#region Sign domain property code
+		
+		/// <summary>
+		/// Sign domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid SignDomainPropertyId = new global::System.Guid(0x19802c3f, 0x11db, 0x4b63, 0xa4, 0xfd, 0x44, 0x93, 0x55, 0x56, 0x9b, 0x00);
+		
+		/// <summary>
+		/// Storage for Sign
+		/// </summary>
+		private global::System.String signPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Sign domain property.
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerns.Sign
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.TestMart.ConcernReferencesTargetConcerns/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.TestMart.ConcernReferencesTargetConcerns/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("19802c3f-11db-4b63-a4fd-449355569b00")]
+		public global::System.String Sign
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return signPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				SignPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ConcernReferencesTargetConcerns.Sign domain property.
+		/// </summary>
+		internal sealed partial class SignPropertyHandler : DslModeling::DomainPropertyValueHandler<ConcernReferencesTargetConcerns, global::System.String>
+		{
+			private SignPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ConcernReferencesTargetConcerns.Sign domain property value handler.
+			/// </summary>
+			public static readonly SignPropertyHandler Instance = new SignPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ConcernReferencesTargetConcerns.Sign domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return SignDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ConcernReferencesTargetConcerns element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.signPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ConcernReferencesTargetConcerns element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.signPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region SourceConcern link accessor
+		/// <summary>
+		/// Get the list of ConcernReferencesTargetConcerns links to a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ConcernReferencesTargetConcerns> GetLinksToTargetConcerned ( global::Company.TestMart.Concern sourceConcernInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ConcernReferencesTargetConcerns>(sourceConcernInstance, global::Company.TestMart.ConcernReferencesTargetConcerns.SourceConcernDomainRoleId);
+		}
+		#endregion
+		#region TargetConcern link accessor
+		/// <summary>
+		/// Get the list of ConcernReferencesTargetConcerns links to a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ConcernReferencesTargetConcerns> GetLinksToSourceConcerned ( global::Company.TestMart.Concern targetConcernInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ConcernReferencesTargetConcerns>(targetConcernInstance, global::Company.TestMart.ConcernReferencesTargetConcerns.TargetConcernDomainRoleId);
+		}
+		#endregion
+		#region ConcernReferencesTargetConcerns instance accessors
+		
+		/// <summary>
+		/// Get any ConcernReferencesTargetConcerns links between a given Concern and a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.TestMart.ConcernReferencesTargetConcerns> GetLinks( global::Company.TestMart.Concern source, global::Company.TestMart.Concern target )
+		{
+			global::System.Collections.Generic.List<global::Company.TestMart.ConcernReferencesTargetConcerns> outLinks = new global::System.Collections.Generic.List<global::Company.TestMart.ConcernReferencesTargetConcerns>();
+			global::System.Collections.Generic.IList<global::Company.TestMart.ConcernReferencesTargetConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ConcernReferencesTargetConcerns>(source, global::Company.TestMart.ConcernReferencesTargetConcerns.SourceConcernDomainRoleId);
+			foreach ( global::Company.TestMart.ConcernReferencesTargetConcerns link in links )
+			{
+				if ( target.Equals(link.TargetConcern) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ConcernReferencesTargetConcerns link between a given Concernand a Concern.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::Company.TestMart.ConcernReferencesTargetConcerns GetLink( global::Company.TestMart.Concern source, global::Company.TestMart.Concern target )
+		{
+			global::System.Collections.Generic.IList<global::Company.TestMart.ConcernReferencesTargetConcerns> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.TestMart.ConcernReferencesTargetConcerns>(source, global::Company.TestMart.ConcernReferencesTargetConcerns.SourceConcernDomainRoleId);
+			foreach ( global::Company.TestMart.ConcernReferencesTargetConcerns link in links )
+			{
+				if ( target.Equals(link.TargetConcern) )
 				{
 					return link;
 				}

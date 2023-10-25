@@ -52,14 +52,14 @@ namespace Company.TestMart
 		
 		/// <summary>
 		/// Gets a list of ImpactLevel.
-		/// Description for Company.TestMart.SoSAHasImpactLevel.SoSA
+		/// Description for Company.TestMart.SoSAHasImpactLevels.SoSA
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ImpactLevels> ImpactLevel
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ImpactLevels>, ImpactLevels>(global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ImpactLevels>, ImpactLevels>(global::Company.TestMart.SoSAHasImpactLevels.SoSADomainRoleId);
 			}
 		}
 		#endregion
@@ -86,14 +86,14 @@ namespace Company.TestMart
 		
 		/// <summary>
 		/// Gets a list of TemporaryConcerned.
-		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerns.SoSA
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<TemporaryConcern> TemporaryConcerned
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<TemporaryConcern>, TemporaryConcern>(global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<TemporaryConcern>, TemporaryConcern>(global::Company.TestMart.SoSAHasTemporaryConcerns.SoSADomainRoleId);
 			}
 		}
 		#endregion
@@ -164,7 +164,7 @@ namespace Company.TestMart
 			global::Company.TestMart.ImpactLevels sourceImpactLevels1 = sourceElement as global::Company.TestMart.ImpactLevels;
 			if (sourceImpactLevels1 != null)
 			{
-				// Create link for path SoSAHasImpactLevel.ImpactLevel
+				// Create link for path SoSAHasImpactLevels.ImpactLevel
 				this.ImpactLevel.Add(sourceImpactLevels1);
 
 				return;
@@ -182,7 +182,7 @@ namespace Company.TestMart
 			global::Company.TestMart.TemporaryConcern sourceTemporaryConcern3 = sourceElement as global::Company.TestMart.TemporaryConcern;
 			if (sourceTemporaryConcern3 != null)
 			{
-				// Create link for path SoSAHasTemporaryConcerned.TemporaryConcerned
+				// Create link for path SoSAHasTemporaryConcerns.TemporaryConcerned
 				this.TemporaryConcerned.Add(sourceTemporaryConcern3);
 
 				return;
@@ -213,12 +213,12 @@ namespace Company.TestMart
 			global::Company.TestMart.ImpactLevels sourceImpactLevels1 = sourceElement as global::Company.TestMart.ImpactLevels;
 			if (sourceImpactLevels1 != null)
 			{
-				// Delete link for path SoSAHasImpactLevel.ImpactLevel
+				// Delete link for path SoSAHasImpactLevels.ImpactLevel
 				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasImpactLevel.GetLinks((global::Company.TestMart.SoSA)this, sourceImpactLevels1))
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasImpactLevels.GetLinks((global::Company.TestMart.SoSA)this, sourceImpactLevels1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.SoSAHasImpactLevel.SoSADomainRoleId, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId);
+					link.Delete(global::Company.TestMart.SoSAHasImpactLevels.SoSADomainRoleId, global::Company.TestMart.SoSAHasImpactLevels.ImpactLevelsDomainRoleId);
 				}
 
 				return;
@@ -241,12 +241,12 @@ namespace Company.TestMart
 			global::Company.TestMart.TemporaryConcern sourceTemporaryConcern3 = sourceElement as global::Company.TestMart.TemporaryConcern;
 			if (sourceTemporaryConcern3 != null)
 			{
-				// Delete link for path SoSAHasTemporaryConcerned.TemporaryConcerned
+				// Delete link for path SoSAHasTemporaryConcerns.TemporaryConcerned
 				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasTemporaryConcerned.GetLinks((global::Company.TestMart.SoSA)this, sourceTemporaryConcern3))
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.SoSAHasTemporaryConcerns.GetLinks((global::Company.TestMart.SoSA)this, sourceTemporaryConcern3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.SoSAHasTemporaryConcerned.SoSADomainRoleId, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId);
+					link.Delete(global::Company.TestMart.SoSAHasTemporaryConcerns.SoSADomainRoleId, global::Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId);
 				}
 
 				return;
@@ -385,6 +385,127 @@ namespace Company.TestMart
 			}
 		}
 		
+		#endregion
+		#region Solution opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Solution.
+		/// Description for Company.TestMart.ImpactImmediateHasSolution.ImpactImmediate
+		/// </summary>
+		public virtual Solution Solution
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactImmediateHasSolution.ImpactImmediateDomainRoleId) as Solution;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactImmediateHasSolution.ImpactImmediateDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Solution.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ImpactImmediateHasSolution.Solution
+					if (this.Solution != null)
+					{
+						return false;
+					}
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::Company.TestMart.Solution sourceSolution1 = sourceElement as global::Company.TestMart.Solution;
+			if (sourceSolution1 != null)
+			{
+				// Create link for path ImpactImmediateHasSolution.Solution
+				this.Solution = sourceSolution1;
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::Company.TestMart.Solution sourceSolution1 = sourceElement as global::Company.TestMart.Solution;
+			if (sourceSolution1 != null)
+			{
+				// Delete link for path ImpactImmediateHasSolution.Solution
+				
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactImmediateHasSolution.GetLinks((global::Company.TestMart.ImpactImmediate)this, sourceSolution1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::Company.TestMart.ImpactImmediateHasSolution.ImpactImmediateDomainRoleId, global::Company.TestMart.ImpactImmediateHasSolution.SolutionDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
 		#endregion
 	}
 }
@@ -907,96 +1028,6 @@ namespace Company.TestMart
 namespace Company.TestMart
 {
 	/// <summary>
-	/// DomainClass Element
-	/// Description for Company.TestMart.Element
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.TestMart.Element.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.TestMart.Element.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d456544b-e3e3-480a-8131-4b81db81910b")]
-	public partial class Element : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// Element domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd456544b, 0xe3e3, 0x480a, 0x81, 0x31, 0x4b, 0x81, 0xdb, 0x81, 0x91, 0x0b);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Element(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Element(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region TargetElements opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of TargetElements.
-		/// Description for Company.TestMart.ElementReferencesTargetElements.SourceElement
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Element> TargetElements
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(global::Company.TestMart.ElementReferencesTargetElements.SourceElementDomainRoleId);
-			}
-		}
-		#endregion
-		#region SourceElements opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of SourceElements.
-		/// Description for Company.TestMart.ElementReferencesTargetElements.TargetElement
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Element> SourceElements
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(global::Company.TestMart.ElementReferencesTargetElements.TargetElementDomainRoleId);
-			}
-		}
-		#endregion
-		#region ImpactLevels opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ImpactLevels.
-		/// Description for Company.TestMart.ImpactLevelsHasElements.Element
-		/// </summary>
-		public virtual ImpactLevels ImpactLevels
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId) as ImpactLevels;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId, value);
-			}
-		}
-		#endregion
-	}
-}
-namespace Company.TestMart
-{
-	/// <summary>
 	/// DomainClass Solution
 	/// Description for Company.TestMart.Solution
 	/// </summary>
@@ -1005,7 +1036,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("e659f591-3954-4113-ab89-4759861ba173")]
-	public partial class Solution : Element
+	public partial class Solution : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1120,6 +1151,40 @@ namespace Company.TestMart
 			}
 		}
 		
+		#endregion
+		#region ImpactImmediate opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ImpactImmediate.
+		/// Description for Company.TestMart.ImpactImmediateHasSolution.Solution
+		/// </summary>
+		public virtual ImpactImmediate ImpactImmediate
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactImmediateHasSolution.SolutionDomainRoleId) as ImpactImmediate;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactImmediateHasSolution.SolutionDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Concerns opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Concerns.
+		/// Description for Company.TestMart.SolutionReferencesConcerns.Solution
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Concern> Concerns
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.SolutionReferencesConcerns.SolutionDomainRoleId);
+			}
+		}
 		#endregion
 	}
 }
@@ -1290,37 +1355,37 @@ namespace Company.TestMart
 		{
 		}
 		#endregion
-		#region Elements opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Elements.
-		/// Description for Company.TestMart.ImpactLevelsHasElements.ImpactLevels
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Element> Elements
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Element>, Element>(global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId);
-			}
-		}
-		#endregion
 		#region SoSA opposite domain role accessor
 		/// <summary>
 		/// Gets or sets SoSA.
-		/// Description for Company.TestMart.SoSAHasImpactLevel.ImpactLevels
+		/// Description for Company.TestMart.SoSAHasImpactLevels.ImpactLevels
 		/// </summary>
 		public virtual SoSA SoSA
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId) as SoSA;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLevels.ImpactLevelsDomainRoleId) as SoSA;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasImpactLevels.ImpactLevelsDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Concerns opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Concerns.
+		/// Description for Company.TestMart.ImpactLevelsHasConcerns.ImpactLevels
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Concern> Concerns
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId);
 			}
 		}
 		#endregion
@@ -1344,7 +1409,7 @@ namespace Company.TestMart
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Element.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.TestMart.Concern.DomainClassId)) 
 				{
 					return true;
 				}
@@ -1373,11 +1438,11 @@ namespace Company.TestMart
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Company.TestMart.Element sourceElement1 = sourceElement as global::Company.TestMart.Element;
-			if (sourceElement1 != null)
+			global::Company.TestMart.Concern sourceConcern1 = sourceElement as global::Company.TestMart.Concern;
+			if (sourceConcern1 != null)
 			{
-				// Create link for path ImpactLevelsHasElements.Elements
-				this.Elements.Add(sourceElement1);
+				// Create link for path ImpactLevelsHasConcerns.Concerns
+				this.Concerns.Add(sourceConcern1);
 
 				return;
 			}
@@ -1404,15 +1469,15 @@ namespace Company.TestMart
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Company.TestMart.Element sourceElement1 = sourceElement as global::Company.TestMart.Element;
-			if (sourceElement1 != null)
+			global::Company.TestMart.Concern sourceConcern1 = sourceElement as global::Company.TestMart.Concern;
+			if (sourceConcern1 != null)
 			{
-				// Delete link for path ImpactLevelsHasElements.Elements
+				// Delete link for path ImpactLevelsHasConcerns.Concerns
 				
-				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelsHasElements.GetLinks((global::Company.TestMart.ImpactLevels)this, sourceElement1))
+				foreach (DslModeling::ElementLink link in global::Company.TestMart.ImpactLevelsHasConcerns.GetLinks((global::Company.TestMart.ImpactLevels)this, sourceConcern1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.TestMart.ImpactLevelsHasElements.ImpactLevelsDomainRoleId, global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId);
+					link.Delete(global::Company.TestMart.ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId, global::Company.TestMart.ImpactLevelsHasConcerns.ConcernDomainRoleId);
 				}
 
 				return;
@@ -1562,7 +1627,7 @@ namespace Company.TestMart
 	[DslModeling::DomainModelOwner(typeof(global::Company.TestMart.TestMartDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("ec935230-be28-4105-94dc-59c8939eb7cd")]
-	public partial class Concern : Element
+	public partial class Concern : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1588,6 +1653,74 @@ namespace Company.TestMart
 		public Concern(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
+		}
+		#endregion
+		#region ImpactLevels opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ImpactLevels.
+		/// Description for Company.TestMart.ImpactLevelsHasConcerns.Concern
+		/// </summary>
+		public virtual ImpactLevels ImpactLevels
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.ImpactLevelsHasConcerns.ConcernDomainRoleId) as ImpactLevels;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.ImpactLevelsHasConcerns.ConcernDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Solution opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Solution.
+		/// Description for Company.TestMart.SolutionReferencesConcerns.Concern
+		/// </summary>
+		public virtual Solution Solution
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SolutionReferencesConcerns.ConcernDomainRoleId) as Solution;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SolutionReferencesConcerns.ConcernDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region TargetConcerned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of TargetConcerned.
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerns.SourceConcern
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Concern> TargetConcerned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ConcernReferencesTargetConcerns.SourceConcernDomainRoleId);
+			}
+		}
+		#endregion
+		#region SourceConcerned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of SourceConcerned.
+		/// Description for Company.TestMart.ConcernReferencesTargetConcerns.TargetConcern
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Concern> SourceConcerned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Concern>, Concern>(global::Company.TestMart.ConcernReferencesTargetConcerns.TargetConcernDomainRoleId);
+			}
 		}
 		#endregion
 	}
@@ -1782,19 +1915,19 @@ namespace Company.TestMart
 		#region SoSA opposite domain role accessor
 		/// <summary>
 		/// Gets or sets SoSA.
-		/// Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern
+		/// Description for Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcern
 		/// </summary>
 		public virtual SoSA SoSA
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId) as SoSA;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId) as SoSA;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId, value);
 			}
 		}
 		#endregion

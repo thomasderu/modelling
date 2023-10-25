@@ -8,7 +8,7 @@
             <DomainClassMoniker Name="ImpactLevels" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>SoSAHasImpactLevel.ImpactLevel</DomainPath>
+            <DomainPath>SoSAHasImpactLevels.ImpactLevel</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -24,7 +24,7 @@
             <DomainClassMoniker Name="TemporaryConcern" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>SoSAHasTemporaryConcerned.TemporaryConcerned</DomainPath>
+            <DomainPath>SoSAHasTemporaryConcerns.TemporaryConcerned</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -40,6 +40,16 @@
           </Type>
         </DomainProperty>
       </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Solution" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ImpactImmediateHasSolution.Solution</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="beefb504-550b-4f41-b4d8-a8eefd6f1526" Description="Description for Company.TestMart.SocialConcern" Name="SocialConcern" DisplayName="Social Concern" Namespace="Company.TestMart">
       <BaseClass>
@@ -89,11 +99,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="d456544b-e3e3-480a-8131-4b81db81910b" Description="Description for Company.TestMart.Element" Name="Element" DisplayName="Element" Namespace="Company.TestMart" />
     <DomainClass Id="e659f591-3954-4113-ab89-4759861ba173" Description="Description for Company.TestMart.Solution" Name="Solution" DisplayName="Solution" Namespace="Company.TestMart">
-      <BaseClass>
-        <DomainClassMoniker Name="Element" />
-      </BaseClass>
       <Properties>
         <DomainProperty Id="4f60711f-388a-48f5-aac3-15ad754f1669" Description="Description for Company.TestMart.Solution.Name" Name="Name" DisplayName="Name" DefaultValue="*add solution*">
           <Type>
@@ -118,10 +124,10 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Element" />
+            <DomainClassMoniker Name="Concern" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ImpactLevelsHasElements.Elements</DomainPath>
+            <DomainPath>ImpactLevelsHasConcerns.Concerns</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -138,11 +144,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="ec935230-be28-4105-94dc-59c8939eb7cd" Description="Description for Company.TestMart.Concern" Name="Concern" DisplayName="Concern" Namespace="Company.TestMart">
-      <BaseClass>
-        <DomainClassMoniker Name="Element" />
-      </BaseClass>
-    </DomainClass>
+    <DomainClass Id="ec935230-be28-4105-94dc-59c8939eb7cd" Description="Description for Company.TestMart.Concern" Name="Concern" DisplayName="Concern" Namespace="Company.TestMart" />
     <DomainClass Id="1b22ac0a-6a6c-4769-8e0a-9ade0a56a916" Description="Description for Company.TestMart.Legend" Name="Legend" DisplayName="Legend" Namespace="Company.TestMart" />
     <DomainClass Id="fdb34555-2b30-4945-a4a7-d236f54cb26a" Description="Description for Company.TestMart.TemporaryConcern" Name="TemporaryConcern" DisplayName="Temporary Concern" Namespace="Company.TestMart">
       <Properties>
@@ -155,55 +157,16 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="a49f47b6-cb34-4a1e-b8c3-e321e303f5f2" Description="Description for Company.TestMart.ElementReferencesTargetElements" Name="ElementReferencesTargetElements" DisplayName="Element References Target Elements" Namespace="Company.TestMart">
-      <Properties>
-        <DomainProperty Id="36ab6d9e-16c2-4815-a493-3431689824f6" Description="Description for Company.TestMart.ElementReferencesTargetElements.Sign" Name="Sign" DisplayName="Sign" DefaultValue="*add sign*">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
+    <DomainRelationship Id="43aa9e11-3b2e-4512-8c7c-a44fe4105743" Description="Description for Company.TestMart.SoSAHasImpactLevels" Name="SoSAHasImpactLevels" DisplayName="So SAHas Impact Levels" Namespace="Company.TestMart" IsEmbedding="true">
       <Source>
-        <DomainRole Id="1df2014b-df0b-4308-8cc4-9a1db7f73fd5" Description="Description for Company.TestMart.ElementReferencesTargetElements.SourceElement" Name="SourceElement" DisplayName="Source Element" PropertyName="TargetElements" PropertyDisplayName="Target Elements">
-          <RolePlayer>
-            <DomainClassMoniker Name="Element" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="c9d452d0-bdd0-4f47-b31b-4fafd8705869" Description="Description for Company.TestMart.ElementReferencesTargetElements.TargetElement" Name="TargetElement" DisplayName="Target Element" PropertyName="SourceElements" PropertyDisplayName="Source Elements">
-          <RolePlayer>
-            <DomainClassMoniker Name="Element" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="2e837fcd-de39-423d-a7f4-2e4655890534" Description="Description for Company.TestMart.ImpactLevelsHasElements" Name="ImpactLevelsHasElements" DisplayName="Impact Levels Has Elements" Namespace="Company.TestMart" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="430b6816-cc3a-4ca6-88f5-b68acc75c0ec" Description="Description for Company.TestMart.ImpactLevelsHasElements.ImpactLevels" Name="ImpactLevels" DisplayName="Impact Levels" PropertyName="Elements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elements">
-          <RolePlayer>
-            <DomainClassMoniker Name="ImpactLevels" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="21ae0721-0e82-4a11-845b-03d11d96c1df" Description="Description for Company.TestMart.ImpactLevelsHasElements.Element" Name="Element" DisplayName="Element" PropertyName="ImpactLevels" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Impact Levels">
-          <RolePlayer>
-            <DomainClassMoniker Name="Element" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="43aa9e11-3b2e-4512-8c7c-a44fe4105743" Description="Description for Company.TestMart.SoSAHasImpactLevel" Name="SoSAHasImpactLevel" DisplayName="So SAHas Impact Level" Namespace="Company.TestMart" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="1ebbca36-353b-4c6c-84d6-83e459b44120" Description="Description for Company.TestMart.SoSAHasImpactLevel.SoSA" Name="SoSA" DisplayName="So SA" PropertyName="ImpactLevel" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Impact Level">
+        <DomainRole Id="1ebbca36-353b-4c6c-84d6-83e459b44120" Description="Description for Company.TestMart.SoSAHasImpactLevels.SoSA" Name="SoSA" DisplayName="So SA" PropertyName="ImpactLevel" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Impact Level">
           <RolePlayer>
             <DomainClassMoniker Name="SoSA" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="75089eb9-dace-4571-96c1-4ff9a93d2a59" Description="Description for Company.TestMart.SoSAHasImpactLevel.ImpactLevels" Name="ImpactLevels" DisplayName="Impact Levels" PropertyName="SoSA" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="So SA">
+        <DomainRole Id="75089eb9-dace-4571-96c1-4ff9a93d2a59" Description="Description for Company.TestMart.SoSAHasImpactLevels.ImpactLevels" Name="ImpactLevels" DisplayName="Impact Levels" PropertyName="SoSA" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="So SA">
           <RolePlayer>
             <DomainClassMoniker Name="ImpactLevels" />
           </RolePlayer>
@@ -226,18 +189,96 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="49820fd6-1695-4eb4-aec4-1051a0ddf8c3" Description="Description for Company.TestMart.SoSAHasTemporaryConcerned" Name="SoSAHasTemporaryConcerned" DisplayName="So SAHas Temporary Concerned" Namespace="Company.TestMart" IsEmbedding="true">
+    <DomainRelationship Id="9c1dbacf-eb26-4873-b464-61fd4db93850" Description="Description for Company.TestMart.ImpactImmediateHasSolution" Name="ImpactImmediateHasSolution" DisplayName="Impact Immediate Has Solution" Namespace="Company.TestMart" IsEmbedding="true">
       <Source>
-        <DomainRole Id="8d9e5a51-6951-48f5-b0a9-72e5cf17c290" Description="Description for Company.TestMart.SoSAHasTemporaryConcerned.SoSA" Name="SoSA" DisplayName="So SA" PropertyName="TemporaryConcerned" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Temporary Concerned">
+        <DomainRole Id="f3630c08-c910-4101-a68a-558c1e4c1646" Description="Description for Company.TestMart.ImpactImmediateHasSolution.ImpactImmediate" Name="ImpactImmediate" DisplayName="Impact Immediate" PropertyName="Solution" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Solution">
+          <RolePlayer>
+            <DomainClassMoniker Name="ImpactImmediate" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="643d00e4-f6ec-43d9-90ea-ee5afad100c0" Description="Description for Company.TestMart.ImpactImmediateHasSolution.Solution" Name="Solution" DisplayName="Solution" PropertyName="ImpactImmediate" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Impact Immediate">
+          <RolePlayer>
+            <DomainClassMoniker Name="Solution" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="defad783-e425-4e89-93cf-d498aea060b1" Description="Description for Company.TestMart.SoSAHasTemporaryConcerns" Name="SoSAHasTemporaryConcerns" DisplayName="So SAHas Temporary Concerns" Namespace="Company.TestMart" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="81d1fdc5-8f66-494e-91cb-57cd5390e2fb" Description="Description for Company.TestMart.SoSAHasTemporaryConcerns.SoSA" Name="SoSA" DisplayName="So SA" PropertyName="TemporaryConcerned" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Temporary Concerned">
           <RolePlayer>
             <DomainClassMoniker Name="SoSA" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="7546660b-bf49-4fdf-b443-f7273ef63312" Description="Description for Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcern" Name="TemporaryConcern" DisplayName="Temporary Concern" PropertyName="SoSA" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="So SA">
+        <DomainRole Id="0f701701-bdb2-4188-8cb8-e93a45b9d0aa" Description="Description for Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcern" Name="TemporaryConcern" DisplayName="Temporary Concern" PropertyName="SoSA" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="So SA">
           <RolePlayer>
             <DomainClassMoniker Name="TemporaryConcern" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="4a0610fa-9675-4239-9e3e-dcbe3b0759a6" Description="Description for Company.TestMart.ImpactLevelsHasConcerns" Name="ImpactLevelsHasConcerns" DisplayName="Impact Levels Has Concerns" Namespace="Company.TestMart" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="58e55dc6-5f53-4c73-9d59-df15fa61544e" Description="Description for Company.TestMart.ImpactLevelsHasConcerns.ImpactLevels" Name="ImpactLevels" DisplayName="Impact Levels" PropertyName="Concerns" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Concerns">
+          <RolePlayer>
+            <DomainClassMoniker Name="ImpactLevels" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="6a306ca2-91c7-4677-8e1a-741b6e7b28e0" Description="Description for Company.TestMart.ImpactLevelsHasConcerns.Concern" Name="Concern" DisplayName="Concern" PropertyName="ImpactLevels" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Impact Levels">
+          <RolePlayer>
+            <DomainClassMoniker Name="Concern" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="9dcea834-357c-4fe5-8d6a-55f499bb360a" Description="Description for Company.TestMart.SolutionReferencesConcerns" Name="SolutionReferencesConcerns" DisplayName="Solution References Concerns" Namespace="Company.TestMart">
+      <Properties>
+        <DomainProperty Id="e70bc6dc-0058-43ff-b73e-617cb1d02fbc" Description="Description for Company.TestMart.SolutionReferencesConcerns.Sign" Name="Sign" DisplayName="Sign" DefaultValue="*add sign*">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="aa3f5c53-aac2-4a26-bb00-df69c99e414f" Description="Description for Company.TestMart.SolutionReferencesConcerns.Solution" Name="Solution" DisplayName="Solution" PropertyName="Concerns" PropertyDisplayName="Concerns">
+          <RolePlayer>
+            <DomainClassMoniker Name="Solution" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="e5663cb6-8da7-4a8c-b45b-e33c8e660482" Description="Description for Company.TestMart.SolutionReferencesConcerns.Concern" Name="Concern" DisplayName="Concern" PropertyName="Solution" Multiplicity="One" PropertyDisplayName="Solution">
+          <RolePlayer>
+            <DomainClassMoniker Name="Concern" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="50588f75-0289-4023-93bd-9b2b2e387ae1" Description="Description for Company.TestMart.ConcernReferencesTargetConcerns" Name="ConcernReferencesTargetConcerns" DisplayName="Concern References Target Concerns" Namespace="Company.TestMart">
+      <Properties>
+        <DomainProperty Id="19802c3f-11db-4b63-a4fd-449355569b00" Description="Description for Company.TestMart.ConcernReferencesTargetConcerns.Sign" Name="Sign" DisplayName="Sign" DefaultValue="*add sign*">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="00ac4eee-796c-4361-846f-0c04f7e897bd" Description="Description for Company.TestMart.ConcernReferencesTargetConcerns.SourceConcern" Name="SourceConcern" DisplayName="Source Concern" PropertyName="TargetConcerned" PropertyDisplayName="Target Concerned">
+          <RolePlayer>
+            <DomainClassMoniker Name="Concern" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="63606090-27c7-4caa-9063-3c46dad42923" Description="Description for Company.TestMart.ConcernReferencesTargetConcerns.TargetConcern" Name="TargetConcern" DisplayName="Target Concern" PropertyName="SourceConcerned" PropertyDisplayName="Source Concerned">
+          <RolePlayer>
+            <DomainClassMoniker Name="Concern" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -263,17 +304,17 @@
   <Shapes>
     <GeometryShape Id="33c836a4-b091-438a-b29f-b63babca1fdc" Description="Description for Company.TestMart.SocialConcernShape" Name="SocialConcernShape" DisplayName="Social Concern Shape" Namespace="Company.TestMart" FixedTooltipText="Social Concern Shape" FillColor="Yellow" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Concern" DefaultText="Name" FontSize="9" />
+        <TextDecorator Name="Name" DisplayName="Concern" DefaultText="*add concern*" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="8d065975-b76a-4ded-9d09-3617cbb91cef" Description="Description for Company.TestMart.EnvironmentalShape" Name="EnvironmentalShape" DisplayName="Environmental Shape" Namespace="Company.TestMart" FixedTooltipText="Environmental Shape" FillColor="LimeGreen" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" FontSize="9" />
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="*add concern*" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="7a8a499d-09e5-4882-a6eb-da940bd9b321" Description="Description for Company.TestMart.EconomicShape" Name="EconomicShape" DisplayName="Economic Shape" Namespace="Company.TestMart" FixedTooltipText="Economic Shape" FillColor="Tomato" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Name" DisplayName="Name" DefaultText="Name" FontSize="9" />
+        <TextDecorator Name="Name" DisplayName="Name" DefaultText="*add concern*" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="91604d28-667c-4f73-9196-02bb1ba8e196" Description="Description for Company.TestMart.TechnicalShape" Name="TechnicalShape" DisplayName="Technical Shape" Namespace="Company.TestMart" FixedTooltipText="Technical Shape" FillColor="CornflowerBlue" OutlineColor="Transparent" InitialWidth="1.25" InitialHeight="0.75" FillGradientMode="None" Geometry="Rectangle">
@@ -281,7 +322,7 @@
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="*add concern*" FontSize="9" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="ee699f92-6dba-4b91-815c-092734bda0b2" Description="Description for Company.TestMart.ElementShape" Name="ElementShape" DisplayName="Element Shape" Namespace="Company.TestMart" FixedTooltipText="Element Shape" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="ee699f92-6dba-4b91-815c-092734bda0b2" Description="Description for Company.TestMart.ConcernShape" Name="ConcernShape" DisplayName="Concern Shape" Namespace="Company.TestMart" FixedTooltipText="Concern Shape" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="5885fb7a-54dd-4b14-94e2-203628cac000" Description="Description for Company.TestMart.SolutionShape" Name="SolutionShape" DisplayName="Solution Shape" Namespace="Company.TestMart" FixedTooltipText="Solution Shape" FillColor="Gainsboro" OutlineColor="Transparent" InitialWidth="1" InitialHeight="1" FillGradientMode="None" Geometry="Circle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Name" DisplayName="Solution" DefaultText="Name" />
@@ -302,8 +343,8 @@
         <TextDecorator Name="Name" DisplayName="Name" DefaultText="IMMEDIATE" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <ImageShape Id="43454b0c-9708-4e08-9e45-46b39693b070" Description="Description for Company.TestMart.LegendShape" Name="LegendShape" DisplayName="Legend Shape" Namespace="Company.TestMart" FixedTooltipText="Legend Shape" InitialHeight="1" Image="Resources\SoSA legend.png" />
-    <GeometryShape Id="becd3492-81c7-41fc-abd3-3c9d49d559b5" Description="Description for Company.TestMart.TempShape" Name="TempShape" DisplayName="Temp Shape" Namespace="Company.TestMart" FixedTooltipText="Temp Shape" InitialHeight="1" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
+    <ImageShape Id="43454b0c-9708-4e08-9e45-46b39693b070" Description="Description for Company.TestMart.LegendShape" Name="LegendShape" DisplayName="Legend Shape" Namespace="Company.TestMart" FixedTooltipText="Legend Shape" InitialHeight="1" Image="Resources\Legend.jpg" />
+    <GeometryShape Id="becd3492-81c7-41fc-abd3-3c9d49d559b5" Description="Description for Company.TestMart.TempShape" Name="TempShape" DisplayName="Temp Shape" Namespace="Company.TestMart" FixedTooltipText="Temp Shape" InitialWidth="1" InitialHeight="0.5" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="TempShapeName" DisplayName="Temp Shape Name" DefaultText="*add concern*" />
       </ShapeHasDecorators>
@@ -311,8 +352,13 @@
   </Shapes>
   <Connectors>
     <Connector Id="a46a11c5-424c-432c-a4c7-b1c1d6073aeb" Description="Description for Company.TestMart.ConcernRela" Name="ConcernRela" DisplayName="Concern Rela" Namespace="Company.TestMart" FixedTooltipText="Concern Rela" TargetEndStyle="FilledArrow" Thickness="0.01" RoutingStyle="Straight" targetEndWidth="0.07" targetEndHeight="0.07">
-      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
-        <TextDecorator Name="Sign" DisplayName="Sign" DefaultText="" FontSize="10" />
+      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
+        <TextDecorator Name="Sign" DisplayName="Sign" DefaultText="*add sign*" FontSize="10" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="16d437fc-d6a5-4390-9754-4a407f5c62a4" Description="Description for Company.TestMart.SolutionRela" Name="SolutionRela" DisplayName="Solution Rela" Namespace="Company.TestMart" FixedTooltipText="Solution Rela" TargetEndStyle="FilledArrow" Thickness="0.01" RoutingStyle="Straight" targetEndWidth="0.07" targetEndHeight="0.07">
+      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
+        <TextDecorator Name="Sign" DisplayName="Sign" DefaultText="*add sign*" FontSize="10" />
       </ConnectorHasDecorators>
     </Connector>
   </Connectors>
@@ -322,13 +368,13 @@
         <DomainClassMoniker Name="SoSA" />
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="impactLevel">
-            <DomainRelationshipMoniker Name="SoSAHasImpactLevel" />
+            <DomainRelationshipMoniker Name="SoSAHasImpactLevels" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="legend">
             <DomainRelationshipMoniker Name="SoSAHasLegend" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="temporaryConcerned">
-            <DomainRelationshipMoniker Name="SoSAHasTemporaryConcerned" />
+            <DomainRelationshipMoniker Name="SoSAHasTemporaryConcerns" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -338,6 +384,9 @@
           <XmlPropertyData XmlName="name" IsMonikerKey="true">
             <DomainPropertyMoniker Name="ImpactImmediate/Name" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="solution">
+            <DomainRelationshipMoniker Name="ImpactImmediateHasSolution" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="TestMartDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="testMartDiagramMoniker" ElementName="testMartDiagram" MonikerTypeName="TestMartDiagramMoniker">
@@ -387,27 +436,11 @@
       <XmlClassData TypeName="TechnicalShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="technicalShapeMoniker" ElementName="technicalShape" MonikerTypeName="TechnicalShapeMoniker">
         <GeometryShapeMoniker Name="TechnicalShape" />
       </XmlClassData>
-      <XmlClassData TypeName="Element" MonikerAttributeName="" SerializeId="true" MonikerElementName="elementMoniker" ElementName="element" MonikerTypeName="ElementMoniker">
-        <DomainClassMoniker Name="Element" />
-        <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="targetElements">
-            <DomainRelationshipMoniker Name="ElementReferencesTargetElements" />
-          </XmlRelationshipData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ElementReferencesTargetElements" MonikerAttributeName="" SerializeId="true" MonikerElementName="elementReferencesTargetElementsMoniker" ElementName="elementReferencesTargetElements" MonikerTypeName="ElementReferencesTargetElementsMoniker">
-        <DomainRelationshipMoniker Name="ElementReferencesTargetElements" />
-        <ElementData>
-          <XmlPropertyData XmlName="sign">
-            <DomainPropertyMoniker Name="ElementReferencesTargetElements/Sign" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
       <XmlClassData TypeName="ConcernRela" MonikerAttributeName="" SerializeId="true" MonikerElementName="concernRelaMoniker" ElementName="concernRela" MonikerTypeName="ConcernRelaMoniker">
         <ConnectorMoniker Name="ConcernRela" />
       </XmlClassData>
-      <XmlClassData TypeName="ElementShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="elementShapeMoniker" ElementName="elementShape" MonikerTypeName="ElementShapeMoniker">
-        <GeometryShapeMoniker Name="ElementShape" />
+      <XmlClassData TypeName="ConcernShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="concernShapeMoniker" ElementName="concernShape" MonikerTypeName="ConcernShapeMoniker">
+        <GeometryShapeMoniker Name="ConcernShape" />
       </XmlClassData>
       <XmlClassData TypeName="Solution" MonikerAttributeName="" SerializeId="true" MonikerElementName="solutionMoniker" ElementName="solution" MonikerTypeName="SolutionMoniker">
         <DomainClassMoniker Name="Solution" />
@@ -415,6 +448,9 @@
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="Solution/Name" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="concerns">
+            <DomainRelationshipMoniker Name="SolutionReferencesConcerns" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="SolutionShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="solutionShapeMoniker" ElementName="solutionShape" MonikerTypeName="SolutionShapeMoniker">
@@ -434,16 +470,13 @@
       <XmlClassData TypeName="ImpactLevels" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactLevelsMoniker" ElementName="impactLevels" MonikerTypeName="ImpactLevelsMoniker">
         <DomainClassMoniker Name="ImpactLevels" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="elements">
-            <DomainRelationshipMoniker Name="ImpactLevelsHasElements" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="concerns">
+            <DomainRelationshipMoniker Name="ImpactLevelsHasConcerns" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ImpactLevelsHasElements" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactLevelsHasElementsMoniker" ElementName="impactLevelsHasElements" MonikerTypeName="ImpactLevelsHasElementsMoniker">
-        <DomainRelationshipMoniker Name="ImpactLevelsHasElements" />
-      </XmlClassData>
-      <XmlClassData TypeName="SoSAHasImpactLevel" MonikerAttributeName="" SerializeId="true" MonikerElementName="soSAHasImpactLevelMoniker" ElementName="soSAHasImpactLevel" MonikerTypeName="SoSAHasImpactLevelMoniker">
-        <DomainRelationshipMoniker Name="SoSAHasImpactLevel" />
+      <XmlClassData TypeName="SoSAHasImpactLevels" MonikerAttributeName="" SerializeId="true" MonikerElementName="soSAHasImpactLevelsMoniker" ElementName="soSAHasImpactLevels" MonikerTypeName="SoSAHasImpactLevelsMoniker">
+        <DomainRelationshipMoniker Name="SoSAHasImpactLevels" />
       </XmlClassData>
       <XmlClassData TypeName="ImpactEnabling" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactEnablingMoniker" ElementName="impactEnabling" MonikerTypeName="ImpactEnablingMoniker">
         <DomainClassMoniker Name="ImpactEnabling" />
@@ -458,6 +491,11 @@
       </XmlClassData>
       <XmlClassData TypeName="Concern" MonikerAttributeName="" SerializeId="true" MonikerElementName="concernMoniker" ElementName="concern" MonikerTypeName="ConcernMoniker">
         <DomainClassMoniker Name="Concern" />
+        <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="targetConcerned">
+            <DomainRelationshipMoniker Name="ConcernReferencesTargetConcerns" />
+          </XmlRelationshipData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ImpactImmediateShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactImmediateShapeMoniker" ElementName="impactImmediateShape" MonikerTypeName="ImpactImmediateShapeMoniker">
         <GeometryShapeMoniker Name="ImpactImmediateShape" />
@@ -479,30 +517,74 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="SoSAHasTemporaryConcerned" MonikerAttributeName="" SerializeId="true" MonikerElementName="soSAHasTemporaryConcernedMoniker" ElementName="soSAHasTemporaryConcerned" MonikerTypeName="SoSAHasTemporaryConcernedMoniker">
-        <DomainRelationshipMoniker Name="SoSAHasTemporaryConcerned" />
-      </XmlClassData>
       <XmlClassData TypeName="TempShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="tempShapeMoniker" ElementName="tempShape" MonikerTypeName="TempShapeMoniker">
         <GeometryShapeMoniker Name="TempShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ImpactImmediateHasSolution" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactImmediateHasSolutionMoniker" ElementName="impactImmediateHasSolution" MonikerTypeName="ImpactImmediateHasSolutionMoniker">
+        <DomainRelationshipMoniker Name="ImpactImmediateHasSolution" />
+      </XmlClassData>
+      <XmlClassData TypeName="SoSAHasTemporaryConcerns" MonikerAttributeName="" SerializeId="true" MonikerElementName="soSAHasTemporaryConcernsMoniker" ElementName="soSAHasTemporaryConcerns" MonikerTypeName="SoSAHasTemporaryConcernsMoniker">
+        <DomainRelationshipMoniker Name="SoSAHasTemporaryConcerns" />
+      </XmlClassData>
+      <XmlClassData TypeName="ImpactLevelsHasConcerns" MonikerAttributeName="" SerializeId="true" MonikerElementName="impactLevelsHasConcernsMoniker" ElementName="impactLevelsHasConcerns" MonikerTypeName="ImpactLevelsHasConcernsMoniker">
+        <DomainRelationshipMoniker Name="ImpactLevelsHasConcerns" />
+      </XmlClassData>
+      <XmlClassData TypeName="SolutionReferencesConcerns" MonikerAttributeName="" SerializeId="true" MonikerElementName="solutionReferencesConcernsMoniker" ElementName="solutionReferencesConcerns" MonikerTypeName="SolutionReferencesConcernsMoniker">
+        <DomainRelationshipMoniker Name="SolutionReferencesConcerns" />
+        <ElementData>
+          <XmlPropertyData XmlName="sign">
+            <DomainPropertyMoniker Name="SolutionReferencesConcerns/Sign" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ConcernReferencesTargetConcerns" MonikerAttributeName="" SerializeId="true" MonikerElementName="concernReferencesTargetConcernsMoniker" ElementName="concernReferencesTargetConcerns" MonikerTypeName="ConcernReferencesTargetConcernsMoniker">
+        <DomainRelationshipMoniker Name="ConcernReferencesTargetConcerns" />
+        <ElementData>
+          <XmlPropertyData XmlName="sign">
+            <DomainPropertyMoniker Name="ConcernReferencesTargetConcerns/Sign" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="SolutionRela" MonikerAttributeName="" SerializeId="true" MonikerElementName="solutionRelaMoniker" ElementName="solutionRela" MonikerTypeName="SolutionRelaMoniker">
+        <ConnectorMoniker Name="SolutionRela" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="TestMartExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="ElementReferencesTargetElementsBuilder">
+    <ConnectionBuilder Name="SolutionReferencesConcernsBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ElementReferencesTargetElements" />
+        <DomainRelationshipMoniker Name="SolutionReferencesConcerns" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="Element" />
+              <DomainClassMoniker Name="Solution" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
         <TargetDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="Element" />
+              <DomainClassMoniker Name="Concern" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ConcernReferencesTargetConcernsBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ConcernReferencesTargetConcerns" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Concern" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Concern" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -515,147 +597,9 @@
     </Class>
     <ShapeMaps>
       <ShapeMap>
-        <DomainClassMoniker Name="TechnicalConcern" />
-        <ParentElementPath>
-          <DomainPath>ImpactLevelsHasElements.ImpactLevels/!ImpactLevels/SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SolutionShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="TechnicalConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="TechnicalShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="TechnicalConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="TechnicalShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="EconomicConcern" />
-        <ParentElementPath>
-          <DomainPath>ImpactLevelsHasElements.ImpactLevels/!ImpactLevels/SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SolutionShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EconomicConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="TechnicalShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EconomicConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="EconomicShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EconomicConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="EconomicShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="EnvironmentalConcern" />
-        <ParentElementPath>
-          <DomainPath>ImpactLevelsHasElements.ImpactLevels/!ImpactLevels/SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SolutionShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EnvironmentalConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="TechnicalShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EnvironmentalConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="EnvironmentalShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EnvironmentalConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="EnvironmentalShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="SocialConcern" />
-        <ParentElementPath>
-          <DomainPath>ImpactLevelsHasElements.ImpactLevels/!ImpactLevels/SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SolutionShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="SocialConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="SocialConcern/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="SocialConcernShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="Solution" />
-        <ParentElementPath>
-          <DomainPath>ImpactLevelsHasElements.ImpactLevels/!ImpactLevels/SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SolutionShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Solution/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="SocialConcernShape/Name" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Solution/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="SolutionShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="Element" />
-        <ParentElementPath>
-          <DomainPath>ImpactLevelsHasElements.ImpactLevels/!ImpactLevels/SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="ElementShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="ImpactStructural" />
         <ParentElementPath>
-          <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
+          <DomainPath>SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="SocialConcernShape/Name" />
@@ -678,7 +622,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="ImpactEnabling" />
         <ParentElementPath>
-          <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
+          <DomainPath>SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="SocialConcernShape/Name" />
@@ -699,13 +643,6 @@
         <GeometryShapeMoniker Name="ImpactEnablingShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="ImpactImmediate" />
-        <ParentElementPath>
-          <DomainPath>SoSAHasImpactLevel.SoSA/!SoSA</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="ImpactImmediateShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="Legend" />
         <ParentElementPath>
           <DomainPath>SoSAHasLegend.SoSA/!SoSA</DomainPath>
@@ -715,28 +652,129 @@
       <ShapeMap>
         <DomainClassMoniker Name="TemporaryConcern" />
         <ParentElementPath>
-          <DomainPath>SoSAHasTemporaryConcerned.SoSA/!SoSA</DomainPath>
+          <DomainPath>SoSAHasTemporaryConcerns.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="TempShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="TechnicalConcern" />
+        <ParentElementPath>
+          <DomainPath>ImpactLevelsHasConcerns.ImpactLevels/!ImpactLevels/SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="TempShape/TempShapeName" />
+          <TextDecoratorMoniker Name="TechnicalShape/Name" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="TemporaryConcern/TempName" />
+              <DomainPropertyMoniker Name="TechnicalConcern/Name" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
-        <GeometryShapeMoniker Name="TempShape" />
+        <GeometryShapeMoniker Name="TechnicalShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="EnvironmentalConcern" />
+        <ParentElementPath>
+          <DomainPath>ImpactLevelsHasConcerns.ImpactLevels/!ImpactLevels/SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="TechnicalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EnvironmentalConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="EnvironmentalShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="SocialConcern" />
+        <ParentElementPath>
+          <DomainPath>ImpactLevelsHasConcerns.ImpactLevels/!ImpactLevels/SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="TechnicalShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SocialConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="SocialConcernShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Solution" />
+        <ParentElementPath>
+          <DomainPath>ImpactImmediateHasSolution.ImpactImmediate/!ImpactImmediate/SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SolutionShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Solution/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="SolutionShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="ImpactImmediate" />
+        <ParentElementPath>
+          <DomainPath>SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="ImpactImmediateShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Concern" />
+        <ParentElementPath>
+          <DomainPath>ImpactLevelsHasConcerns.ImpactLevels/!ImpactLevels/SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="ConcernShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="EconomicConcern" />
+        <ParentElementPath>
+          <DomainPath>ImpactLevelsHasConcerns.ImpactLevels/!ImpactLevels/SoSAHasImpactLevels.SoSA/!SoSA</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EconomicShape/Name" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EconomicConcern/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="EconomicShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="ConcernRela" />
-        <DomainRelationshipMoniker Name="ElementReferencesTargetElements" />
+        <DomainRelationshipMoniker Name="ConcernReferencesTargetConcerns" />
         <DecoratorMap>
           <TextDecoratorMoniker Name="ConcernRela/Sign" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ElementReferencesTargetElements/Sign" />
+              <DomainPropertyMoniker Name="ConcernReferencesTargetConcerns/Sign" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SolutionRela/Sign" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ConcernReferencesTargetConcerns/Sign" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="SolutionRela" />
+        <DomainRelationshipMoniker Name="SolutionReferencesConcerns" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SolutionRela/Sign" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SolutionReferencesConcerns/Sign" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -754,20 +792,14 @@
       <ElementTool Name="LevelImpactStructural" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Impact Level: Structural" Tooltip="Level Impact Structural" HelpKeyword="LevelImpactStructural">
         <DomainClassMoniker Name="ImpactStructural" />
       </ElementTool>
-      <ElementTool Name="LevelImpactImmediate" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Impact Level: Immediate" Tooltip="LevelImpactImmediate" HelpKeyword="LevelImpactImmediate">
-        <DomainClassMoniker Name="ImpactImmediate" />
-      </ElementTool>
       <ElementTool Name="LevelImpactEnabling" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Impact Level: Enabling" Tooltip="Level Impact Enabling" HelpKeyword="LevelImpactEnabling">
         <DomainClassMoniker Name="ImpactEnabling" />
       </ElementTool>
-      <ElementTool Name="Legend" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Legend" Tooltip="Legend" HelpKeyword="Legend">
-        <DomainClassMoniker Name="Legend" />
+      <ElementTool Name="LevelImpactImmediate" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Impact Level: Immediate" Tooltip="LevelImpactImmediate" HelpKeyword="LevelImpactImmediate">
+        <DomainClassMoniker Name="ImpactImmediate" />
       </ElementTool>
       <ElementTool Name="Solution" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Solution / software" Tooltip="Solution" HelpKeyword="Solution">
         <DomainClassMoniker Name="Solution" />
-      </ElementTool>
-      <ElementTool Name="TemporaryConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Temporary Concern" Tooltip="Temporary Concern" HelpKeyword="TemporaryConcern">
-        <DomainClassMoniker Name="TemporaryConcern" />
       </ElementTool>
       <ElementTool Name="SocialConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Concern: Social" Tooltip="Create an ExampleConcern" HelpKeyword="SocialConcern">
         <DomainClassMoniker Name="SocialConcern" />
@@ -781,9 +813,18 @@
       <ElementTool Name="TechnicalConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Concern: Technical" Tooltip="Technical Concern" HelpKeyword="TechnicalConcern">
         <DomainClassMoniker Name="TechnicalConcern" />
       </ElementTool>
-      <ConnectionTool Name="EffectRelation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Relation between concerns" Tooltip="Effect Relation" HelpKeyword="EffectRelation">
-        <ConnectionBuilderMoniker Name="TestMart/ElementReferencesTargetElementsBuilder" />
+      <ConnectionTool Name="EffectSolution" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Direct effect of solution" Tooltip="Effect Solution" HelpKeyword="EffectSolution">
+        <ConnectionBuilderMoniker Name="TestMart/SolutionReferencesConcernsBuilder" />
       </ConnectionTool>
+      <ConnectionTool Name="EffectRelation" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Direct effect of concern" Tooltip="Effect Relation" HelpKeyword="EffectConcerns">
+        <ConnectionBuilderMoniker Name="TestMart/ConcernReferencesTargetConcernsBuilder" />
+      </ConnectionTool>
+      <ElementTool Name="Legend" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Optional: Legend" Tooltip="Legend" HelpKeyword="Legend">
+        <DomainClassMoniker Name="Legend" />
+      </ElementTool>
+      <ElementTool Name="TemporaryConcern" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Optional: Temporary Concern" Tooltip="Temporary Concern" HelpKeyword="TemporaryConcern">
+        <DomainClassMoniker Name="TemporaryConcern" />
+      </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="TestMart2" />
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

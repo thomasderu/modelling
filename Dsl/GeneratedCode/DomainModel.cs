@@ -73,7 +73,6 @@ namespace Company.TestMart
 				typeof(EnvironmentalConcern),
 				typeof(EconomicConcern),
 				typeof(TechnicalConcern),
-				typeof(Element),
 				typeof(Solution),
 				typeof(ImpactStructural),
 				typeof(ImpactLevels),
@@ -81,18 +80,21 @@ namespace Company.TestMart
 				typeof(Concern),
 				typeof(Legend),
 				typeof(TemporaryConcern),
-				typeof(ElementReferencesTargetElements),
-				typeof(ImpactLevelsHasElements),
-				typeof(SoSAHasImpactLevel),
+				typeof(SoSAHasImpactLevels),
 				typeof(SoSAHasLegend),
-				typeof(SoSAHasTemporaryConcerned),
+				typeof(ImpactImmediateHasSolution),
+				typeof(SoSAHasTemporaryConcerns),
+				typeof(ImpactLevelsHasConcerns),
+				typeof(SolutionReferencesConcerns),
+				typeof(ConcernReferencesTargetConcerns),
 				typeof(TestMartDiagram),
 				typeof(ConcernRela),
+				typeof(SolutionRela),
 				typeof(SocialConcernShape),
 				typeof(EnvironmentalShape),
 				typeof(EconomicShape),
 				typeof(TechnicalShape),
-				typeof(ElementShape),
+				typeof(ConcernShape),
 				typeof(SolutionShape),
 				typeof(ImpactStructuralShape),
 				typeof(ImpactEnablingShape),
@@ -122,7 +124,8 @@ namespace Company.TestMart
 				new DomainMemberInfo(typeof(ImpactStructural), "Name", ImpactStructural.NameDomainPropertyId, typeof(ImpactStructural.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(ImpactEnabling), "Name", ImpactEnabling.NameDomainPropertyId, typeof(ImpactEnabling.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(TemporaryConcern), "TempName", TemporaryConcern.TempNameDomainPropertyId, typeof(TemporaryConcern.TempNamePropertyHandler)),
-				new DomainMemberInfo(typeof(ElementReferencesTargetElements), "Sign", ElementReferencesTargetElements.SignDomainPropertyId, typeof(ElementReferencesTargetElements.SignPropertyHandler)),
+				new DomainMemberInfo(typeof(SolutionReferencesConcerns), "Sign", SolutionReferencesConcerns.SignDomainPropertyId, typeof(SolutionReferencesConcerns.SignPropertyHandler)),
+				new DomainMemberInfo(typeof(ConcernReferencesTargetConcerns), "Sign", ConcernReferencesTargetConcerns.SignDomainPropertyId, typeof(ConcernReferencesTargetConcerns.SignPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -133,16 +136,20 @@ namespace Company.TestMart
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(ElementReferencesTargetElements), "SourceElement", ElementReferencesTargetElements.SourceElementDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ElementReferencesTargetElements), "TargetElement", ElementReferencesTargetElements.TargetElementDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelsHasElements), "ImpactLevels", ImpactLevelsHasElements.ImpactLevelsDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ImpactLevelsHasElements), "Element", ImpactLevelsHasElements.ElementDomainRoleId),
-				new DomainRolePlayerInfo(typeof(SoSAHasImpactLevel), "SoSA", SoSAHasImpactLevel.SoSADomainRoleId),
-				new DomainRolePlayerInfo(typeof(SoSAHasImpactLevel), "ImpactLevels", SoSAHasImpactLevel.ImpactLevelsDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SoSAHasImpactLevels), "SoSA", SoSAHasImpactLevels.SoSADomainRoleId),
+				new DomainRolePlayerInfo(typeof(SoSAHasImpactLevels), "ImpactLevels", SoSAHasImpactLevels.ImpactLevelsDomainRoleId),
 				new DomainRolePlayerInfo(typeof(SoSAHasLegend), "SoSA", SoSAHasLegend.SoSADomainRoleId),
 				new DomainRolePlayerInfo(typeof(SoSAHasLegend), "Legend", SoSAHasLegend.LegendDomainRoleId),
-				new DomainRolePlayerInfo(typeof(SoSAHasTemporaryConcerned), "SoSA", SoSAHasTemporaryConcerned.SoSADomainRoleId),
-				new DomainRolePlayerInfo(typeof(SoSAHasTemporaryConcerned), "TemporaryConcern", SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ImpactImmediateHasSolution), "ImpactImmediate", ImpactImmediateHasSolution.ImpactImmediateDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ImpactImmediateHasSolution), "Solution", ImpactImmediateHasSolution.SolutionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SoSAHasTemporaryConcerns), "SoSA", SoSAHasTemporaryConcerns.SoSADomainRoleId),
+				new DomainRolePlayerInfo(typeof(SoSAHasTemporaryConcerns), "TemporaryConcern", SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ImpactLevelsHasConcerns), "ImpactLevels", ImpactLevelsHasConcerns.ImpactLevelsDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ImpactLevelsHasConcerns), "Concern", ImpactLevelsHasConcerns.ConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SolutionReferencesConcerns), "Solution", SolutionReferencesConcerns.SolutionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(SolutionReferencesConcerns), "Concern", SolutionReferencesConcerns.ConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConcernReferencesTargetConcerns), "SourceConcern", ConcernReferencesTargetConcerns.SourceConcernDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ConcernReferencesTargetConcerns), "TargetConcern", ConcernReferencesTargetConcerns.TargetConcernDomainRoleId),
 			};
 		}
 		#endregion
@@ -171,21 +178,21 @@ namespace Company.TestMart
 				createElementMap.Add(typeof(EnvironmentalConcern), 3);
 				createElementMap.Add(typeof(EconomicConcern), 4);
 				createElementMap.Add(typeof(TechnicalConcern), 5);
-				createElementMap.Add(typeof(Element), 6);
-				createElementMap.Add(typeof(Solution), 7);
-				createElementMap.Add(typeof(ImpactStructural), 8);
-				createElementMap.Add(typeof(ImpactLevels), 9);
-				createElementMap.Add(typeof(ImpactEnabling), 10);
-				createElementMap.Add(typeof(Concern), 11);
-				createElementMap.Add(typeof(Legend), 12);
-				createElementMap.Add(typeof(TemporaryConcern), 13);
-				createElementMap.Add(typeof(TestMartDiagram), 14);
-				createElementMap.Add(typeof(ConcernRela), 15);
+				createElementMap.Add(typeof(Solution), 6);
+				createElementMap.Add(typeof(ImpactStructural), 7);
+				createElementMap.Add(typeof(ImpactLevels), 8);
+				createElementMap.Add(typeof(ImpactEnabling), 9);
+				createElementMap.Add(typeof(Concern), 10);
+				createElementMap.Add(typeof(Legend), 11);
+				createElementMap.Add(typeof(TemporaryConcern), 12);
+				createElementMap.Add(typeof(TestMartDiagram), 13);
+				createElementMap.Add(typeof(ConcernRela), 14);
+				createElementMap.Add(typeof(SolutionRela), 15);
 				createElementMap.Add(typeof(SocialConcernShape), 16);
 				createElementMap.Add(typeof(EnvironmentalShape), 17);
 				createElementMap.Add(typeof(EconomicShape), 18);
 				createElementMap.Add(typeof(TechnicalShape), 19);
-				createElementMap.Add(typeof(ElementShape), 20);
+				createElementMap.Add(typeof(ConcernShape), 20);
 				createElementMap.Add(typeof(SolutionShape), 21);
 				createElementMap.Add(typeof(ImpactStructuralShape), 22);
 				createElementMap.Add(typeof(ImpactEnablingShape), 23);
@@ -211,21 +218,21 @@ namespace Company.TestMart
 				case 3: return new EnvironmentalConcern(partition, propertyAssignments);
 				case 4: return new EconomicConcern(partition, propertyAssignments);
 				case 5: return new TechnicalConcern(partition, propertyAssignments);
-				case 6: return new Element(partition, propertyAssignments);
-				case 7: return new Solution(partition, propertyAssignments);
-				case 8: return new ImpactStructural(partition, propertyAssignments);
-				case 9: return new ImpactLevels(partition, propertyAssignments);
-				case 10: return new ImpactEnabling(partition, propertyAssignments);
-				case 11: return new Concern(partition, propertyAssignments);
-				case 12: return new Legend(partition, propertyAssignments);
-				case 13: return new TemporaryConcern(partition, propertyAssignments);
-				case 14: return new TestMartDiagram(partition, propertyAssignments);
-				case 15: return new ConcernRela(partition, propertyAssignments);
+				case 6: return new Solution(partition, propertyAssignments);
+				case 7: return new ImpactStructural(partition, propertyAssignments);
+				case 8: return new ImpactLevels(partition, propertyAssignments);
+				case 9: return new ImpactEnabling(partition, propertyAssignments);
+				case 10: return new Concern(partition, propertyAssignments);
+				case 11: return new Legend(partition, propertyAssignments);
+				case 12: return new TemporaryConcern(partition, propertyAssignments);
+				case 13: return new TestMartDiagram(partition, propertyAssignments);
+				case 14: return new ConcernRela(partition, propertyAssignments);
+				case 15: return new SolutionRela(partition, propertyAssignments);
 				case 16: return new SocialConcernShape(partition, propertyAssignments);
 				case 17: return new EnvironmentalShape(partition, propertyAssignments);
 				case 18: return new EconomicShape(partition, propertyAssignments);
 				case 19: return new TechnicalShape(partition, propertyAssignments);
-				case 20: return new ElementShape(partition, propertyAssignments);
+				case 20: return new ConcernShape(partition, propertyAssignments);
 				case 21: return new SolutionShape(partition, propertyAssignments);
 				case 22: return new ImpactStructuralShape(partition, propertyAssignments);
 				case 23: return new ImpactEnablingShape(partition, propertyAssignments);
@@ -254,12 +261,14 @@ namespace Company.TestMart
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
-				createElementLinkMap.Add(typeof(ElementReferencesTargetElements), 0);
-				createElementLinkMap.Add(typeof(ImpactLevelsHasElements), 1);
-				createElementLinkMap.Add(typeof(SoSAHasImpactLevel), 2);
-				createElementLinkMap.Add(typeof(SoSAHasLegend), 3);
-				createElementLinkMap.Add(typeof(SoSAHasTemporaryConcerned), 4);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
+				createElementLinkMap.Add(typeof(SoSAHasImpactLevels), 0);
+				createElementLinkMap.Add(typeof(SoSAHasLegend), 1);
+				createElementLinkMap.Add(typeof(ImpactImmediateHasSolution), 2);
+				createElementLinkMap.Add(typeof(SoSAHasTemporaryConcerns), 3);
+				createElementLinkMap.Add(typeof(ImpactLevelsHasConcerns), 4);
+				createElementLinkMap.Add(typeof(SolutionReferencesConcerns), 5);
+				createElementLinkMap.Add(typeof(ConcernReferencesTargetConcerns), 6);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -274,11 +283,13 @@ namespace Company.TestMart
 			}
 			switch (index)
 			{
-				case 0: return new ElementReferencesTargetElements(partition, roleAssignments, propertyAssignments);
-				case 1: return new ImpactLevelsHasElements(partition, roleAssignments, propertyAssignments);
-				case 2: return new SoSAHasImpactLevel(partition, roleAssignments, propertyAssignments);
-				case 3: return new SoSAHasLegend(partition, roleAssignments, propertyAssignments);
-				case 4: return new SoSAHasTemporaryConcerned(partition, roleAssignments, propertyAssignments);
+				case 0: return new SoSAHasImpactLevels(partition, roleAssignments, propertyAssignments);
+				case 1: return new SoSAHasLegend(partition, roleAssignments, propertyAssignments);
+				case 2: return new ImpactImmediateHasSolution(partition, roleAssignments, propertyAssignments);
+				case 3: return new SoSAHasTemporaryConcerns(partition, roleAssignments, propertyAssignments);
+				case 4: return new ImpactLevelsHasConcerns(partition, roleAssignments, propertyAssignments);
+				case 5: return new SolutionReferencesConcerns(partition, roleAssignments, propertyAssignments);
+				case 6: return new ConcernReferencesTargetConcerns(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -449,10 +460,11 @@ namespace Company.TestMart
 		public TestMartDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Company.TestMart.ImpactLevelsHasElements.ElementDomainRoleId, true);
-			DomainRoles.Add(global::Company.TestMart.SoSAHasImpactLevel.ImpactLevelsDomainRoleId, true);
+			DomainRoles.Add(global::Company.TestMart.SoSAHasImpactLevels.ImpactLevelsDomainRoleId, true);
 			DomainRoles.Add(global::Company.TestMart.SoSAHasLegend.LegendDomainRoleId, true);
-			DomainRoles.Add(global::Company.TestMart.SoSAHasTemporaryConcerned.TemporaryConcernDomainRoleId, true);
+			DomainRoles.Add(global::Company.TestMart.ImpactImmediateHasSolution.SolutionDomainRoleId, true);
+			DomainRoles.Add(global::Company.TestMart.SoSAHasTemporaryConcerns.TemporaryConcernDomainRoleId, true);
+			DomainRoles.Add(global::Company.TestMart.ImpactLevelsHasConcerns.ConcernDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
