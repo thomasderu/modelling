@@ -13751,9 +13751,10 @@ namespace Company.TestMart
 				global::System.String propValue = instanceOfSolutionReferencesConcerns.Sign;
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
+					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "*add sign*") != 0))
+					{	// No need to write the value out if it's the same as default value.
 						TestMartSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "sign", propValue);
-	
+					}
 				}
 			}
 		}
@@ -14657,9 +14658,10 @@ namespace Company.TestMart
 				global::System.String propValue = instanceOfConcernReferencesTargetConcerns.Sign;
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
+					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "*add sign*") != 0))
+					{	// No need to write the value out if it's the same as default value.
 						TestMartSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "sign", propValue);
-	
+					}
 				}
 			}
 		}

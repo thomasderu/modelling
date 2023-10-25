@@ -1419,7 +1419,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Sign
 		/// </summary>
-		private global::System.String signPropertyStorage = string.Empty;
+		private global::System.String signPropertyStorage = "*add sign*";
 		
 		/// <summary>
 		/// Gets or sets the value of Sign domain property.
@@ -1427,6 +1427,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.SolutionReferencesConcerns/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.SolutionReferencesConcerns/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add sign*")]
 		[DslModeling::DomainObjectId("e70bc6dc-0058-43ff-b73e-617cb1d02fbc")]
 		public global::System.String Sign
 		{
@@ -1735,7 +1736,7 @@ namespace Company.TestMart
 		/// <summary>
 		/// Storage for Sign
 		/// </summary>
-		private global::System.String signPropertyStorage = string.Empty;
+		private global::System.String signPropertyStorage = "*add sign*";
 		
 		/// <summary>
 		/// Gets or sets the value of Sign domain property.
@@ -1743,6 +1744,7 @@ namespace Company.TestMart
 		/// </summary>
 		[DslDesign::DisplayNameResource("Company.TestMart.ConcernReferencesTargetConcerns/Sign.DisplayName", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("Company.TestMart.ConcernReferencesTargetConcerns/Sign.Description", typeof(global::Company.TestMart.TestMartDomainModel), "Company.TestMart.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("*add sign*")]
 		[DslModeling::DomainObjectId("19802c3f-11db-4b63-a4fd-449355569b00")]
 		public global::System.String Sign
 		{
