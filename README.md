@@ -42,3 +42,7 @@ After that open a new project it and search for
 Now you can start!
 
 For more information see: [More information](https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/modeling/getting-started-with-domain-specific-languages.md)
+
+## Images
+![Afbeelding1](https://github.com/thomasderu/modelling/assets/115470061/fa79db44-b786-4cad-96f0-74d511347e92)
+
