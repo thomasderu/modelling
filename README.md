@@ -45,4 +45,11 @@ For more information see: [More information](https://github.com/MicrosoftDocs/vi
 
 ## Images
 ![Afbeelding1](https://github.com/thomasderu/modelling/assets/115470061/fa79db44-b786-4cad-96f0-74d511347e92)
-
+![Afbeelding2](https://github.com/thomasderu/modelling/assets/115470061/4836f9b5-af7a-4087-848a-1e10675bcf4b)
+![Afbeelding3](https://github.com/thomasderu/modelling/assets/115470061/b0eff2fa-04c7-455d-b048-6f5b636a07bf)
+![Afbeelding4](https://github.com/thomasderu/modelling/assets/115470061/b8263c3c-384b-40db-9573-715dfd0c1806)
+![Afbeelding5](https://github.com/thomasderu/modelling/assets/115470061/1a2f301b-67a8-47d2-addb-3353f1e2bfe2)
+![Afbeelding6](https://github.com/thomasderu/modelling/assets/115470061/947df753-b859-4bcc-951f-293e4394f03a)
+![Afbeelding7](https://github.com/thomasderu/modelling/assets/115470061/f4df5c89-1c93-4d47-b1df-0396b075ac97)
+![Afbeelding8](https://github.com/thomasderu/modelling/assets/115470061/d661e879-1e7a-4410-843b-7ee01aa83375)
+![Afbeelding9](https://github.com/thomasderu/modelling/assets/115470061/71cb2454-eae0-415b-85c1-41b5a99412bf)
