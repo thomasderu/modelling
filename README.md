@@ -12,7 +12,7 @@ The autohors and developers of this tool are:
 - [Jan Kemper](https://www.github.com/jankemper1)
 - [Stefan van den Eijkel](https://www.github.com/s-n-vandeneijkel)
 - [Thomas de Ruijter](https://www.github.com/TimKragten04)
-- [Tim Krachten](https://www.github.com/TimKragten04)
+- [Tim Kragten](https://www.github.com/TimKragten04)
 - [Mart Koek](https://www.github.com/MartKoek)
 
 ## Documentation
