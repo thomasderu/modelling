@@ -45,4 +45,3 @@ For more information see: [More information](https://github.com/MicrosoftDocs/vi
 ![Afbeelding6](https://github.com/thomasderu/modelling/assets/115470061/947df753-b859-4bcc-951f-293e4394f03a)
 ![Afbeelding7](https://github.com/thomasderu/modelling/assets/115470061/f4df5c89-1c93-4d47-b1df-0396b075ac97)
 ![Afbeelding8](https://github.com/thomasderu/modelling/assets/115470061/d661e879-1e7a-4410-843b-7ee01aa83375)
-![Afbeelding9](https://github.com/thomasderu/modelling/assets/115470061/71cb2454-eae0-415b-85c1-41b5a99412bf)
